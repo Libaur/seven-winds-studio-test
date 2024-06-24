@@ -4,9 +4,15 @@
   "author": "rikzun",
   "scripts": {
     "start": "webpack serve --progress",
-    "build": "webpack build --progress"
+    "build": "webpack build --progress",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@fontsource/roboto": "^5.0.13",
+    "@mui/icons-material": "^5.15.20",
+    "@mui/material": "^5.15.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -19,6 +25,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^6.9.1",
+    "gh-pages": "^6.1.1",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
     "prettier": "^3.3.2",

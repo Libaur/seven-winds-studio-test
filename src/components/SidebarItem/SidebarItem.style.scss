@@ -1,0 +1,10 @@
+@import '../../App.style.scss';
+
+.sidebar-item {
+    margin: 0 8px 0 8px;
+    color: white;
+}
+
+.item-marked {
+    background-color: $secondary;
+}

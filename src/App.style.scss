@@ -1,19 +1,8 @@
-body {
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
+$main: #323232;
+$secondary: #a1a1aa;
 
-    > #root {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: inherit;
-        width: inherit;
-
-        > iframe {
-            height: 100%;
-            width: 100%;
-            border: unset;
-        }
-    }
+.interactive-component {
+    width: 100%;
+    background-color: $main;
+    border-left: 0.5px solid $secondary;
 }

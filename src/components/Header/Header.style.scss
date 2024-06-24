@@ -1,0 +1,19 @@
+@import '../../App.style.scss';
+
+.toolbar {
+    gap: 20px;
+    background-color: $main;
+    color: $secondary;
+}
+
+.toolbar-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10.5px 0px;
+}
+
+.with-border {
+    border-bottom: 2px solid white;
+    color: white;
+}
