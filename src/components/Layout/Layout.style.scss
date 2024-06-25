@@ -7,7 +7,7 @@
 }
 
 @mixin sidebar-border {
-    border: 0.5px solid $secondary;
+    border: 1px solid $secondary;
 }
 
 .sidebar {
@@ -22,6 +22,7 @@
 .subheader {
     @include sidebar-main-specs(77%);
     @include sidebar-border;
+    border-left: none;
     color: white;
 
     h3 {
