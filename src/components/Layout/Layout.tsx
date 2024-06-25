@@ -1,19 +1,19 @@
-import './Backbone.style.scss';
+import './Layout.style.scss';
 import { ReactNode } from 'react';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-interface BackboneProps {
+interface LayoutProps {
     children: ReactNode;
     interactiveComponent?: ReactNode;
 }
 
-export default function Backbone({ children, interactiveComponent }: BackboneProps) {
+export default function Layout({ children, interactiveComponent }: LayoutProps) {
     return (
         <Box display="flex" flexDirection="column">
-            <Box className="backbone-container">
+            <Box display="flex">
                 <Toolbar className="project-title">
                     Название проекта
                     <br />

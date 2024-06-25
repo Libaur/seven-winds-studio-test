@@ -10,10 +10,6 @@
     border: 0.5px solid $secondary;
 }
 
-.backbone-container {
-    display: flex;
-}
-
 .sidebar {
     @include sidebar-main-specs(240px);
 }
