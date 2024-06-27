@@ -1,15 +1,16 @@
 import { useReducer } from 'react';
 import TableCell from '@mui/material/TableCell';
 import TextField from '@mui/material/TextField';
-import { reducer, initialState } from './WorksheetEditRow.service';
+import { worksheetReducer, initialRow, currentRows } from './WorksheetEditRow.service';
 
 export default function WorksheetEditRow() {
-   const [state, dispatch] = useReducer(reducer, initialState);
+   const [state, dispatch] = useReducer(worksheetReducer, initialRow);
 
    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
       if (event.key === 'Enter') {
          event.preventDefault();
          dispatch({ type: 'SUBMIT_FORM' });
+         currentRows.push(state);
          dispatch({ type: 'RESET_FORM' });
       }
    };
@@ -24,9 +25,9 @@ export default function WorksheetEditRow() {
                   borderRadius: '5px'
                }}
                size="small"
-               value={state.field1}
+               value={state.rowName}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  dispatch({ type: 'UPDATE_FIELD', field: 'field1', value: e.target.value })
+                  dispatch({ type: 'UPDATE_FIELD', field: 'rowName', value: e.target.value })
                }
                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyDown(e)}
                InputProps={{
@@ -38,9 +39,9 @@ export default function WorksheetEditRow() {
             <TextField
                size="small"
                style={{ border: '1px solid #a1a1aa', borderRadius: '5px' }}
-               value={state.field2}
+               value={state.salary}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  dispatch({ type: 'UPDATE_FIELD', field: 'field2', value: e.target.value })
+                  dispatch({ type: 'UPDATE_FIELD', field: 'salary', value: e.target.value })
                }
                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyDown(e)}
                InputProps={{
@@ -52,9 +53,9 @@ export default function WorksheetEditRow() {
             <TextField
                size="small"
                style={{ border: '1px solid #a1a1aa', borderRadius: '5px' }}
-               value={state.field3}
+               value={state.equipmentCosts}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  dispatch({ type: 'UPDATE_FIELD', field: 'field3', value: e.target.value })
+                  dispatch({ type: 'UPDATE_FIELD', field: 'equipmentCosts', value: e.target.value })
                }
                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyDown(e)}
                InputProps={{
@@ -66,9 +67,9 @@ export default function WorksheetEditRow() {
             <TextField
                size="small"
                style={{ border: '1px solid #a1a1aa', borderRadius: '5px' }}
-               value={state.field4}
+               value={state.overheads}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  dispatch({ type: 'UPDATE_FIELD', field: 'field4', value: e.target.value })
+                  dispatch({ type: 'UPDATE_FIELD', field: 'overheads', value: e.target.value })
                }
                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyDown(e)}
                InputProps={{
@@ -80,9 +81,13 @@ export default function WorksheetEditRow() {
             <TextField
                size="small"
                style={{ border: '1px solid #a1a1aa', borderRadius: '5px' }}
-               value={state.field5}
+               value={state.estimatedProfit}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  dispatch({ type: 'UPDATE_FIELD', field: 'field5', value: e.target.value })
+                  dispatch({
+                     type: 'UPDATE_FIELD',
+                     field: 'estimatedProfit',
+                     value: e.target.value
+                  })
                }
                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyDown(e)}
                InputProps={{

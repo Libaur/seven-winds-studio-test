@@ -1,4 +1,4 @@
-const sidebarItemsTitles = [
+const SIDEBAR_ITEMS_TITLES = [
     'По проекту',
     'Объекты',
     'РД',
@@ -16,4 +16,4 @@ const sidebarItemsTitles = [
     'Контрагенты'
 ];
 
-export default sidebarItemsTitles;
+export default SIDEBAR_ITEMS_TITLES;

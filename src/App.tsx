@@ -1,7 +1,7 @@
 import './App.style.scss';
 import { Header } from './components/Header';
 import { Layout } from './components/Layout';
-import { SidebarItem, sidebarItemsTitles } from './components/SidebarItem';
+import { SidebarItem, SIDEBAR_ITEMS_TITLES } from './components/SidebarItem';
 import { Worksheet } from './components/Worksheet';
 
 export function App() {
@@ -9,7 +9,7 @@ export function App() {
       <>
          <Header />
          <Layout interactiveComponent={<Worksheet />}>
-            {sidebarItemsTitles.map((title, index) => (
+            {SIDEBAR_ITEMS_TITLES.map((title, index) => (
                <SidebarItem key={index} title={title} />
             ))}
          </Layout>

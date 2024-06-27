@@ -1,24 +1,36 @@
-export const initialState = {
-   field1: '',
-   field2: '',
-   field3: '',
-   field4: '',
-   field5: ''
+const TABLE_HEAD_TITLES = [
+   'Уровень',
+   'Наименование работ',
+   'Основная з/п',
+   'Оборудование',
+   'Накладные расходы',
+   'Сметная прибыль'
+];
+
+const initialRow = {
+   rowName: '',
+   salary: 0,
+   equipmentCosts: 0,
+   overheads: 0,
+   estimatedProfit: 0
 };
 
-export function reducer(
-   state: typeof initialState,
+const currentRows: typeof initialRow[] = [];
+
+function worksheetReducer(
+   state: typeof initialRow,
    action: { type: string; field?: string; value?: string }
-): typeof initialState {
+): typeof initialRow {
    switch (action.type) {
       case 'UPDATE_FIELD':
          return { ...state, [action.field!]: action.value! };
       case 'SUBMIT_FORM':
-         console.log(state);
          return state;
       case 'RESET_FORM':
-         return initialState;
+         return initialRow;
       default:
          return state;
    }
 }
+
+export { TABLE_HEAD_TITLES, initialRow, currentRows, worksheetReducer };
