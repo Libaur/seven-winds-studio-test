@@ -2,11 +2,13 @@ import { RichTreeView } from '@mui/x-tree-view/RichTreeView';
 import { TreeItem2 } from '@mui/x-tree-view/TreeItem2';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import DescriptionIcon from '@mui/icons-material/Description';
+import WorksheetEditRow from './WorksheetEditRow';
 import { tableHeadTitles, tableRowsData } from './Worksheet.data';
 
 // const id = 128766;
 
 export default function Worksheet() {
+   const isEdit = true;
    return (
       <TableContainer style={{ background: '#323232', borderLeft: '1px solid #a1a1aa' }}>
          <Table>
@@ -23,9 +25,11 @@ export default function Worksheet() {
                <TableRow>
                   <TableCell>
                      {/* <RichTreeView /> */}
-                     <DescriptionIcon style={{ color: '#7890B2', cursor: 'pointer' }} />
+                     {!isEdit && (
+                        <DescriptionIcon style={{ color: '#7890B2', cursor: 'pointer' }} />
+                     )}
                   </TableCell>
-                  {tableRowsData.map((data, index) => (
+                  {/* {tableRowsData.map((data, index) => (
                      <TableCell
                         width={data === 'Data Description' ? 250 : ''}
                         key={index}
@@ -33,7 +37,8 @@ export default function Worksheet() {
                      >
                         {data}
                      </TableCell>
-                  ))}
+                  ))} */}
+                  <WorksheetEditRow />
                </TableRow>
             </TableBody>
          </Table>

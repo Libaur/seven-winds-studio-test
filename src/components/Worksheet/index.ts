@@ -1,1 +1,1 @@
-export { default as Table } from './Worksheet';
+export { default as Worksheet } from './Worksheet';
