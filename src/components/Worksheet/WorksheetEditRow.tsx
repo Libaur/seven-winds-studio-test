@@ -14,7 +14,7 @@ export default function WorksheetEditRow({ changedRow }: { changedRow?: Row }) {
    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
       if (event.key === 'Enter') {
          event.preventDefault();
-         dispatch({ type: 'SUBMIT_FORM', rowCells: { ...rowCells, id: currentId } });
+         !changedRow && dispatch({ type: 'SUBMIT_FORM', rowCells: { ...rowCells, id: currentId } });
          dispatch({ type: 'UPDATE_ROW', id: currentId, rowCells: rowCells });
       }
    };
