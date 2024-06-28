@@ -54306,26 +54306,66 @@ const initialRow = {
     edited: false
 };
 const initialState = [];
-function worksheetReducer(state = [], action) {
+const mockRows = [
+    {
+        id: '1313446',
+        rowName: 'Бухие работы',
+        salary: 43634645634,
+        equipmentCosts: 5686945699.779,
+        overheads: 245614235,
+        estimatedProfit: 87534754.68,
+        edited: false
+    },
+    {
+        id: '3435345',
+        rowName: 'Системный отстой',
+        salary: 568699319779,
+        equipmentCosts: 8757544368,
+        overheads: 4363456634,
+        estimatedProfit: 241.24235,
+        edited: false
+    },
+    {
+        id: '6456449',
+        rowName: 'Маленький бизнес большие возможности',
+        salary: 4363463434,
+        equipmentCosts: 568693499779,
+        overheads: 2345523,
+        estimatedProfit: 2414523.5,
+        edited: false
+    },
+    {
+        id: '353458',
+        rowName: 'Хитрый подрядчик',
+        salary: 241422335,
+        equipmentCosts: 875754468,
+        overheads: 875725468,
+        estimatedProfit: 5686959.9779,
+        edited: false
+    },
+    {
+        id: '546547',
+        rowName: 'Квартиры в долг',
+        salary: 24142335,
+        equipmentCosts: 875752468,
+        overheads: 5686.9599779,
+        estimatedProfit: 436342634,
+        edited: false
+    }
+];
+function worksheetReducer(state = mockRows, action) {
     switch (action.type) {
         case 'EDIT_ROW':
-            const editedRow = state.find((row) => row.id === action.id);
-            if (editedRow) {
-                return [...state.filter((row) => row.id !== action.id), Object.assign(Object.assign({}, editedRow), { edited: true })];
-            }
-            return state;
+            return state.map((row) => (row.id === action.id ? Object.assign(Object.assign({}, row), { edited: true }) : row));
         case 'UPDATE_ROW':
-            const updatedRow = state.find((row) => row.id === action.id);
-            if (updatedRow && action.rowCells) {
-                return [
-                    ...state.filter((row) => row.id !== action.id),
-                    Object.assign(Object.assign({}, action.rowCells), { id: action.id, edited: false })
-                ];
+            if (action.rowCells) {
+                return state.map((row) => row.id === action.id
+                    ? Object.assign(Object.assign(Object.assign({}, row), action.rowCells), { id: action.id, edited: false }) : row);
             }
             return state;
         case 'SUBMIT_FORM':
             if (action.rowCells) {
-                return [...state, action.rowCells];
+                return [...state, Object.assign(Object.assign({}, initialRow), action.rowCells)];
             }
             return state;
         case 'RESET_FORM':
@@ -54372,7 +54412,7 @@ function WorksheetEditRow({ changedRow }) {
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             event.preventDefault();
-            dispatch({ type: 'SUBMIT_FORM', rowCells: Object.assign(Object.assign({}, rowCells), { id: currentId }) });
+            !changedRow && dispatch({ type: 'SUBMIT_FORM', rowCells: Object.assign(Object.assign({}, rowCells), { id: currentId }) });
             dispatch({ type: 'UPDATE_ROW', id: currentId, rowCells: rowCells });
         }
     };
@@ -61783,4 +61823,4 @@ root.render((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_redux__
 
 /******/ })()
 ;
-//# sourceMappingURL=main.51a6ac05.js.map
+//# sourceMappingURL=main.bffab317.js.map
