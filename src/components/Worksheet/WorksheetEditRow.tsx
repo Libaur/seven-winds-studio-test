@@ -1,18 +1,21 @@
 import TableCell from '@mui/material/TableCell';
 import TextField from '@mui/material/TextField';
 import { useState } from 'react';
+import { nanoid } from 'nanoid';
 import { useAppDispatch } from 'src/store';
-import { initialRow } from './WorksheetEditRow.service';
+import { initialRow, Row } from './WorksheetEditRow.service';
 
-export default function WorksheetEditRow() {
-   const [rowCells, setRowCells] = useState(initialRow);
+export default function WorksheetEditRow({ changedRow }: { changedRow?: Row }) {
+   const currentRow = changedRow || initialRow;
+   const [rowCells, setRowCells] = useState(currentRow);
+   const currentId = changedRow ? rowCells.id : nanoid();
    const dispatch = useAppDispatch();
 
    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
       if (event.key === 'Enter') {
          event.preventDefault();
-         dispatch({ type: 'SUBMIT_FORM', rowCells: rowCells });
-         setRowCells(initialRow);
+         dispatch({ type: 'SUBMIT_FORM', rowCells: { ...rowCells, id: currentId } });
+         dispatch({ type: 'UPDATE_ROW', id: currentId, rowCells: rowCells });
       }
    };
 
