@@ -1,17 +1,18 @@
-import { useReducer } from 'react';
 import TableCell from '@mui/material/TableCell';
 import TextField from '@mui/material/TextField';
-import { worksheetReducer, initialRow, currentRows } from './WorksheetEditRow.service';
+import { useState } from 'react';
+import { useAppDispatch } from 'src/store';
+import { initialRow } from './WorksheetEditRow.service';
 
 export default function WorksheetEditRow() {
-   const [state, dispatch] = useReducer(worksheetReducer, initialRow);
+   const [rowCells, setRowCells] = useState(initialRow);
+   const dispatch = useAppDispatch();
 
    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
       if (event.key === 'Enter') {
          event.preventDefault();
-         dispatch({ type: 'SUBMIT_FORM' });
-         currentRows.push(state);
-         dispatch({ type: 'RESET_FORM' });
+         dispatch({ type: 'SUBMIT_FORM', rowCells: rowCells });
+         setRowCells(initialRow);
       }
    };
 
@@ -25,9 +26,9 @@ export default function WorksheetEditRow() {
                   borderRadius: '5px'
                }}
                size="small"
-               value={state.rowName}
+               value={rowCells.rowName}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  dispatch({ type: 'UPDATE_FIELD', field: 'rowName', value: e.target.value })
+                  setRowCells({ ...rowCells, rowName: e.target.value })
                }
                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyDown(e)}
                InputProps={{
@@ -39,9 +40,9 @@ export default function WorksheetEditRow() {
             <TextField
                size="small"
                style={{ border: '1px solid #a1a1aa', borderRadius: '5px' }}
-               value={state.salary}
+               value={rowCells.salary.toString()}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  dispatch({ type: 'UPDATE_FIELD', field: 'salary', value: e.target.value })
+                  setRowCells({ ...rowCells, salary: Number(e.target.value) })
                }
                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyDown(e)}
                InputProps={{
@@ -53,9 +54,9 @@ export default function WorksheetEditRow() {
             <TextField
                size="small"
                style={{ border: '1px solid #a1a1aa', borderRadius: '5px' }}
-               value={state.equipmentCosts}
+               value={rowCells.equipmentCosts.toString()}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  dispatch({ type: 'UPDATE_FIELD', field: 'equipmentCosts', value: e.target.value })
+                  setRowCells({ ...rowCells, equipmentCosts: Number(e.target.value) })
                }
                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyDown(e)}
                InputProps={{
@@ -67,9 +68,9 @@ export default function WorksheetEditRow() {
             <TextField
                size="small"
                style={{ border: '1px solid #a1a1aa', borderRadius: '5px' }}
-               value={state.overheads}
+               value={rowCells.overheads.toString()}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  dispatch({ type: 'UPDATE_FIELD', field: 'overheads', value: e.target.value })
+                  setRowCells({ ...rowCells, overheads: Number(e.target.value) })
                }
                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyDown(e)}
                InputProps={{
@@ -81,13 +82,9 @@ export default function WorksheetEditRow() {
             <TextField
                size="small"
                style={{ border: '1px solid #a1a1aa', borderRadius: '5px' }}
-               value={state.estimatedProfit}
+               value={rowCells.estimatedProfit.toString()}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  dispatch({
-                     type: 'UPDATE_FIELD',
-                     field: 'estimatedProfit',
-                     value: e.target.value
-                  })
+                  setRowCells({ ...rowCells, estimatedProfit: Number(e.target.value) })
                }
                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyDown(e)}
                InputProps={{

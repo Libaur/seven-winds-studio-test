@@ -15,22 +15,38 @@ const initialRow = {
    estimatedProfit: 0
 };
 
-const currentRows: typeof initialRow[] = [];
+type Row = typeof initialRow;
+
+const initialState: Row[] = [];
 
 function worksheetReducer(
-   state: typeof initialRow,
-   action: { type: string; field?: string; value?: string }
-): typeof initialRow {
+   state: Row[] = initialState,
+   action: {
+      type: string;
+      field?: string;
+      value?: string;
+      index?: number;
+      rowCells?: Row;
+   }
+): Row[] {
    switch (action.type) {
       case 'UPDATE_FIELD':
-         return { ...state, [action.field!]: action.value! };
+         if (action.index && action.field && action.value) {
+            return state.map((row, index) =>
+               index === action.index ? { ...row, [action.field!]: action.value } : row
+            );
+         }
+         return state;
       case 'SUBMIT_FORM':
+         if (action.rowCells) {
+            return [...state, { ...action.rowCells }];
+         }
          return state;
       case 'RESET_FORM':
-         return initialRow;
+         return initialState;
       default:
          return state;
    }
 }
 
-export { TABLE_HEAD_TITLES, initialRow, currentRows, worksheetReducer };
+export { TABLE_HEAD_TITLES, type Row, initialRow, initialState, worksheetReducer };

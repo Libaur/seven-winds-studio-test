@@ -3,17 +3,19 @@ import { TreeItem2 } from '@mui/x-tree-view/TreeItem2';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import DescriptionIcon from '@mui/icons-material/Description';
 import WorksheetEditRow from './WorksheetEditRow';
-import { TABLE_HEAD_TITLES, currentRows } from './WorksheetEditRow.service';
+import { TABLE_HEAD_TITLES, Row } from './WorksheetEditRow.service';
+import { useAppSelector } from 'src/store';
 import { useEffect, useState } from 'react';
 
 // const id = 128766;
 
 export default function Worksheet() {
-   const [rows, setRows] = useState(currentRows);
+   const worksheetData = useAppSelector((state) => state);
+   const [currentRows, setCurrentRows] = useState<Row[]>([]);
    useEffect(() => {
-      setRows(currentRows)
-   }, [])
-   // const isEdit = true;
+      setCurrentRows(worksheetData);
+   }, [worksheetData]);
+   const isEdit = true;
    return (
       <TableContainer style={{ background: '#323232', borderLeft: '1px solid #a1a1aa' }}>
          <Table>
@@ -27,11 +29,10 @@ export default function Worksheet() {
                </TableRow>
             </TableHead>
             <TableBody>
-               {rows.length > 0 ? (
-                  rows.map((row, rowIndex) => (
+               {!isEdit ? (
+                  currentRows.map((row, rowIndex) => (
                      <TableRow key={rowIndex}>
                         <TableCell>
-                           {/* <RichTreeView /> */}
                            <DescriptionIcon style={{ color: '#7890B2', cursor: 'pointer' }} />
                         </TableCell>
                         {Object.values(row).map((value, cellIndex) => (
