@@ -2,8 +2,9 @@ import { RichTreeView } from '@mui/x-tree-view/RichTreeView';
 import { TreeItem2 } from '@mui/x-tree-view/TreeItem2';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import DescriptionIcon from '@mui/icons-material/Description';
+import DeleteIcon from '@mui/icons-material/Delete';
 import WorksheetEditRow from './WorksheetEditRow';
-import { TABLE_HEAD_TITLES, Row } from './WorksheetEditRow.service';
+import { TABLE_HEAD_TITLES, initialRow } from './WorksheetEditRow.service';
 import { useAppSelector, useAppDispatch } from 'src/store';
 
 // const id = 128766;
@@ -29,10 +30,21 @@ export default function Worksheet() {
                      !row.edited ? (
                         <TableRow
                            key={rowIndex}
-                           onDoubleClick={() => dispatch({ type: 'EDIT_ROW', id: row.id })}
+                           onDoubleClick={() => dispatch({ type: 'ROW_EDITED', id: row.id })}
+                           onMouseEnter={() => dispatch({ type: 'ROW_HOVERED', id: row.id })}
+                           onMouseLeave={() => dispatch({ type: 'ROW_HOVERED_OFF', id: row.id })}
                         >
                            <TableCell>
-                              <DescriptionIcon style={{ color: '#7890B2', cursor: 'pointer' }} />
+                              <DescriptionIcon
+                                 style={{ color: '#7890B2', cursor: 'pointer' }}
+                                 onClick={() => dispatch({ type: 'ROW_SUBMITED', rowCells: initialRow })}
+                              />
+                              {row.hovered && (
+                                 <DeleteIcon
+                                    style={{ color: '#DF4444', cursor: 'pointer' }}
+                                    onClick={() => dispatch({ type: 'ROW_DELETED', id: row.id })}
+                                 />
+                              )}
                            </TableCell>
                            <TableCell key={row.rowName} style={{ color: 'white' }}>
                               {row.rowName}

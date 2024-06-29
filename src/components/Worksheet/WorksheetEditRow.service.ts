@@ -10,11 +10,12 @@ const TABLE_HEAD_TITLES = [
 const initialRow = {
    id: '',
    rowName: '',
-   salary: 0,
-   equipmentCosts: 0,
-   overheads: 0,
-   estimatedProfit: 0,
-   edited: false
+   salary: '0',
+   equipmentCosts: '0',
+   overheads: '0',
+   estimatedProfit: '0',
+   edited: true,
+   hovered: false
 };
 
 type Row = typeof initialRow;
@@ -29,7 +30,8 @@ const mockRows = [
       equipmentCosts: 5686945699.779,
       overheads: 245614235,
       estimatedProfit: 87534754.68,
-      edited: false
+      edited: false,
+      hovered: false
    },
    {
       id: '3435345',
@@ -38,7 +40,8 @@ const mockRows = [
       equipmentCosts: 8757544368,
       overheads: 4363456634,
       estimatedProfit: 241.24235,
-      edited: false
+      edited: false,
+      hovered: false
    },
    {
       id: '6456449',
@@ -47,7 +50,8 @@ const mockRows = [
       equipmentCosts: 568693499779,
       overheads: 2345523,
       estimatedProfit: 2414523.5,
-      edited: false
+      edited: false,
+      hovered: false
    },
    {
       id: '353458',
@@ -56,7 +60,8 @@ const mockRows = [
       equipmentCosts: 875754468,
       overheads: 875725468,
       estimatedProfit: 5686959.9779,
-      edited: false
+      edited: false,
+      hovered: false
    },
    {
       id: '546547',
@@ -65,12 +70,24 @@ const mockRows = [
       equipmentCosts: 875752468,
       overheads: 5686.9599779,
       estimatedProfit: 436342634,
-      edited: false
+      edited: false,
+      hovered: false
    }
 ];
 
+const preparedMockRows: Row[] = mockRows.map((row) => ({
+   id: row.id,
+   rowName: row.rowName,
+   salary: row.salary.toString(),
+   equipmentCosts: row.equipmentCosts.toString(),
+   overheads: row.overheads.toString(),
+   estimatedProfit: row.estimatedProfit.toString(),
+   edited: row.edited,
+   hovered: row.hovered
+}));
+
 function worksheetReducer(
-   state: Row[] = mockRows,
+   state: Row[] = preparedMockRows,
    action: {
       type: string;
       id: string;
@@ -78,9 +95,9 @@ function worksheetReducer(
    }
 ): Row[] {
    switch (action.type) {
-      case 'EDIT_ROW':
+      case 'ROW_EDITED':
          return state.map((row) => (row.id === action.id ? { ...row, edited: true } : row));
-      case 'UPDATE_ROW':
+      case 'ROW_UPDATED':
          if (action.rowCells) {
             return state.map((row) =>
                row.id === action.id
@@ -89,13 +106,17 @@ function worksheetReducer(
             );
          }
          return state;
-      case 'SUBMIT_FORM':
+      case 'ROW_DELETED':
+         return state.filter((row) => row.id !== action.id);
+      case 'ROW_HOVERED':
+         return state.map((row) => (row.id === action.id ? { ...row, hovered: true } : row));
+      case 'ROW_HOVERED_OFF':
+         return state.map((row) => (row.id === action.id ? { ...row, hovered: false } : row));
+      case 'ROW_SUBMITED':
          if (action.rowCells) {
             return [...state, { ...initialRow, ...action.rowCells }];
          }
          return state;
-      case 'RESET_FORM':
-         return initialState;
       default:
          return state;
    }

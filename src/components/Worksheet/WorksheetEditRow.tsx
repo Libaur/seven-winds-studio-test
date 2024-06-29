@@ -14,8 +14,8 @@ export default function WorksheetEditRow({ changedRow }: { changedRow?: Row }) {
    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
       if (event.key === 'Enter') {
          event.preventDefault();
-         !changedRow && dispatch({ type: 'SUBMIT_FORM', rowCells: { ...rowCells, id: currentId } });
-         dispatch({ type: 'UPDATE_ROW', id: currentId, rowCells: rowCells });
+         !changedRow && dispatch({ type: 'ROW_SUBMITED', rowCells: { ...rowCells, id: currentId } });
+         dispatch({ type: 'ROW_UPDATED', id: currentId, rowCells: rowCells });
       }
    };
 
@@ -45,7 +45,7 @@ export default function WorksheetEditRow({ changedRow }: { changedRow?: Row }) {
                style={{ border: '1px solid #a1a1aa', borderRadius: '5px' }}
                value={rowCells.salary.toString()}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  setRowCells({ ...rowCells, salary: Number(e.target.value) })
+                  setRowCells({ ...rowCells, salary: e.target.value.replace(/[^\d.]/g, '') })
                }
                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyDown(e)}
                InputProps={{
@@ -59,7 +59,10 @@ export default function WorksheetEditRow({ changedRow }: { changedRow?: Row }) {
                style={{ border: '1px solid #a1a1aa', borderRadius: '5px' }}
                value={rowCells.equipmentCosts.toString()}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  setRowCells({ ...rowCells, equipmentCosts: Number(e.target.value) })
+                  setRowCells({
+                     ...rowCells,
+                     equipmentCosts: e.target.value.replace(/[^\d.]/g, '')
+                  })
                }
                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyDown(e)}
                InputProps={{
@@ -73,7 +76,7 @@ export default function WorksheetEditRow({ changedRow }: { changedRow?: Row }) {
                style={{ border: '1px solid #a1a1aa', borderRadius: '5px' }}
                value={rowCells.overheads.toString()}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  setRowCells({ ...rowCells, overheads: Number(e.target.value) })
+                  setRowCells({ ...rowCells, overheads: e.target.value.replace(/[^\d.]/g, '') })
                }
                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyDown(e)}
                InputProps={{
@@ -87,7 +90,10 @@ export default function WorksheetEditRow({ changedRow }: { changedRow?: Row }) {
                style={{ border: '1px solid #a1a1aa', borderRadius: '5px' }}
                value={rowCells.estimatedProfit.toString()}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  setRowCells({ ...rowCells, estimatedProfit: Number(e.target.value) })
+                  setRowCells({
+                     ...rowCells,
+                     estimatedProfit: e.target.value.replace(/[^\d.]/g, '')
+                  })
                }
                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyDown(e)}
                InputProps={{
