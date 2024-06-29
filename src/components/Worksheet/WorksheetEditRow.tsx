@@ -43,7 +43,7 @@ export default function WorksheetEditRow({ changedRow }: { changedRow?: Row }) {
             <TextField
                size="small"
                style={{ border: '1px solid #a1a1aa', borderRadius: '5px' }}
-               value={rowCells.salary.toString()}
+               value={rowCells.salary}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setRowCells({ ...rowCells, salary: e.target.value.replace(/[^\d.]/g, '') })
                }
@@ -57,7 +57,7 @@ export default function WorksheetEditRow({ changedRow }: { changedRow?: Row }) {
             <TextField
                size="small"
                style={{ border: '1px solid #a1a1aa', borderRadius: '5px' }}
-               value={rowCells.equipmentCosts.toString()}
+               value={rowCells.equipmentCosts}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setRowCells({
                      ...rowCells,
@@ -74,7 +74,7 @@ export default function WorksheetEditRow({ changedRow }: { changedRow?: Row }) {
             <TextField
                size="small"
                style={{ border: '1px solid #a1a1aa', borderRadius: '5px' }}
-               value={rowCells.overheads.toString()}
+               value={rowCells.overheads}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setRowCells({ ...rowCells, overheads: e.target.value.replace(/[^\d.]/g, '') })
                }
@@ -88,7 +88,7 @@ export default function WorksheetEditRow({ changedRow }: { changedRow?: Row }) {
             <TextField
                size="small"
                style={{ border: '1px solid #a1a1aa', borderRadius: '5px' }}
-               value={rowCells.estimatedProfit.toString()}
+               value={rowCells.estimatedProfit}
                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setRowCells({
                      ...rowCells,
