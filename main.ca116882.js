@@ -146,9 +146,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.interactive-component {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/SidebarItem/Sidebaritem.style.scss":
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/SidebarItem/SidebarItem.style.scss":
 /*!****************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/SidebarItem/Sidebaritem.style.scss ***!
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/SidebarItem/SidebarItem.style.scss ***!
   \****************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -178,7 +178,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.interactive-component {
 
 .item-marked {
   background-color: #a1a1aa;
-}`, "",{"version":3,"sources":["webpack://./src/App.style.scss","webpack://./src/components/SidebarItem/Sidebaritem.style.scss"],"names":[],"mappings":"AAGA;EACI,WAAA;EACA,yBALG;EAMH,gCAAA;ACFJ;;AAFA;EACI,mBAAA;EACA,YAAA;AAKJ;;AAFA;EACI,yBDPQ;ACYZ","sourcesContent":["$main: #323232;\r\n$secondary: #a1a1aa;\r\n\r\n.interactive-component {\r\n    width: 100%;\r\n    background-color: $main;\r\n    border-left: 0.5px solid $secondary;\r\n}\r\n","@import '../../App.style.scss';\r\n\r\n.sidebar-item {\r\n    margin: 0 8px 0 8px;\r\n    color: white;\r\n}\r\n\r\n.item-marked {\r\n    background-color: $secondary;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/App.style.scss","webpack://./src/components/SidebarItem/SidebarItem.style.scss"],"names":[],"mappings":"AAGA;EACI,WAAA;EACA,yBALG;EAMH,gCAAA;ACFJ;;AAFA;EACI,mBAAA;EACA,YAAA;AAKJ;;AAFA;EACI,yBDPQ;ACYZ","sourcesContent":["$main: #323232;\r\n$secondary: #a1a1aa;\r\n\r\n.interactive-component {\r\n    width: 100%;\r\n    background-color: $main;\r\n    border-left: 0.5px solid $secondary;\r\n}\r\n","@import '../../App.style.scss';\r\n\r\n.sidebar-item {\r\n    margin: 0 8px 0 8px;\r\n    color: white;\r\n}\r\n\r\n.item-marked {\r\n    background-color: $secondary;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -347,9 +347,9 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ "./src/components/SidebarItem/Sidebaritem.style.scss":
+/***/ "./src/components/SidebarItem/SidebarItem.style.scss":
 /*!***********************************************************!*\
-  !*** ./src/components/SidebarItem/Sidebaritem.style.scss ***!
+  !*** ./src/components/SidebarItem/SidebarItem.style.scss ***!
   \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -369,7 +369,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Sidebaritem_style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./Sidebaritem.style.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/SidebarItem/Sidebaritem.style.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_SidebarItem_style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./SidebarItem.style.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/SidebarItem/SidebarItem.style.scss");
 
       
       
@@ -391,12 +391,12 @@ options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWi
 options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
 options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Sidebaritem_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_SidebarItem_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
 
 
 
 
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Sidebaritem_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Sidebaritem_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Sidebaritem_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_SidebarItem_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_SidebarItem_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_SidebarItem_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -54220,7 +54220,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ SidebarItem)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _Sidebaritem_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sidebaritem.style.scss */ "./src/components/SidebarItem/Sidebaritem.style.scss");
+/* harmony import */ var _SidebarItem_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SidebarItem.style.scss */ "./src/components/SidebarItem/SidebarItem.style.scss");
 /* harmony import */ var _mui_material_ListItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/material/ListItem */ "./node_modules/@mui/material/ListItem/ListItem.js");
 /* harmony import */ var _mui_material_ListItemButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material/ListItemButton */ "./node_modules/@mui/material/ListItemButton/ListItemButton.js");
 /* harmony import */ var _mui_material_ListItemIcon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material/ListItemIcon */ "./node_modules/@mui/material/ListItemIcon/ListItemIcon.js");
@@ -54289,11 +54289,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// const id = 128766;
 function Worksheet() {
     const worksheetData = (0,src_store__WEBPACK_IMPORTED_MODULE_3__.useAppSelector)((state) => state);
     const dispatch = (0,src_store__WEBPACK_IMPORTED_MODULE_3__.useAppDispatch)();
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], { style: { background: '#323232', borderLeft: '1px solid #a1a1aa' }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { children: _WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_2__.TABLE_HEAD_TITLES.map((title, index) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: '#a1a1aa' }, children: title }, index))) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], { children: worksheetData.length > 0 ? (worksheetData.map((row, rowIndex) => !row.edited ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { onDoubleClick: () => dispatch({ type: 'ROW_EDITED', id: row.id }), onMouseEnter: () => dispatch({ type: 'ROW_HOVERED', id: row.id }), onMouseLeave: () => dispatch({ type: 'ROW_HOVERED_OFF', id: row.id }), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Description__WEBPACK_IMPORTED_MODULE_10__["default"], { style: { color: '#7890B2', cursor: 'pointer' }, onClick: () => dispatch({ type: 'ROW_SUBMITED', rowCells: _WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_2__.initialRow }) }), row.hovered && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_11__["default"], { style: { color: '#DF4444', cursor: 'pointer' }, onClick: () => dispatch({ type: 'ROW_DELETED', id: row.id }) }))] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: row.rowName }, row.rowName), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: row.salary }, row.salary), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: row.equipmentCosts }, row.equipmentCosts), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: row.overheads }, row.overheads), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: row.estimatedProfit }, row.estimatedProfit)] }, rowIndex)) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetEditRow__WEBPACK_IMPORTED_MODULE_1__["default"], { changedRow: row })] })))) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetEditRow__WEBPACK_IMPORTED_MODULE_1__["default"], {})] })) })] }) }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], { style: { background: '#323232', borderLeft: '1px solid #a1a1aa' }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { children: _WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_2__.TABLE_HEAD_TITLES.map((title, index) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: '#a1a1aa' }, children: title }, index))) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], { children: worksheetData.length > 0 ? (worksheetData.map((row, rowIndex) => !row.edited ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { onDoubleClick: () => dispatch({ type: 'ROW_EDITED', id: row.id }), onMouseEnter: () => dispatch({ type: 'ROW_HOVERED', id: row.id }), onMouseLeave: () => dispatch({ type: 'ROW_HOVERED_OFF', id: row.id }), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Description__WEBPACK_IMPORTED_MODULE_10__["default"], { style: { color: '#7890B2', cursor: 'pointer' }, onClick: () => dispatch({ type: 'ROW_SUBMITED', id: row.id }) }), row.hovered && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_11__["default"], { style: { color: '#DF4444', cursor: 'pointer' }, onClick: () => dispatch({ type: 'ROW_DELETED', id: row.id }) }))] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: row.rowName }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: row.salary }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: row.equipmentCosts }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: row.overheads }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: row.estimatedProfit })] }, rowIndex), row.child &&
+                                row.child.map((childRow, childIndex) => !childRow.edited ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { onDoubleClick: () => dispatch({ type: 'ROW_EDITED', id: childRow.id }), onMouseEnter: () => dispatch({ type: 'ROW_HOVERED', id: childRow.id }), onMouseLeave: () => dispatch({ type: 'ROW_HOVERED_OFF', id: childRow.id }), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { width: '100px', minWidth: '100px' }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { display: 'flex', alignItems: 'center' }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Description__WEBPACK_IMPORTED_MODULE_10__["default"], { style: { marginLeft: '15px', color: '#7890B2', cursor: 'pointer' }, onClick: () => dispatch({ type: 'ROW_SUBMITED', id: childRow.id }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_11__["default"], { style: {
+                                                            color: childRow.hovered ? '#DF4444' : 'transparent',
+                                                            cursor: 'pointer'
+                                                        }, onClick: () => dispatch({ type: 'ROW_DELETED', id: childRow.id }) })] }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: childRow.rowName }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: childRow.salary }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: childRow.equipmentCosts }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: childRow.overheads }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: childRow.estimatedProfit })] }, childIndex)) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetEditRow__WEBPACK_IMPORTED_MODULE_1__["default"], { changedRow: childRow })] })))] })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetEditRow__WEBPACK_IMPORTED_MODULE_1__["default"], { changedRow: row })] })))) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetEditRow__WEBPACK_IMPORTED_MODULE_1__["default"], {})] })) })] }) }));
 }
 
 
@@ -54312,6 +54315,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   initialState: () => (/* binding */ initialState),
 /* harmony export */   worksheetReducer: () => (/* binding */ worksheetReducer)
 /* harmony export */ });
+/* harmony import */ var nanoid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! nanoid */ "./node_modules/nanoid/index.browser.js");
+
 const TABLE_HEAD_TITLES = [
     'Уровень',
     'Наименование работ',
@@ -54328,7 +54333,8 @@ const initialRow = {
     overheads: '0',
     estimatedProfit: '0',
     edited: true,
-    hovered: false
+    hovered: false,
+    child: []
 };
 const initialState = [];
 const mockRows = [
@@ -54340,27 +54346,31 @@ const mockRows = [
         overheads: 245614235,
         estimatedProfit: 87534754.68,
         edited: false,
-        hovered: false
-    },
-    {
-        id: '3435345',
-        rowName: 'Системный отстой',
-        salary: 568699319779,
-        equipmentCosts: 8757544368,
-        overheads: 4363456634,
-        estimatedProfit: 241.24235,
-        edited: false,
-        hovered: false
-    },
-    {
-        id: '6456449',
-        rowName: 'Маленький бизнес большие возможности',
-        salary: 4363463434,
-        equipmentCosts: 568693499779,
-        overheads: 2345523,
-        estimatedProfit: 2414523.5,
-        edited: false,
-        hovered: false
+        hovered: false,
+        child: [
+            {
+                id: '3435345',
+                rowName: 'Системный отстой',
+                salary: 568699319779,
+                equipmentCosts: 8757544368,
+                overheads: 4363456634,
+                estimatedProfit: 241.24235,
+                edited: false,
+                hovered: false,
+                child: []
+            },
+            {
+                id: '6456449',
+                rowName: 'Маленький бизнес большие возможности',
+                salary: 4363463434,
+                equipmentCosts: 568693499779,
+                overheads: 2345523,
+                estimatedProfit: 2414523.5,
+                edited: false,
+                hovered: false,
+                child: []
+            }
+        ]
     },
     {
         id: '353458',
@@ -54370,7 +54380,8 @@ const mockRows = [
         overheads: 875725468,
         estimatedProfit: 5686959.9779,
         edited: false,
-        hovered: false
+        hovered: false,
+        child: []
     },
     {
         id: '546547',
@@ -54380,7 +54391,8 @@ const mockRows = [
         overheads: 5686.9599779,
         estimatedProfit: 436342634,
         edited: false,
-        hovered: false
+        hovered: false,
+        child: []
     }
 ];
 const preparedMockRows = mockRows.map((row) => ({
@@ -54391,29 +54403,86 @@ const preparedMockRows = mockRows.map((row) => ({
     overheads: row.overheads.toString(),
     estimatedProfit: row.estimatedProfit.toString(),
     edited: row.edited,
-    hovered: row.hovered
+    hovered: row.hovered,
+    child: row.child.length
+        ? row.child.map((childRow) => ({
+            id: childRow.id,
+            rowName: childRow.rowName,
+            salary: childRow.salary.toString(),
+            equipmentCosts: childRow.equipmentCosts.toString(),
+            overheads: childRow.overheads.toString(),
+            estimatedProfit: childRow.estimatedProfit.toString(),
+            edited: childRow.edited,
+            hovered: childRow.hovered,
+            child: []
+        }))
+        : []
 }));
 function worksheetReducer(state = preparedMockRows, action) {
     switch (action.type) {
         case 'ROW_EDITED':
-            return state.map((row) => (row.id === action.id ? Object.assign(Object.assign({}, row), { edited: true }) : row));
+            return state.map((row) => row.id === action.id
+                ? Object.assign(Object.assign({}, row), { edited: true }) : row.child
+                ? Object.assign(Object.assign({}, row), { child: row.child.map((childRow) => childRow.id === action.id ? Object.assign(Object.assign({}, childRow), { edited: true }) : childRow) }) : row);
         case 'ROW_UPDATED':
             if (action.rowCells) {
                 return state.map((row) => row.id === action.id
-                    ? Object.assign(Object.assign(Object.assign({}, row), action.rowCells), { id: action.id, edited: false }) : row);
+                    ? Object.assign(Object.assign(Object.assign({}, row), action.rowCells), { id: action.id, edited: false }) : row.child
+                    ? Object.assign(Object.assign({}, row), { child: row.child.map((childRow) => childRow.id === action.id
+                            ? Object.assign(Object.assign(Object.assign({}, row), action.rowCells), { id: action.id, edited: false }) : childRow) }) : row);
             }
             return state;
         case 'ROW_DELETED':
-            return state.filter((row) => row.id !== action.id);
+            return state.flatMap((row) => {
+                if (row.id === action.id) {
+                    return [];
+                }
+                else if (row.child) {
+                    return [
+                        Object.assign(Object.assign({}, row), { child: row.child.flatMap((childRow) => {
+                                if (childRow.id === action.id) {
+                                    return [];
+                                }
+                                else {
+                                    return [childRow];
+                                }
+                            }) })
+                    ];
+                }
+                else {
+                    return [row];
+                }
+            });
         case 'ROW_HOVERED':
-            return state.map((row) => (row.id === action.id ? Object.assign(Object.assign({}, row), { hovered: true }) : row));
+            return state.map((row) => row.id === action.id
+                ? Object.assign(Object.assign({}, row), { hovered: true }) : row.child
+                ? Object.assign(Object.assign({}, row), { child: row.child.map((childRow) => childRow.id === action.id ? Object.assign(Object.assign({}, childRow), { hovered: true }) : childRow) }) : row);
         case 'ROW_HOVERED_OFF':
-            return state.map((row) => (row.id === action.id ? Object.assign(Object.assign({}, row), { hovered: false }) : row));
+            return state.map((row) => row.id === action.id
+                ? Object.assign(Object.assign({}, row), { hovered: false }) : row.child
+                ? Object.assign(Object.assign({}, row), { child: row.child.map((childRow) => childRow.id === action.id ? Object.assign(Object.assign({}, childRow), { hovered: false }) : childRow) }) : row);
         case 'ROW_SUBMITED':
             if (action.rowCells) {
-                return [...state, Object.assign(Object.assign({}, initialRow), action.rowCells)];
+                return [...state, Object.assign(Object.assign(Object.assign({}, initialRow), action.rowCells), { edited: false, id: (0,nanoid__WEBPACK_IMPORTED_MODULE_0__.nanoid)() })];
             }
-            return state;
+            else if (action.id) {
+                return state.map((row) => {
+                    if (row.id === action.id) {
+                        return Object.assign(Object.assign({}, row), { child: [...row.child, Object.assign(Object.assign({}, initialRow), { id: (0,nanoid__WEBPACK_IMPORTED_MODULE_0__.nanoid)() })] });
+                    }
+                    else {
+                        return Object.assign(Object.assign({}, row), { child: row.child.map((childRow) => {
+                                if (childRow.id === action.id) {
+                                    return Object.assign(Object.assign({}, childRow), { child: [...childRow.child, Object.assign(Object.assign({}, initialRow), { id: (0,nanoid__WEBPACK_IMPORTED_MODULE_0__.nanoid)() })] });
+                                }
+                                else {
+                                    return childRow;
+                                }
+                            }) });
+                    }
+                });
+            }
+            return [...state, Object.assign(Object.assign({}, initialRow), { id: (0,nanoid__WEBPACK_IMPORTED_MODULE_0__.nanoid)() })];
         default:
             return state;
     }
@@ -54466,13 +54535,13 @@ function WorksheetEditRow({ changedRow }) {
                         borderRadius: '5px'
                     }, size: "small", value: rowCells.rowName, onChange: (e) => setRowCells(Object.assign(Object.assign({}, rowCells), { rowName: e.target.value })), onKeyDown: (e) => handleKeyDown(e), InputProps: {
                         style: { color: '#a1a1aa' }
-                    } }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], { size: "small", style: { border: '1px solid #a1a1aa', borderRadius: '5px' }, value: rowCells.salary.toString(), onChange: (e) => setRowCells(Object.assign(Object.assign({}, rowCells), { salary: e.target.value.replace(/[^\d.]/g, '') })), onKeyDown: (e) => handleKeyDown(e), InputProps: {
+                    } }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], { size: "small", style: { border: '1px solid #a1a1aa', borderRadius: '5px' }, value: rowCells.salary, onChange: (e) => setRowCells(Object.assign(Object.assign({}, rowCells), { salary: e.target.value.replace(/[^\d.]/g, '') })), onKeyDown: (e) => handleKeyDown(e), InputProps: {
                         style: { color: '#a1a1aa' }
-                    } }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], { size: "small", style: { border: '1px solid #a1a1aa', borderRadius: '5px' }, value: rowCells.equipmentCosts.toString(), onChange: (e) => setRowCells(Object.assign(Object.assign({}, rowCells), { equipmentCosts: e.target.value.replace(/[^\d.]/g, '') })), onKeyDown: (e) => handleKeyDown(e), InputProps: {
+                    } }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], { size: "small", style: { border: '1px solid #a1a1aa', borderRadius: '5px' }, value: rowCells.equipmentCosts, onChange: (e) => setRowCells(Object.assign(Object.assign({}, rowCells), { equipmentCosts: e.target.value.replace(/[^\d.]/g, '') })), onKeyDown: (e) => handleKeyDown(e), InputProps: {
                         style: { color: '#a1a1aa' }
-                    } }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], { size: "small", style: { border: '1px solid #a1a1aa', borderRadius: '5px' }, value: rowCells.overheads.toString(), onChange: (e) => setRowCells(Object.assign(Object.assign({}, rowCells), { overheads: e.target.value.replace(/[^\d.]/g, '') })), onKeyDown: (e) => handleKeyDown(e), InputProps: {
+                    } }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], { size: "small", style: { border: '1px solid #a1a1aa', borderRadius: '5px' }, value: rowCells.overheads, onChange: (e) => setRowCells(Object.assign(Object.assign({}, rowCells), { overheads: e.target.value.replace(/[^\d.]/g, '') })), onKeyDown: (e) => handleKeyDown(e), InputProps: {
                         style: { color: '#a1a1aa' }
-                    } }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], { size: "small", style: { border: '1px solid #a1a1aa', borderRadius: '5px' }, value: rowCells.estimatedProfit.toString(), onChange: (e) => setRowCells(Object.assign(Object.assign({}, rowCells), { estimatedProfit: e.target.value.replace(/[^\d.]/g, '') })), onKeyDown: (e) => handleKeyDown(e), InputProps: {
+                    } }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], { size: "small", style: { border: '1px solid #a1a1aa', borderRadius: '5px' }, value: rowCells.estimatedProfit, onChange: (e) => setRowCells(Object.assign(Object.assign({}, rowCells), { estimatedProfit: e.target.value.replace(/[^\d.]/g, '') })), onKeyDown: (e) => handleKeyDown(e), InputProps: {
                         style: { color: '#a1a1aa' }
                     } }) })] }));
 }
@@ -61867,4 +61936,4 @@ root.render((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_redux__
 
 /******/ })()
 ;
-//# sourceMappingURL=main.47efbfc9.js.map
+//# sourceMappingURL=main.ca116882.js.map
