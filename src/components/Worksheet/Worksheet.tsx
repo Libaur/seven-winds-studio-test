@@ -1,112 +1,141 @@
-import { RichTreeView } from '@mui/x-tree-view/RichTreeView';
-import { TreeItem2 } from '@mui/x-tree-view/TreeItem2';
+import './Worksheet.style.scss';
+import React, { useEffect, useState } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import DescriptionIcon from '@mui/icons-material/Description';
 import DeleteIcon from '@mui/icons-material/Delete';
 import WorksheetEditRow from './WorksheetEditRow';
-import { TABLE_HEAD_TITLES, initialRow } from './WorksheetEditRow.service';
+import { TABLE_HEAD_TITLES, ROW_INITIAL_VALUES } from './WorksheetEditRow.service';
 import { useAppSelector, useAppDispatch } from 'src/store';
+import { fetchRowsList, createRow, deleteRow } from 'src/api';
 
 export default function Worksheet() {
-  const worksheetData = useAppSelector((state) => state);
   const dispatch = useAppDispatch();
+  const treeRows = useAppSelector((state) => state.rows);
+  const [editedRow, setEditedRows] = useState<number | null>(null);
+  const [hoveredRows, setHoveredRows] = useState<number[]>([]);
+  const lastCreatedRowId = useAppSelector((state) => state.lastCreatedRowId);
+
+  useEffect(() => {
+    dispatch(fetchRowsList());
+  });
+
+  useEffect(() => {
+    lastCreatedRowId && handleEditRow(lastCreatedRowId);
+  }, [lastCreatedRowId]);
+
+  const handleCreateRow = (id: number) => {
+    dispatch(
+      createRow({
+        outlayRowRequest: { ...ROW_INITIAL_VALUES, parentId: id }
+      })
+    );
+  };
+
+  const handleEditRow = (id: number) => {
+    setEditedRows(id);
+  };
+
+  const handleUpdateRow = () => {
+    setEditedRows(null);
+  };
+
+  const handleDeleteRow = (rowId: number) => {
+    dispatch(deleteRow({ rowId }));
+  };
+
+  const handleMouseEnter = (id: number) => {
+    setHoveredRows((ids) => [...ids, id]);
+  };
+
+  const handleMouseLeave = (id: number) => {
+    setHoveredRows((ids) => ids.filter((rowId) => rowId !== id));
+  };
 
   return (
-    <TableContainer style={{ background: '#323232', borderLeft: '1px solid #a1a1aa' }}>
+    <TableContainer className="table-container">
       <Table>
         <TableHead>
           <TableRow>
             {TABLE_HEAD_TITLES.map((title, index) => (
-              <TableCell key={index} style={{ color: '#a1a1aa' }}>
+              <TableCell key={index} sx={{ color: '#a1a1aa' }}>
                 {title}
               </TableCell>
             ))}
           </TableRow>
         </TableHead>
         <TableBody>
-          {worksheetData.length > 0 ? (
-            worksheetData.map((row, rowIndex) =>
-              !row.edited ? (
-                <>
+          {treeRows.length > 0 ? (
+            treeRows.map((row, rowIndex) => (
+              <React.Fragment key={rowIndex}>
+                {row.id !== null && editedRow === row.id ? (
+                  <TableRow>
+                    <TableCell></TableCell>
+                    <WorksheetEditRow updatedRow={row} updateHandler={handleUpdateRow} />
+                  </TableRow>
+                ) : (
                   <TableRow
-                    key={rowIndex}
-                    onDoubleClick={() => dispatch({ type: 'ROW_EDITED', id: row.id })}
-                    onMouseEnter={() => dispatch({ type: 'ROW_HOVERED', id: row.id })}
-                    onMouseLeave={() => dispatch({ type: 'ROW_HOVERED_OFF', id: row.id })}
+                    onDoubleClick={() => handleEditRow(row.id)}
+                    onMouseEnter={() => handleMouseEnter(row.id)}
+                    onMouseLeave={() => handleMouseLeave(row.id)}
                   >
                     <TableCell>
                       <DescriptionIcon
-                        style={{ color: '#7890B2', cursor: 'pointer' }}
-                        onClick={() => dispatch({ type: 'ROW_SUBMITED', id: row.id })}
+                        className="description-icon"
+                        onClick={() => handleCreateRow(row.id)}
                       />
-                      {row.hovered && (
-                        <DeleteIcon
-                          style={{ color: '#DF4444', cursor: 'pointer' }}
-                          onClick={() => dispatch({ type: 'ROW_DELETED', id: row.id })}
-                        />
-                      )}
+                      <DeleteIcon
+                        className={`delete-icon ${hoveredRows.includes(row.id) ? 'hovered' : ''}`}
+                        onClick={() => handleDeleteRow(row.id)}
+                      />
                     </TableCell>
-                    <TableCell style={{ color: 'white' }}>{row.rowName}</TableCell>
-                    <TableCell style={{ color: 'white' }}>{row.salary}</TableCell>
-                    <TableCell style={{ color: 'white' }}>{row.equipmentCosts}</TableCell>
-                    <TableCell style={{ color: 'white' }}>{row.overheads}</TableCell>
-                    <TableCell style={{ color: 'white' }}>{row.estimatedProfit}</TableCell>
+                    <TableCell>{row.rowName}</TableCell>
+                    <TableCell>{row.salary}</TableCell>
+                    <TableCell>{row.equipmentCosts}</TableCell>
+                    <TableCell>{row.overheads}</TableCell>
+                    <TableCell>{row.estimatedProfit}</TableCell>
                   </TableRow>
-                  {row.child &&
-                    row.child.map((childRow, childIndex) =>
-                      !childRow.edited ? (
+                )}
+                {row.child &&
+                  row.child.map((childRow, childIndex) => (
+                    <React.Fragment key={childIndex}>
+                      {editedRow === childRow.id ? (
+                        <TableRow>
+                          <TableCell></TableCell>
+                          <WorksheetEditRow updatedRow={childRow} updateHandler={handleUpdateRow} />
+                        </TableRow>
+                      ) : (
                         <TableRow
-                          key={childIndex}
-                          onDoubleClick={() => dispatch({ type: 'ROW_EDITED', id: childRow.id })}
-                          onMouseEnter={() => dispatch({ type: 'ROW_HOVERED', id: childRow.id })}
-                          onMouseLeave={() =>
-                            dispatch({ type: 'ROW_HOVERED_OFF', id: childRow.id })
-                          }
+                          onDoubleClick={() => handleEditRow(childRow.id)}
+                          onMouseEnter={() => handleMouseEnter(childRow.id)}
+                          onMouseLeave={() => handleMouseLeave(childRow.id)}
                         >
-                          <TableCell style={{ width: '100px', minWidth: '100px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                          <TableCell className="table-cell-child">
+                            <div className="flex-center">
                               <DescriptionIcon
-                                style={{ marginLeft: '15px', color: '#7890B2', cursor: 'pointer' }}
-                                onClick={() => dispatch({ type: 'ROW_SUBMITED', id: childRow.id })}
+                                className="description-icon icon-child"
+                                onClick={() => handleCreateRow(childRow.id)}
                               />
                               <DeleteIcon
-                                style={{
-                                  color: childRow.hovered ? '#DF4444' : 'transparent',
-                                  cursor: 'pointer'
-                                }}
-                                onClick={() => dispatch({ type: 'ROW_DELETED', id: childRow.id })}
+                                className={`delete-icon ${hoveredRows.includes(childRow.id) ? 'hovered' : ''}`}
+                                onClick={() => handleDeleteRow(childRow.id)}
                               />
                             </div>
                           </TableCell>
-                          <TableCell style={{ color: 'white' }}>{childRow.rowName}</TableCell>
-                          <TableCell style={{ color: 'white' }}>{childRow.salary}</TableCell>
-                          <TableCell style={{ color: 'white' }}>
-                            {childRow.equipmentCosts}
-                          </TableCell>
-                          <TableCell style={{ color: 'white' }}>{childRow.overheads}</TableCell>
-                          <TableCell style={{ color: 'white' }}>
-                            {childRow.estimatedProfit}
-                          </TableCell>
+                          <TableCell>{childRow.rowName}</TableCell>
+                          <TableCell>{childRow.salary}</TableCell>
+                          <TableCell>{childRow.equipmentCosts}</TableCell>
+                          <TableCell>{childRow.overheads}</TableCell>
+                          <TableCell>{childRow.estimatedProfit}</TableCell>
                         </TableRow>
-                      ) : (
-                        <TableRow>
-                          <TableCell></TableCell>
-                          <WorksheetEditRow changedRow={childRow} />
-                        </TableRow>
-                      )
-                    )}
-                </>
-              ) : (
-                <TableRow>
-                  <TableCell></TableCell>
-                  <WorksheetEditRow changedRow={row} />
-                </TableRow>
-              )
-            )
+                      )}
+                    </React.Fragment>
+                  ))}
+              </React.Fragment>
+            ))
           ) : (
             <TableRow>
               <TableCell></TableCell>
-              <WorksheetEditRow />
+              <WorksheetEditRow updateHandler={handleUpdateRow} />
             </TableRow>
           )}
         </TableBody>

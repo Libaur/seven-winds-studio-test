@@ -7,7 +7,7 @@
 }
 
 @mixin sidebar-border {
-    border: 1px solid $secondary;
+    border: 0.1px solid $secondary;
 }
 
 .sidebar {
@@ -39,4 +39,5 @@
 .arrow-icon {
     margin-left: auto;
     color: white;
+    cursor: pointer;
 }

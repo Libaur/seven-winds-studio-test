@@ -1,0 +1,36 @@
+.row-name {
+  width: 250px;
+}
+
+.table-container {
+  background: #252525;
+  border-left: 0.1px solid #a1a1aa;
+}
+
+.description-icon {
+  color: #7890b2;
+  cursor: pointer;
+}
+
+.delete-icon {
+  cursor: pointer;
+  color: transparent;
+
+  &.hovered {
+    color: #df4444;
+  }
+}
+
+.table-cell-child {
+  width: 100px;
+  min-width: 100px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.icon-child {
+  margin-left: 15px;
+}

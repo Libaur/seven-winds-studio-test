@@ -1,10 +1,13 @@
 import { TypedUseSelectorHook, useSelector, useDispatch } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import { worksheetReducer } from './components/Worksheet/WorksheetEditRow.service';
+import { setupListeners } from '@reduxjs/toolkit/query';
+import rowsReducer from './rows-slice';
 
 const store = configureStore({
-   reducer: worksheetReducer
+  reducer: rowsReducer
 });
+
+setupListeners(store.dispatch);
 
 type AppState = ReturnType<typeof store.getState>;
 type AppDispatch = typeof store.dispatch;
