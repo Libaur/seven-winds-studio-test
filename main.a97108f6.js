@@ -115,19 +115,19 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.interactive-component {
   background-color: #323232;
   color: #a1a1aa;
   width: 15.4%;
-  border: 1px solid #a1a1aa;
+  border: 0.1px solid #a1a1aa;
 }
 
 .subheader {
   background-color: #323232;
   color: #a1a1aa;
   width: 77%;
-  border: 1px solid #a1a1aa;
+  border: 0.1px solid #a1a1aa;
   border-left: none;
   color: white;
 }
 .subheader h3 {
-  border: 1px solid #a1a1aa;
+  border: 0.1px solid #a1a1aa;
   border-left: none;
   height: 100%;
   padding-right: 25px;
@@ -139,7 +139,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.interactive-component {
 .arrow-icon {
   margin-left: auto;
   color: white;
-}`, "",{"version":3,"sources":["webpack://./src/App.style.scss","webpack://./src/components/Layout/Layout.style.scss"],"names":[],"mappings":"AAGA;EACI,WAAA;EACA,yBALG;EAMH,gCAAA;ACFJ;;AAQA;EATI,yBDHG;ECIH,cDHQ;ECIR,YAQ4B;AAHhC;;AAMA;EAbI,yBDHG;ECIH,cDHQ;ECIR,YAY4B;EAR5B,yBAAA;AAQJ;;AAIA;EAlBI,yBDHG;ECIH,cDHQ;ECIR,UAiB4B;EAb5B,yBAAA;EAeA,iBAAA;EACA,YAAA;AACJ;AACI;EAlBA,yBAAA;EAoBI,iBAAA;EACA,YAAA;EACA,mBAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;AACR;;AAGA;EACI,iBAAA;EACA,YAAA;AAAJ","sourcesContent":["$main: #323232;\r\n$secondary: #a1a1aa;\r\n\r\n.interactive-component {\r\n    width: 100%;\r\n    background-color: $main;\r\n    border-left: 0.5px solid $secondary;\r\n}\r\n","@import '../../App.style.scss';\r\n\r\n@mixin sidebar-main-specs($width) {\r\n    background-color: $main;\r\n    color: $secondary;\r\n    width: $width;\r\n}\r\n\r\n@mixin sidebar-border {\r\n    border: 1px solid $secondary;\r\n}\r\n\r\n.sidebar {\r\n    @include sidebar-main-specs(240px);\r\n}\r\n\r\n.project-title {\r\n    @include sidebar-main-specs(15.4%);\r\n    @include sidebar-border;\r\n}\r\n\r\n.subheader {\r\n    @include sidebar-main-specs(77%);\r\n    @include sidebar-border;\r\n    border-left: none;\r\n    color: white;\r\n\r\n    h3 {\r\n        @include sidebar-border;\r\n        border-left: none;\r\n        height: 100%;\r\n        padding-right: 25px;\r\n        display: flex;\r\n        align-items: center;\r\n        justify-content: center;\r\n    }\r\n}\r\n\r\n.arrow-icon {\r\n    margin-left: auto;\r\n    color: white;\r\n}\r\n"],"sourceRoot":""}]);
+  cursor: pointer;
+}`, "",{"version":3,"sources":["webpack://./src/App.style.scss","webpack://./src/components/Layout/Layout.style.scss"],"names":[],"mappings":"AAGA;EACI,WAAA;EACA,yBALG;EAMH,gCAAA;ACFJ;;AAQA;EATI,yBDHG;ECIH,cDHQ;ECIR,YAQ4B;AAHhC;;AAMA;EAbI,yBDHG;ECIH,cDHQ;ECIR,YAY4B;EAR5B,2BAAA;AAQJ;;AAIA;EAlBI,yBDHG;ECIH,cDHQ;ECIR,UAiB4B;EAb5B,2BAAA;EAeA,iBAAA;EACA,YAAA;AACJ;AACI;EAlBA,2BAAA;EAoBI,iBAAA;EACA,YAAA;EACA,mBAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;AACR;;AAGA;EACI,iBAAA;EACA,YAAA;EACA,eAAA;AAAJ","sourcesContent":["$main: #323232;\r\n$secondary: #a1a1aa;\r\n\r\n.interactive-component {\r\n    width: 100%;\r\n    background-color: $main;\r\n    border-left: 0.5px solid $secondary;\r\n}\r\n","@import '../../App.style.scss';\r\n\r\n@mixin sidebar-main-specs($width) {\r\n    background-color: $main;\r\n    color: $secondary;\r\n    width: $width;\r\n}\r\n\r\n@mixin sidebar-border {\r\n    border: 0.1px solid $secondary;\r\n}\r\n\r\n.sidebar {\r\n    @include sidebar-main-specs(240px);\r\n}\r\n\r\n.project-title {\r\n    @include sidebar-main-specs(15.4%);\r\n    @include sidebar-border;\r\n}\r\n\r\n.subheader {\r\n    @include sidebar-main-specs(77%);\r\n    @include sidebar-border;\r\n    border-left: none;\r\n    color: white;\r\n\r\n    h3 {\r\n        @include sidebar-border;\r\n        border-left: none;\r\n        height: 100%;\r\n        padding-right: 25px;\r\n        display: flex;\r\n        align-items: center;\r\n        justify-content: center;\r\n    }\r\n}\r\n\r\n.arrow-icon {\r\n    margin-left: auto;\r\n    color: white;\r\n    cursor: pointer;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -173,12 +174,71 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.interactive-component {
 
 .sidebar-item {
   margin: 0 8px 0 8px;
-  color: white;
 }
 
 .item-marked {
   background-color: #a1a1aa;
-}`, "",{"version":3,"sources":["webpack://./src/App.style.scss","webpack://./src/components/SidebarItem/SidebarItem.style.scss"],"names":[],"mappings":"AAGA;EACI,WAAA;EACA,yBALG;EAMH,gCAAA;ACFJ;;AAFA;EACI,mBAAA;EACA,YAAA;AAKJ;;AAFA;EACI,yBDPQ;ACYZ","sourcesContent":["$main: #323232;\r\n$secondary: #a1a1aa;\r\n\r\n.interactive-component {\r\n    width: 100%;\r\n    background-color: $main;\r\n    border-left: 0.5px solid $secondary;\r\n}\r\n","@import '../../App.style.scss';\r\n\r\n.sidebar-item {\r\n    margin: 0 8px 0 8px;\r\n    color: white;\r\n}\r\n\r\n.item-marked {\r\n    background-color: $secondary;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/App.style.scss","webpack://./src/components/SidebarItem/SidebarItem.style.scss"],"names":[],"mappings":"AAGA;EACI,WAAA;EACA,yBALG;EAMH,gCAAA;ACFJ;;AAFA;EACE,mBAAA;AAKF;;AAFA;EACE,yBDNU;ACWZ","sourcesContent":["$main: #323232;\r\n$secondary: #a1a1aa;\r\n\r\n.interactive-component {\r\n    width: 100%;\r\n    background-color: $main;\r\n    border-left: 0.5px solid $secondary;\r\n}\r\n","@import '../../App.style.scss';\r\n\r\n.sidebar-item {\r\n  margin: 0 8px 0 8px;\r\n}\r\n\r\n.item-marked {\r\n  background-color: $secondary;\r\n}\r\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Worksheet/Worksheet.style.scss":
+/*!************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Worksheet/Worksheet.style.scss ***!
+  \************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.row-name {
+  width: 250px;
+}
+
+.table-container {
+  background: #252525;
+  border-left: 0.1px solid #a1a1aa;
+}
+
+.description-icon {
+  color: #7890b2;
+  cursor: pointer;
+}
+
+.delete-icon {
+  cursor: pointer;
+  color: transparent;
+}
+.delete-icon.hovered {
+  color: #df4444;
+}
+
+.table-cell-child {
+  width: 100px;
+  min-width: 100px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.icon-child {
+  margin-left: 15px;
+}`, "",{"version":3,"sources":["webpack://./src/components/Worksheet/Worksheet.style.scss"],"names":[],"mappings":"AAAA;EACE,YAAA;AACF;;AAEA;EACE,mBAAA;EACA,gCAAA;AACF;;AAEA;EACE,cAAA;EACA,eAAA;AACF;;AAEA;EACE,eAAA;EACA,kBAAA;AACF;AACE;EACE,cAAA;AACJ;;AAGA;EACE,YAAA;EACA,gBAAA;AAAF;;AAGA;EACE,aAAA;EACA,mBAAA;AAAF;;AAGA;EACE,iBAAA;AAAF","sourcesContent":[".row-name {\r\n  width: 250px;\r\n}\r\n\r\n.table-container {\r\n  background: #252525;\r\n  border-left: 0.1px solid #a1a1aa;\r\n}\r\n\r\n.description-icon {\r\n  color: #7890b2;\r\n  cursor: pointer;\r\n}\r\n\r\n.delete-icon {\r\n  cursor: pointer;\r\n  color: transparent;\r\n\r\n  &.hovered {\r\n    color: #df4444;\r\n  }\r\n}\r\n\r\n.table-cell-child {\r\n  width: 100px;\r\n  min-width: 100px;\r\n}\r\n\r\n.flex-center {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.icon-child {\r\n  margin-left: 15px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -397,6 +457,60 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_SidebarItem_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_SidebarItem_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_SidebarItem_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./src/components/Worksheet/Worksheet.style.scss":
+/*!*******************************************************!*\
+  !*** ./src/components/Worksheet/Worksheet.style.scss ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Worksheet_style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./Worksheet.style.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Worksheet/Worksheet.style.scss");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Worksheet_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Worksheet_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Worksheet_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Worksheet_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -16306,6 +16420,56 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/@mui/material/styles/ThemeProvider.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@mui/material/styles/ThemeProvider.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ ThemeProvider)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _mui_system__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/system */ "./node_modules/@mui/system/esm/ThemeProvider/ThemeProvider.js");
+/* harmony import */ var _identifier__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./identifier */ "./node_modules/@mui/material/styles/identifier.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+'use client';
+
+
+const _excluded = ["theme"];
+
+
+
+
+
+function ThemeProvider(_ref) {
+    let { theme: themeInput } = _ref, props = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, _excluded);
+    const scopedTheme = themeInput[_identifier__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_system__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+        themeId: scopedTheme ? _identifier__WEBPACK_IMPORTED_MODULE_4__["default"] : undefined,
+        theme: scopedTheme || themeInput
+    }));
+}
+ true ? ThemeProvider.propTypes = {
+    /**
+     * Your component tree.
+     */
+    children: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().node),
+    /**
+     * A theme object. You can provide a function to extend the outer theme.
+     */
+    theme: prop_types__WEBPACK_IMPORTED_MODULE_6___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_6___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_6___default().func)]).isRequired
+} : 0;
+
+
+/***/ }),
+
 /***/ "./node_modules/@mui/material/styles/createMixins.js":
 /*!***********************************************************!*\
   !*** ./node_modules/@mui/material/styles/createMixins.js ***!
@@ -17651,6 +17815,155 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/@mui/private-theming/ThemeProvider/ThemeProvider.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@mui/private-theming/ThemeProvider/ThemeProvider.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/exactProp/exactProp.js");
+/* harmony import */ var _useTheme_ThemeContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../useTheme/ThemeContext */ "./node_modules/@mui/private-theming/useTheme/ThemeContext.js");
+/* harmony import */ var _useTheme__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../useTheme */ "./node_modules/@mui/private-theming/useTheme/useTheme.js");
+/* harmony import */ var _nested__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nested */ "./node_modules/@mui/private-theming/ThemeProvider/nested.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+// To support composition of theme.
+
+function mergeOuterLocalTheme(outerTheme, localTheme) {
+    if (typeof localTheme === 'function') {
+        const mergedTheme = localTheme(outerTheme);
+        if (true) {
+            if (!mergedTheme) {
+                console.error(['MUI: You should return an object from your theme function, i.e.', '<ThemeProvider theme={() => ({})} />'].join('\n'));
+            }
+        }
+        return mergedTheme;
+    }
+    return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, outerTheme, localTheme);
+}
+/**
+ * This component takes a `theme` prop.
+ * It makes the `theme` available down the React tree thanks to React context.
+ * This component should preferably be used at **the root of your component tree**.
+ */
+function ThemeProvider(props) {
+    const { children, theme: localTheme } = props;
+    const outerTheme = (0,_useTheme__WEBPACK_IMPORTED_MODULE_3__["default"])();
+    if (true) {
+        if (outerTheme === null && typeof localTheme === 'function') {
+            console.error(['MUI: You are providing a theme function prop to the ThemeProvider component:', '<ThemeProvider theme={outerTheme => outerTheme} />', '', 'However, no outer theme is present.', 'Make sure a theme is already injected higher in the React tree ' + 'or provide a theme object.'].join('\n'));
+        }
+    }
+    const theme = react__WEBPACK_IMPORTED_MODULE_1__.useMemo(() => {
+        const output = outerTheme === null ? localTheme : mergeOuterLocalTheme(outerTheme, localTheme);
+        if (output != null) {
+            output[_nested__WEBPACK_IMPORTED_MODULE_4__["default"]] = outerTheme !== null;
+        }
+        return output;
+    }, [localTheme, outerTheme]);
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_useTheme_ThemeContext__WEBPACK_IMPORTED_MODULE_5__["default"].Provider, {
+        value: theme,
+        children: children
+    });
+}
+ true ? ThemeProvider.propTypes = {
+    /**
+     * Your component tree.
+     */
+    children: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().node),
+    /**
+     * A theme object. You can provide a function to extend the outer theme.
+     */
+    theme: prop_types__WEBPACK_IMPORTED_MODULE_6___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_6___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_6___default().func)]).isRequired
+} : 0;
+if (true) {
+     true ? ThemeProvider.propTypes = (0,_mui_utils__WEBPACK_IMPORTED_MODULE_7__["default"])(ThemeProvider.propTypes) : 0;
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ThemeProvider);
+
+
+/***/ }),
+
+/***/ "./node_modules/@mui/private-theming/ThemeProvider/nested.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@mui/private-theming/ThemeProvider/nested.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const hasSymbol = typeof Symbol === 'function' && Symbol.for;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (hasSymbol ? Symbol.for('mui.nested') : '__THEME_NESTED__');
+
+
+/***/ }),
+
+/***/ "./node_modules/@mui/private-theming/useTheme/ThemeContext.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@mui/private-theming/useTheme/ThemeContext.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+const ThemeContext = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.createContext(null);
+if (true) {
+    ThemeContext.displayName = 'ThemeContext';
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ThemeContext);
+
+
+/***/ }),
+
+/***/ "./node_modules/@mui/private-theming/useTheme/useTheme.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@mui/private-theming/useTheme/useTheme.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ useTheme)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ThemeContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ThemeContext */ "./node_modules/@mui/private-theming/useTheme/ThemeContext.js");
+
+
+function useTheme() {
+    const theme = react__WEBPACK_IMPORTED_MODULE_0__.useContext(_ThemeContext__WEBPACK_IMPORTED_MODULE_1__["default"]);
+    if (true) {
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        react__WEBPACK_IMPORTED_MODULE_0__.useDebugValue(theme);
+    }
+    return theme;
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/@mui/styled-engine/GlobalStyles/GlobalStyles.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@mui/styled-engine/GlobalStyles/GlobalStyles.js ***!
@@ -18514,6 +18827,115 @@ const useRtl = () => {
     return value != null ? value : false;
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RtlProvider);
+
+
+/***/ }),
+
+/***/ "./node_modules/@mui/system/esm/ThemeProvider/ThemeProvider.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@mui/system/esm/ThemeProvider/ThemeProvider.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _mui_private_theming__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/private-theming */ "./node_modules/@mui/private-theming/useTheme/useTheme.js");
+/* harmony import */ var _mui_private_theming__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/private-theming */ "./node_modules/@mui/private-theming/ThemeProvider/ThemeProvider.js");
+/* harmony import */ var _mui_utils_exactProp__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/utils/exactProp */ "./node_modules/@mui/utils/exactProp/exactProp.js");
+/* harmony import */ var _mui_styled_engine__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/styled-engine */ "./node_modules/@emotion/react/dist/emotion-element-43c6fea0.browser.esm.js");
+/* harmony import */ var _useThemeWithoutDefault__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../useThemeWithoutDefault */ "./node_modules/@mui/system/esm/useThemeWithoutDefault.js");
+/* harmony import */ var _RtlProvider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../RtlProvider */ "./node_modules/@mui/system/esm/RtlProvider/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+'use client';
+
+
+
+
+
+
+
+
+
+const EMPTY_THEME = {};
+function useThemeScoping(themeId, upperTheme, localTheme, isPrivate = false) {
+    return react__WEBPACK_IMPORTED_MODULE_1__.useMemo(() => {
+        const resolvedTheme = themeId ? upperTheme[themeId] || upperTheme : upperTheme;
+        if (typeof localTheme === 'function') {
+            const mergedTheme = localTheme(resolvedTheme);
+            const result = themeId ? (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, upperTheme, {
+                [themeId]: mergedTheme
+            }) : mergedTheme;
+            // must return a function for the private theme to NOT merge with the upper theme.
+            // see the test case "use provided theme from a callback" in ThemeProvider.test.js
+            if (isPrivate) {
+                return () => result;
+            }
+            return result;
+        }
+        return themeId ? (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, upperTheme, {
+            [themeId]: localTheme
+        }) : (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, upperTheme, localTheme);
+    }, [themeId, upperTheme, localTheme, isPrivate]);
+}
+/**
+ * This component makes the `theme` available down the React tree.
+ * It should preferably be used at **the root of your component tree**.
+ *
+ * <ThemeProvider theme={theme}> // existing use case
+ * <ThemeProvider theme={{ id: theme }}> // theme scoping
+ */
+function ThemeProvider(props) {
+    const { children, theme: localTheme, themeId } = props;
+    const upperTheme = (0,_useThemeWithoutDefault__WEBPACK_IMPORTED_MODULE_3__["default"])(EMPTY_THEME);
+    const upperPrivateTheme = (0,_mui_private_theming__WEBPACK_IMPORTED_MODULE_4__["default"])() || EMPTY_THEME;
+    if (true) {
+        if (upperTheme === null && typeof localTheme === 'function' || themeId && upperTheme && !upperTheme[themeId] && typeof localTheme === 'function') {
+            console.error(['MUI: You are providing a theme function prop to the ThemeProvider component:', '<ThemeProvider theme={outerTheme => outerTheme} />', '', 'However, no outer theme is present.', 'Make sure a theme is already injected higher in the React tree ' + 'or provide a theme object.'].join('\n'));
+        }
+    }
+    const engineTheme = useThemeScoping(themeId, upperTheme, localTheme);
+    const privateTheme = useThemeScoping(themeId, upperPrivateTheme, localTheme, true);
+    const rtlValue = engineTheme.direction === 'rtl';
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_private_theming__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        theme: privateTheme,
+        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_styled_engine__WEBPACK_IMPORTED_MODULE_6__.T.Provider, {
+            value: engineTheme,
+            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_RtlProvider__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                value: rtlValue,
+                children: children
+            })
+        })
+    });
+}
+ true ? ThemeProvider.propTypes /* remove-proptypes */ = {
+    // ┌────────────────────────────── Warning ──────────────────────────────┐
+    // │ These PropTypes are generated from the TypeScript type definitions. │
+    // │    To update them, edit the d.ts file and run `pnpm proptypes`.     │
+    // └─────────────────────────────────────────────────────────────────────┘
+    /**
+     * Your component tree.
+     */
+    children: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().node),
+    /**
+     * A theme object. You can provide a function to extend the outer theme.
+     */
+    theme: prop_types__WEBPACK_IMPORTED_MODULE_8___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_8___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object)]).isRequired,
+    /**
+     * The design system's unique id for getting the corresponded theme when there are multiple design systems.
+     */
+    themeId: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().string)
+} : 0;
+if (true) {
+     true ? ThemeProvider.propTypes = (0,_mui_utils_exactProp__WEBPACK_IMPORTED_MODULE_9__["default"])(ThemeProvider.propTypes) : 0;
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ThemeProvider);
 
 
 /***/ }),
@@ -54064,6 +54486,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var _App_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.style.scss */ "./src/App.style.scss");
+/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/createTheme.js");
+/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/ThemeProvider.js");
 /* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Header */ "./src/components/Header/index.ts");
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Layout */ "./src/components/Layout/index.ts");
 /* harmony import */ var _components_SidebarItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/SidebarItem */ "./src/components/SidebarItem/index.ts");
@@ -54074,9 +54498,126 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+const theme = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_6__["default"])({
+    palette: {
+        mode: 'dark',
+    },
+});
 function App() {
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_Header__WEBPACK_IMPORTED_MODULE_2__.Header, {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_Layout__WEBPACK_IMPORTED_MODULE_3__.Layout, { interactiveComponent: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_Worksheet__WEBPACK_IMPORTED_MODULE_5__.Worksheet, {}), children: _components_SidebarItem__WEBPACK_IMPORTED_MODULE_4__.SIDEBAR_ITEMS_TITLES.map((title, index) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_SidebarItem__WEBPACK_IMPORTED_MODULE_4__.SidebarItem, { title: title }, index))) })] }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material_styles__WEBPACK_IMPORTED_MODULE_7__["default"], { theme: theme, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_Header__WEBPACK_IMPORTED_MODULE_2__.Header, {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_Layout__WEBPACK_IMPORTED_MODULE_3__.Layout, { interactiveComponent: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_Worksheet__WEBPACK_IMPORTED_MODULE_5__.Worksheet, {}), children: _components_SidebarItem__WEBPACK_IMPORTED_MODULE_4__.SIDEBAR_ITEMS_TITLES.map((title, index) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_SidebarItem__WEBPACK_IMPORTED_MODULE_4__.SidebarItem, { title: title }, index))) })] }));
 }
+
+
+/***/ }),
+
+/***/ "./src/api/index.ts":
+/*!**************************!*\
+  !*** ./src/api/index.ts ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createRow: () => (/* binding */ createRow),
+/* harmony export */   deleteRow: () => (/* binding */ deleteRow),
+/* harmony export */   fetchRowsList: () => (/* binding */ fetchRowsList),
+/* harmony export */   updateRow: () => (/* binding */ updateRow)
+/* harmony export */ });
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+const API = {
+    SERVER_URL: 'http://185.244.172.108:8081',
+    ENTITY_ID: 128766
+};
+const fetchRowsList = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createAsyncThunk)('rows/fetchRowsList', (_1, _a) => __awaiter(void 0, [_1, _a], void 0, function* (_, { rejectWithValue }) {
+    try {
+        const response = yield fetch(`${API.SERVER_URL}/v1/outlay-rows/entity/${API.ENTITY_ID}/row/list`);
+        if (!response.ok) {
+            throw new Error('Ошибка при загрузке списка строк');
+        }
+        const data = yield response.json();
+        return data;
+    }
+    catch (error) {
+        if (error instanceof Error) {
+            return rejectWithValue(error.message);
+        }
+        return rejectWithValue('Произошла неизвестная ошибка');
+    }
+}));
+const createRow = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createAsyncThunk)('rows/createRow', (_a, _b) => __awaiter(void 0, [_a, _b], void 0, function* ({ outlayRowRequest }, { rejectWithValue }) {
+    try {
+        const response = yield fetch(`${API.SERVER_URL}/v1/outlay-rows/entity/${API.ENTITY_ID}/row/create`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(outlayRowRequest)
+        });
+        if (!response.ok) {
+            throw new Error('Ошибка при создании строки');
+        }
+        const recalculated = yield response.json();
+        return recalculated;
+    }
+    catch (error) {
+        if (error instanceof Error) {
+            return rejectWithValue(error.message);
+        }
+        return rejectWithValue('Произошла неизвестная ошибка');
+    }
+}));
+const updateRow = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createAsyncThunk)('rows/updateRow', (_a, _b) => __awaiter(void 0, [_a, _b], void 0, function* ({ outlayRowRequest, rowId }, { rejectWithValue }) {
+    try {
+        const response = yield fetch(`${API.SERVER_URL}/v1/outlay-rows/entity/${API.ENTITY_ID}/row/${rowId}/update`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(outlayRowRequest)
+        });
+        if (!response.ok) {
+            throw new Error('Ошибка при обновлении строки');
+        }
+        const recalculated = yield response.json();
+        return { recalculated, rowId };
+    }
+    catch (error) {
+        if (error instanceof Error) {
+            return rejectWithValue(error.message);
+        }
+        return rejectWithValue('Произошла неизвестная ошибка');
+    }
+}));
+const deleteRow = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createAsyncThunk)('rows/deleteRow', (_a, _b) => __awaiter(void 0, [_a, _b], void 0, function* ({ rowId }, { rejectWithValue }) {
+    try {
+        const response = yield fetch(`${API.SERVER_URL}/v1/outlay-rows/entity/${API.ENTITY_ID}/row/${rowId}/delete`, {
+            method: 'DELETE'
+        });
+        if (!response.ok) {
+            throw new Error('Ошибка при удалении строки');
+        }
+        const recalculated = yield response.json();
+        return { recalculated, rowId };
+    }
+    catch (error) {
+        if (error instanceof Error) {
+            return rejectWithValue(error.message);
+        }
+        return rejectWithValue('Произошла неизвестная ошибка');
+    }
+}));
+
 
 
 /***/ }),
@@ -54271,17 +54812,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Worksheet)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableContainer/TableContainer.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Table/Table.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableHead/TableHead.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableRow/TableRow.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableCell/TableCell.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableBody/TableBody.js");
-/* harmony import */ var _mui_icons_material_Description__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/icons-material/Description */ "./node_modules/@mui/icons-material/Description.js");
-/* harmony import */ var _mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/icons-material/Delete */ "./node_modules/@mui/icons-material/Delete.js");
-/* harmony import */ var _WorksheetEditRow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./WorksheetEditRow */ "./src/components/Worksheet/WorksheetEditRow.tsx");
-/* harmony import */ var _WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./WorksheetEditRow.service */ "./src/components/Worksheet/WorksheetEditRow.service.ts");
-/* harmony import */ var src_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/store */ "./src/store.ts");
+/* harmony import */ var _Worksheet_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Worksheet.style.scss */ "./src/components/Worksheet/Worksheet.style.scss");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableContainer/TableContainer.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Table/Table.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableHead/TableHead.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableRow/TableRow.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableCell/TableCell.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableBody/TableBody.js");
+/* harmony import */ var _mui_icons_material_Description__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/icons-material/Description */ "./node_modules/@mui/icons-material/Description.js");
+/* harmony import */ var _mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/icons-material/Delete */ "./node_modules/@mui/icons-material/Delete.js");
+/* harmony import */ var _WorksheetEditRow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WorksheetEditRow */ "./src/components/Worksheet/WorksheetEditRow.tsx");
+/* harmony import */ var _WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./WorksheetEditRow.service */ "./src/components/Worksheet/WorksheetEditRow.service.ts");
+/* harmony import */ var src_store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/store */ "./src/store/index.ts");
+/* harmony import */ var src_api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/api */ "./src/api/index.ts");
+
+
+
 
 
 
@@ -54290,13 +54838,39 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Worksheet() {
-    const worksheetData = (0,src_store__WEBPACK_IMPORTED_MODULE_3__.useAppSelector)((state) => state);
-    const dispatch = (0,src_store__WEBPACK_IMPORTED_MODULE_3__.useAppDispatch)();
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], { style: { background: '#323232', borderLeft: '1px solid #a1a1aa' }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { children: _WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_2__.TABLE_HEAD_TITLES.map((title, index) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: '#a1a1aa' }, children: title }, index))) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], { children: worksheetData.length > 0 ? (worksheetData.map((row, rowIndex) => !row.edited ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { onDoubleClick: () => dispatch({ type: 'ROW_EDITED', id: row.id }), onMouseEnter: () => dispatch({ type: 'ROW_HOVERED', id: row.id }), onMouseLeave: () => dispatch({ type: 'ROW_HOVERED_OFF', id: row.id }), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Description__WEBPACK_IMPORTED_MODULE_10__["default"], { style: { color: '#7890B2', cursor: 'pointer' }, onClick: () => dispatch({ type: 'ROW_SUBMITED', id: row.id }) }), row.hovered && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_11__["default"], { style: { color: '#DF4444', cursor: 'pointer' }, onClick: () => dispatch({ type: 'ROW_DELETED', id: row.id }) }))] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: row.rowName }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: row.salary }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: row.equipmentCosts }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: row.overheads }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: row.estimatedProfit })] }, rowIndex), row.child &&
-                                row.child.map((childRow, childIndex) => !childRow.edited ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { onDoubleClick: () => dispatch({ type: 'ROW_EDITED', id: childRow.id }), onMouseEnter: () => dispatch({ type: 'ROW_HOVERED', id: childRow.id }), onMouseLeave: () => dispatch({ type: 'ROW_HOVERED_OFF', id: childRow.id }), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { width: '100px', minWidth: '100px' }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { display: 'flex', alignItems: 'center' }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Description__WEBPACK_IMPORTED_MODULE_10__["default"], { style: { marginLeft: '15px', color: '#7890B2', cursor: 'pointer' }, onClick: () => dispatch({ type: 'ROW_SUBMITED', id: childRow.id }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_11__["default"], { style: {
-                                                            color: childRow.hovered ? '#DF4444' : 'transparent',
-                                                            cursor: 'pointer'
-                                                        }, onClick: () => dispatch({ type: 'ROW_DELETED', id: childRow.id }) })] }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: childRow.rowName }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: childRow.salary }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: childRow.equipmentCosts }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: childRow.overheads }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { color: 'white' }, children: childRow.estimatedProfit })] }, childIndex)) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetEditRow__WEBPACK_IMPORTED_MODULE_1__["default"], { changedRow: childRow })] })))] })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetEditRow__WEBPACK_IMPORTED_MODULE_1__["default"], { changedRow: row })] })))) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetEditRow__WEBPACK_IMPORTED_MODULE_1__["default"], {})] })) })] }) }));
+    const dispatch = (0,src_store__WEBPACK_IMPORTED_MODULE_5__.useAppDispatch)();
+    const treeRows = (0,src_store__WEBPACK_IMPORTED_MODULE_5__.useAppSelector)((state) => state.rows);
+    const [editedRow, setEditedRows] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null);
+    const [hoveredRows, setHoveredRows] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]);
+    const lastCreatedRowId = (0,src_store__WEBPACK_IMPORTED_MODULE_5__.useAppSelector)((state) => state.lastCreatedRowId);
+    (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
+        dispatch((0,src_api__WEBPACK_IMPORTED_MODULE_6__.fetchRowsList)());
+    });
+    (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
+        lastCreatedRowId && handleEditRow(lastCreatedRowId);
+    }, [lastCreatedRowId]);
+    const handleCreateRow = (id) => {
+        dispatch((0,src_api__WEBPACK_IMPORTED_MODULE_6__.createRow)({
+            outlayRowRequest: Object.assign(Object.assign({}, _WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_4__.ROW_INITIAL_VALUES), { parentId: id })
+        }));
+    };
+    const handleEditRow = (id) => {
+        setEditedRows(id);
+    };
+    const handleUpdateRow = () => {
+        setEditedRows(null);
+    };
+    const handleDeleteRow = (rowId) => {
+        dispatch((0,src_api__WEBPACK_IMPORTED_MODULE_6__.deleteRow)({ rowId }));
+    };
+    const handleMouseEnter = (id) => {
+        setHoveredRows((ids) => [...ids, id]);
+    };
+    const handleMouseLeave = (id) => {
+        setHoveredRows((ids) => ids.filter((rowId) => rowId !== id));
+    };
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { className: "table-container", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], { children: _WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_4__.TABLE_HEAD_TITLES.map((title, index) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { sx: { color: '#a1a1aa' }, children: title }, index))) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], { children: treeRows.length > 0 ? (treeRows.map((row, rowIndex) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((react__WEBPACK_IMPORTED_MODULE_2___default().Fragment), { children: [row.id !== null && editedRow === row.id ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetEditRow__WEBPACK_IMPORTED_MODULE_3__["default"], { updatedRow: row, updateHandler: handleUpdateRow })] })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], { onDoubleClick: () => handleEditRow(row.id), onMouseEnter: () => handleMouseEnter(row.id), onMouseLeave: () => handleMouseLeave(row.id), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Description__WEBPACK_IMPORTED_MODULE_13__["default"], { className: "description-icon", onClick: () => handleCreateRow(row.id) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_14__["default"], { className: `delete-icon ${hoveredRows.includes(row.id) ? 'hovered' : ''}`, onClick: () => handleDeleteRow(row.id) })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: row.rowName }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: row.salary }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: row.equipmentCosts }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: row.overheads }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: row.estimatedProfit })] })), row.child &&
+                                row.child.map((childRow, childIndex) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)((react__WEBPACK_IMPORTED_MODULE_2___default().Fragment), { children: editedRow === childRow.id ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetEditRow__WEBPACK_IMPORTED_MODULE_3__["default"], { updatedRow: childRow, updateHandler: handleUpdateRow })] })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], { onDoubleClick: () => handleEditRow(childRow.id), onMouseEnter: () => handleMouseEnter(childRow.id), onMouseLeave: () => handleMouseLeave(childRow.id), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { className: "table-cell-child", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "flex-center", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Description__WEBPACK_IMPORTED_MODULE_13__["default"], { className: "description-icon icon-child", onClick: () => handleCreateRow(childRow.id) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_14__["default"], { className: `delete-icon ${hoveredRows.includes(childRow.id) ? 'hovered' : ''}`, onClick: () => handleDeleteRow(childRow.id) })] }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: childRow.rowName }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: childRow.salary }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: childRow.equipmentCosts }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: childRow.overheads }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: childRow.estimatedProfit })] })) }, childIndex)))] }, rowIndex)))) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetEditRow__WEBPACK_IMPORTED_MODULE_3__["default"], { updateHandler: handleUpdateRow })] })) })] }) }));
 }
 
 
@@ -54310,13 +54884,10 @@ function Worksheet() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ROW_INITIAL_VALUES: () => (/* binding */ ROW_INITIAL_VALUES),
 /* harmony export */   TABLE_HEAD_TITLES: () => (/* binding */ TABLE_HEAD_TITLES),
-/* harmony export */   initialRow: () => (/* binding */ initialRow),
-/* harmony export */   initialState: () => (/* binding */ initialState),
-/* harmony export */   worksheetReducer: () => (/* binding */ worksheetReducer)
+/* harmony export */   numberCheckPattern: () => (/* binding */ numberCheckPattern)
 /* harmony export */ });
-/* harmony import */ var nanoid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! nanoid */ "./node_modules/nanoid/index.browser.js");
-
 const TABLE_HEAD_TITLES = [
     'Уровень',
     'Наименование работ',
@@ -54325,168 +54896,19 @@ const TABLE_HEAD_TITLES = [
     'Накладные расходы',
     'Сметная прибыль'
 ];
-const initialRow = {
-    id: '',
+const ROW_INITIAL_VALUES = {
     rowName: '',
-    salary: '0',
-    equipmentCosts: '0',
-    overheads: '0',
-    estimatedProfit: '0',
-    edited: true,
-    hovered: false,
-    child: []
+    salary: 0,
+    equipmentCosts: 0,
+    overheads: 0,
+    estimatedProfit: 0,
+    machineOperatorSalary: 0,
+    mainCosts: 0,
+    materials: 0,
+    mimExploitation: 0,
+    supportCosts: 0
 };
-const initialState = [];
-const mockRows = [
-    {
-        id: '1313446',
-        rowName: 'Бухие работы',
-        salary: 43634645634,
-        equipmentCosts: 5686945699.779,
-        overheads: 245614235,
-        estimatedProfit: 87534754.68,
-        edited: false,
-        hovered: false,
-        child: [
-            {
-                id: '3435345',
-                rowName: 'Системный отстой',
-                salary: 568699319779,
-                equipmentCosts: 8757544368,
-                overheads: 4363456634,
-                estimatedProfit: 241.24235,
-                edited: false,
-                hovered: false,
-                child: []
-            },
-            {
-                id: '6456449',
-                rowName: 'Маленький бизнес большие возможности',
-                salary: 4363463434,
-                equipmentCosts: 568693499779,
-                overheads: 2345523,
-                estimatedProfit: 2414523.5,
-                edited: false,
-                hovered: false,
-                child: []
-            }
-        ]
-    },
-    {
-        id: '353458',
-        rowName: 'Хитрый подрядчик',
-        salary: 241422335,
-        equipmentCosts: 875754468,
-        overheads: 875725468,
-        estimatedProfit: 5686959.9779,
-        edited: false,
-        hovered: false,
-        child: []
-    },
-    {
-        id: '546547',
-        rowName: 'Квартиры в долг',
-        salary: 24142335,
-        equipmentCosts: 875752468,
-        overheads: 5686.9599779,
-        estimatedProfit: 436342634,
-        edited: false,
-        hovered: false,
-        child: []
-    }
-];
-const preparedMockRows = mockRows.map((row) => ({
-    id: row.id,
-    rowName: row.rowName,
-    salary: row.salary.toString(),
-    equipmentCosts: row.equipmentCosts.toString(),
-    overheads: row.overheads.toString(),
-    estimatedProfit: row.estimatedProfit.toString(),
-    edited: row.edited,
-    hovered: row.hovered,
-    child: row.child.length
-        ? row.child.map((childRow) => ({
-            id: childRow.id,
-            rowName: childRow.rowName,
-            salary: childRow.salary.toString(),
-            equipmentCosts: childRow.equipmentCosts.toString(),
-            overheads: childRow.overheads.toString(),
-            estimatedProfit: childRow.estimatedProfit.toString(),
-            edited: childRow.edited,
-            hovered: childRow.hovered,
-            child: []
-        }))
-        : []
-}));
-function worksheetReducer(state = preparedMockRows, action) {
-    switch (action.type) {
-        case 'ROW_EDITED':
-            return state.map((row) => row.id === action.id
-                ? Object.assign(Object.assign({}, row), { edited: true }) : row.child
-                ? Object.assign(Object.assign({}, row), { child: row.child.map((childRow) => childRow.id === action.id ? Object.assign(Object.assign({}, childRow), { edited: true }) : childRow) }) : row);
-        case 'ROW_UPDATED':
-            if (action.rowCells) {
-                return state.map((row) => row.id === action.id
-                    ? Object.assign(Object.assign(Object.assign({}, row), action.rowCells), { id: action.id, edited: false }) : row.child
-                    ? Object.assign(Object.assign({}, row), { child: row.child.map((childRow) => childRow.id === action.id
-                            ? Object.assign(Object.assign(Object.assign({}, row), action.rowCells), { id: action.id, edited: false }) : childRow) }) : row);
-            }
-            return state;
-        case 'ROW_DELETED':
-            return state.flatMap((row) => {
-                if (row.id === action.id) {
-                    return [];
-                }
-                else if (row.child) {
-                    return [
-                        Object.assign(Object.assign({}, row), { child: row.child.flatMap((childRow) => {
-                                if (childRow.id === action.id) {
-                                    return [];
-                                }
-                                else {
-                                    return [childRow];
-                                }
-                            }) })
-                    ];
-                }
-                else {
-                    return [row];
-                }
-            });
-        case 'ROW_HOVERED':
-            return state.map((row) => row.id === action.id
-                ? Object.assign(Object.assign({}, row), { hovered: true }) : row.child
-                ? Object.assign(Object.assign({}, row), { child: row.child.map((childRow) => childRow.id === action.id ? Object.assign(Object.assign({}, childRow), { hovered: true }) : childRow) }) : row);
-        case 'ROW_HOVERED_OFF':
-            return state.map((row) => row.id === action.id
-                ? Object.assign(Object.assign({}, row), { hovered: false }) : row.child
-                ? Object.assign(Object.assign({}, row), { child: row.child.map((childRow) => childRow.id === action.id ? Object.assign(Object.assign({}, childRow), { hovered: false }) : childRow) }) : row);
-        case 'ROW_SUBMITED':
-            if (action.rowCells) {
-                return [...state, Object.assign(Object.assign(Object.assign({}, initialRow), action.rowCells), { edited: false, id: (0,nanoid__WEBPACK_IMPORTED_MODULE_0__.nanoid)() })];
-            }
-            else if (action.id) {
-                return state.map((row) => {
-                    if (row.id === action.id) {
-                        return Object.assign(Object.assign({}, row), { child: [...row.child, Object.assign(Object.assign({}, initialRow), { id: (0,nanoid__WEBPACK_IMPORTED_MODULE_0__.nanoid)() })] });
-                    }
-                    else {
-                        return Object.assign(Object.assign({}, row), { child: row.child.map((childRow) => {
-                                if (childRow.id === action.id) {
-                                    return Object.assign(Object.assign({}, childRow), { child: [...childRow.child, Object.assign(Object.assign({}, initialRow), { id: (0,nanoid__WEBPACK_IMPORTED_MODULE_0__.nanoid)() })] });
-                                }
-                                else {
-                                    return childRow;
-                                }
-                            }) });
-                    }
-                });
-            }
-            return [...state, Object.assign(Object.assign({}, initialRow), { id: (0,nanoid__WEBPACK_IMPORTED_MODULE_0__.nanoid)() })];
-        default:
-            return state;
-    }
-}
+const numberCheckPattern = /[^\d.]/g;
 
 
 
@@ -54503,13 +54925,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ WorksheetEditRow)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _mui_material_TableCell__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material/TableCell */ "./node_modules/@mui/material/TableCell/TableCell.js");
-/* harmony import */ var _mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material/TextField */ "./node_modules/@mui/material/TextField/TextField.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var nanoid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! nanoid */ "./node_modules/nanoid/index.browser.js");
-/* harmony import */ var src_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/store */ "./src/store.ts");
+/* harmony import */ var _Worksheet_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Worksheet.style.scss */ "./src/components/Worksheet/Worksheet.style.scss");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material/TableCell */ "./node_modules/@mui/material/TableCell/TableCell.js");
+/* harmony import */ var _mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material/TextField */ "./node_modules/@mui/material/TextField/TextField.js");
 /* harmony import */ var _WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WorksheetEditRow.service */ "./src/components/Worksheet/WorksheetEditRow.service.ts");
+/* harmony import */ var src_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/store */ "./src/store/index.ts");
+/* harmony import */ var src_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/api */ "./src/api/index.ts");
 
 
 
@@ -54517,33 +54940,36 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function WorksheetEditRow({ changedRow }) {
-    const currentRow = changedRow || _WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_3__.initialRow;
-    const [rowCells, setRowCells] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(currentRow);
-    const currentId = changedRow ? rowCells.id : (0,nanoid__WEBPACK_IMPORTED_MODULE_4__.nanoid)();
-    const dispatch = (0,src_store__WEBPACK_IMPORTED_MODULE_2__.useAppDispatch)();
-    const handleKeyDown = (event) => {
+
+function WorksheetEditRow({ updatedRow, parentId, updateHandler }) {
+    const dispatch = (0,src_store__WEBPACK_IMPORTED_MODULE_4__.useAppDispatch)();
+    const lastCreatedRowId = (0,src_store__WEBPACK_IMPORTED_MODULE_4__.useAppSelector)((state) => state.lastCreatedRowId);
+    const [currentParentId, setCurrentParentId] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null);
+    const [updatedRowId, setUpdatedRowId] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null);
+    const [rowCells, setRowCells] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(Object.assign(Object.assign({}, _WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_3__.ROW_INITIAL_VALUES), { parentId: currentParentId }));
+    (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
+        if (updatedRow) {
+            setRowCells((rowCells) => (Object.assign(Object.assign({}, rowCells), { rowName: updatedRow.rowName, salary: updatedRow.salary, equipmentCosts: updatedRow.equipmentCosts, overheads: updatedRow.overheads, estimatedProfit: updatedRow.estimatedProfit })));
+            setUpdatedRowId(updatedRow.id);
+        }
+    }, []);
+    (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
+        parentId !== undefined && setCurrentParentId(parentId);
+    }, [parentId]);
+    const handleSubmitRow = (event) => {
         if (event.key === 'Enter') {
             event.preventDefault();
-            !changedRow && dispatch({ type: 'ROW_SUBMITED', rowCells: Object.assign(Object.assign({}, rowCells), { id: currentId }) });
-            dispatch({ type: 'ROW_UPDATED', id: currentId, rowCells: rowCells });
+            if (updatedRowId) {
+                dispatch((0,src_api__WEBPACK_IMPORTED_MODULE_5__.updateRow)({ outlayRowRequest: rowCells, rowId: updatedRowId }));
+                updateHandler();
+            }
+            else {
+                dispatch((0,src_api__WEBPACK_IMPORTED_MODULE_5__.createRow)({ outlayRowRequest: rowCells }));
+                updateHandler();
+            }
         }
     };
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], { style: {
-                        width: '250px',
-                        border: '1px solid #a1a1aa',
-                        borderRadius: '5px'
-                    }, size: "small", value: rowCells.rowName, onChange: (e) => setRowCells(Object.assign(Object.assign({}, rowCells), { rowName: e.target.value })), onKeyDown: (e) => handleKeyDown(e), InputProps: {
-                        style: { color: '#a1a1aa' }
-                    } }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], { size: "small", style: { border: '1px solid #a1a1aa', borderRadius: '5px' }, value: rowCells.salary, onChange: (e) => setRowCells(Object.assign(Object.assign({}, rowCells), { salary: e.target.value.replace(/[^\d.]/g, '') })), onKeyDown: (e) => handleKeyDown(e), InputProps: {
-                        style: { color: '#a1a1aa' }
-                    } }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], { size: "small", style: { border: '1px solid #a1a1aa', borderRadius: '5px' }, value: rowCells.equipmentCosts, onChange: (e) => setRowCells(Object.assign(Object.assign({}, rowCells), { equipmentCosts: e.target.value.replace(/[^\d.]/g, '') })), onKeyDown: (e) => handleKeyDown(e), InputProps: {
-                        style: { color: '#a1a1aa' }
-                    } }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], { size: "small", style: { border: '1px solid #a1a1aa', borderRadius: '5px' }, value: rowCells.overheads, onChange: (e) => setRowCells(Object.assign(Object.assign({}, rowCells), { overheads: e.target.value.replace(/[^\d.]/g, '') })), onKeyDown: (e) => handleKeyDown(e), InputProps: {
-                        style: { color: '#a1a1aa' }
-                    } }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], { size: "small", style: { border: '1px solid #a1a1aa', borderRadius: '5px' }, value: rowCells.estimatedProfit, onChange: (e) => setRowCells(Object.assign(Object.assign({}, rowCells), { estimatedProfit: e.target.value.replace(/[^\d.]/g, '') })), onKeyDown: (e) => handleKeyDown(e), InputProps: {
-                        style: { color: '#a1a1aa' }
-                    } }) })] }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], { className: "row-name", size: "small", value: rowCells.rowName, onChange: (e) => setRowCells((rowCells) => (Object.assign(Object.assign({}, rowCells), { rowName: e.target.value }))), onKeyDown: (e) => handleSubmitRow(e) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], { size: "small", value: rowCells.salary, onChange: (e) => setRowCells((rowCells) => (Object.assign(Object.assign({}, rowCells), { salary: parseFloat(e.target.value.replace(_WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_3__.numberCheckPattern, '')) }))), onKeyDown: (e) => handleSubmitRow(e) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], { size: "small", value: rowCells.equipmentCosts, onChange: (e) => setRowCells((rowCells) => (Object.assign(Object.assign({}, rowCells), { equipmentCosts: parseFloat(e.target.value.replace(_WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_3__.numberCheckPattern, '')) }))), onKeyDown: (e) => handleSubmitRow(e) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], { className: "cell-field", size: "small", value: rowCells.overheads, onChange: (e) => setRowCells((rowCells) => (Object.assign(Object.assign({}, rowCells), { overheads: parseFloat(e.target.value.replace(_WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_3__.numberCheckPattern, '')) }))), onKeyDown: (e) => handleSubmitRow(e) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], { size: "small", value: rowCells.estimatedProfit, onChange: (e) => setRowCells((rowCells) => (Object.assign(Object.assign({}, rowCells), { estimatedProfit: parseFloat(e.target.value.replace(_WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_3__.numberCheckPattern, '')) }))), onKeyDown: (e) => handleSubmitRow(e) }) })] }));
 }
 
 
@@ -54565,10 +54991,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/store.ts":
-/*!**********************!*\
-  !*** ./src/store.ts ***!
-  \**********************/
+/***/ "./src/store/index.ts":
+/*!****************************!*\
+  !*** ./src/store/index.ts ***!
+  \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -54577,18 +55003,128 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   useAppDispatch: () => (/* binding */ useAppDispatch),
 /* harmony export */   useAppSelector: () => (/* binding */ useAppSelector)
 /* harmony export */ });
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs");
-/* harmony import */ var _components_Worksheet_WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Worksheet/WorksheetEditRow.service */ "./src/components/Worksheet/WorksheetEditRow.service.ts");
+/* harmony import */ var _reduxjs_toolkit_query__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @reduxjs/toolkit/query */ "./node_modules/@reduxjs/toolkit/dist/query/rtk-query.modern.mjs");
+/* harmony import */ var _rows_slice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rows-slice */ "./src/store/rows-slice.ts");
+
 
 
 
 const store = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.configureStore)({
-    reducer: _components_Worksheet_WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_0__.worksheetReducer
+    reducer: _rows_slice__WEBPACK_IMPORTED_MODULE_0__["default"]
 });
-const useAppSelector = react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector;
-const useAppDispatch = () => (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useDispatch)();
+(0,_reduxjs_toolkit_query__WEBPACK_IMPORTED_MODULE_2__.setupListeners)(store.dispatch);
+const useAppSelector = react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector;
+const useAppDispatch = () => (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useDispatch)();
 
+
+
+/***/ }),
+
+/***/ "./src/store/rows-slice.ts":
+/*!*********************************!*\
+  !*** ./src/store/rows-slice.ts ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   rowsSlice: () => (/* binding */ rowsSlice)
+/* harmony export */ });
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs");
+/* harmony import */ var src_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/api */ "./src/api/index.ts");
+
+
+const initialState = {
+    rows: [],
+    lastCreatedRowId: null,
+    status: 'idle',
+    error: null
+};
+const rowsSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createSlice)({
+    name: 'rows',
+    initialState,
+    reducers: {},
+    extraReducers: (builder) => {
+        builder
+            .addCase(src_api__WEBPACK_IMPORTED_MODULE_0__.fetchRowsList.pending, (state) => {
+            state.status = 'loading';
+        })
+            .addCase(src_api__WEBPACK_IMPORTED_MODULE_0__.fetchRowsList.fulfilled, (state, action) => {
+            state.status = 'succeeded';
+            state.rows = action.payload;
+        })
+            .addCase(src_api__WEBPACK_IMPORTED_MODULE_0__.fetchRowsList.rejected, (state, action) => {
+            state.status = 'failed';
+            state.error = action.payload;
+        })
+            .addCase(src_api__WEBPACK_IMPORTED_MODULE_0__.createRow.pending, (state) => {
+            state.status = 'loading';
+        })
+            .addCase(src_api__WEBPACK_IMPORTED_MODULE_0__.createRow.fulfilled, (state, action) => {
+            state.status = 'succeeded';
+            const newRow = action.payload.current;
+            if (state.rows.length)
+                state.lastCreatedRowId = newRow.id;
+            state.rows.push(newRow);
+            // const newRow = action.payload.recalculated.current;
+            // const parentId = action.payload.parentId;
+            // if (parentId) {
+            //   state.rows = state.rows.map((row) => {
+            //     if (row.id === parentId) {
+            //       return {
+            //         ...row,
+            //         child:
+            //           row.child.length === 0
+            //             ? [{ ...newRow, child: [] }]
+            //             : [...row.child, { ...newRow, child: [] }]
+            //       };
+            //     }
+            //     return row;
+            //   });
+            // } else {
+            //   state.rows.push({ ...newRow, child: [] });
+            // }
+        })
+            .addCase(src_api__WEBPACK_IMPORTED_MODULE_0__.createRow.rejected, (state, action) => {
+            state.status = 'failed';
+            state.error = action.payload;
+        })
+            .addCase(src_api__WEBPACK_IMPORTED_MODULE_0__.updateRow.pending, (state) => {
+            state.status = 'loading';
+        })
+            .addCase(src_api__WEBPACK_IMPORTED_MODULE_0__.updateRow.fulfilled, (state, action) => {
+            state.status = 'succeeded';
+            state.rows = state.rows.filter((row) => row.id !== action.payload.rowId);
+            state.rows.push(action.payload.recalculated.current);
+            // const updatedRow = action.payload.current;
+            // state.rows = state.rows.map((row) => {
+            //   if (row.id === updatedRow.id) {
+            //     return { ...row, ...updatedRow };
+            //   }
+            //   return row;
+            // });
+        })
+            .addCase(src_api__WEBPACK_IMPORTED_MODULE_0__.updateRow.rejected, (state, action) => {
+            state.status = 'failed';
+            state.error = action.payload;
+        })
+            .addCase(src_api__WEBPACK_IMPORTED_MODULE_0__.deleteRow.pending, (state) => {
+            state.status = 'loading';
+        })
+            .addCase(src_api__WEBPACK_IMPORTED_MODULE_0__.deleteRow.fulfilled, (state, action) => {
+            state.status = 'succeeded';
+            state.rows.filter((row) => row.id !== action.payload.rowId);
+        })
+            .addCase(src_api__WEBPACK_IMPORTED_MODULE_0__.deleteRow.rejected, (state, action) => {
+            state.status = 'failed';
+            state.error = action.payload;
+        });
+    }
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (rowsSlice.reducer);
 
 
 /***/ }),
@@ -54653,6 +55189,2428 @@ function _objectWithoutPropertiesLoose(r, e) {
 }
 module.exports = _objectWithoutPropertiesLoose, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
+
+/***/ }),
+
+/***/ "./node_modules/@reduxjs/toolkit/dist/query/rtk-query.modern.mjs":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@reduxjs/toolkit/dist/query/rtk-query.modern.mjs ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   QueryStatus: () => (/* binding */ QueryStatus),
+/* harmony export */   buildCreateApi: () => (/* binding */ buildCreateApi),
+/* harmony export */   copyWithStructuralSharing: () => (/* binding */ copyWithStructuralSharing),
+/* harmony export */   coreModule: () => (/* binding */ coreModule),
+/* harmony export */   coreModuleName: () => (/* binding */ coreModuleName),
+/* harmony export */   createApi: () => (/* binding */ createApi),
+/* harmony export */   defaultSerializeQueryArgs: () => (/* binding */ defaultSerializeQueryArgs),
+/* harmony export */   fakeBaseQuery: () => (/* binding */ fakeBaseQuery),
+/* harmony export */   fetchBaseQuery: () => (/* binding */ fetchBaseQuery),
+/* harmony export */   retry: () => (/* binding */ retry),
+/* harmony export */   setupListeners: () => (/* binding */ setupListeners),
+/* harmony export */   skipToken: () => (/* binding */ skipToken)
+/* harmony export */ });
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/redux/dist/redux.mjs");
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs");
+/* harmony import */ var immer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! immer */ "./node_modules/immer/dist/immer.mjs");
+/* harmony import */ var reselect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reselect */ "./node_modules/reselect/dist/reselect.mjs");
+// src/query/core/apiState.ts
+var QueryStatus = /* @__PURE__ */ ((QueryStatus2) => {
+  QueryStatus2["uninitialized"] = "uninitialized";
+  QueryStatus2["pending"] = "pending";
+  QueryStatus2["fulfilled"] = "fulfilled";
+  QueryStatus2["rejected"] = "rejected";
+  return QueryStatus2;
+})(QueryStatus || {});
+function getRequestStatusFlags(status) {
+  return {
+    status,
+    isUninitialized: status === "uninitialized" /* uninitialized */,
+    isLoading: status === "pending" /* pending */,
+    isSuccess: status === "fulfilled" /* fulfilled */,
+    isError: status === "rejected" /* rejected */
+  };
+}
+
+// src/query/utils/isAbsoluteUrl.ts
+function isAbsoluteUrl(url) {
+  return new RegExp(`(^|:)//`).test(url);
+}
+
+// src/query/utils/joinUrls.ts
+var withoutTrailingSlash = (url) => url.replace(/\/$/, "");
+var withoutLeadingSlash = (url) => url.replace(/^\//, "");
+function joinUrls(base, url) {
+  if (!base) {
+    return url;
+  }
+  if (!url) {
+    return base;
+  }
+  if (isAbsoluteUrl(url)) {
+    return url;
+  }
+  const delimiter = base.endsWith("/") || !url.startsWith("?") ? "/" : "";
+  base = withoutTrailingSlash(base);
+  url = withoutLeadingSlash(url);
+  return `${base}${delimiter}${url}`;
+}
+
+// src/query/utils/flatten.ts
+var flatten = (arr) => [].concat(...arr);
+
+// src/query/utils/isOnline.ts
+function isOnline() {
+  return typeof navigator === "undefined" ? true : navigator.onLine === void 0 ? true : navigator.onLine;
+}
+
+// src/query/utils/isDocumentVisible.ts
+function isDocumentVisible() {
+  if (typeof document === "undefined") {
+    return true;
+  }
+  return document.visibilityState !== "hidden";
+}
+
+// src/query/core/rtkImports.ts
+
+
+// src/query/utils/copyWithStructuralSharing.ts
+var isPlainObject2 = _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.isPlainObject;
+function copyWithStructuralSharing(oldObj, newObj) {
+  if (oldObj === newObj || !(isPlainObject2(oldObj) && isPlainObject2(newObj) || Array.isArray(oldObj) && Array.isArray(newObj))) {
+    return newObj;
+  }
+  const newKeys = Object.keys(newObj);
+  const oldKeys = Object.keys(oldObj);
+  let isSameObject = newKeys.length === oldKeys.length;
+  const mergeObj = Array.isArray(newObj) ? [] : {};
+  for (const key of newKeys) {
+    mergeObj[key] = copyWithStructuralSharing(oldObj[key], newObj[key]);
+    if (isSameObject)
+      isSameObject = oldObj[key] === mergeObj[key];
+  }
+  return isSameObject ? oldObj : mergeObj;
+}
+
+// src/query/fetchBaseQuery.ts
+var defaultFetchFn = (...args) => fetch(...args);
+var defaultValidateStatus = (response) => response.status >= 200 && response.status <= 299;
+var defaultIsJsonContentType = (headers) => (
+  /*applicat*/
+  /ion\/(vnd\.api\+)?json/.test(headers.get("content-type") || "")
+);
+function stripUndefined(obj) {
+  if (!(0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.isPlainObject)(obj)) {
+    return obj;
+  }
+  const copy = {
+    ...obj
+  };
+  for (const [k, v] of Object.entries(copy)) {
+    if (v === void 0)
+      delete copy[k];
+  }
+  return copy;
+}
+function fetchBaseQuery({
+  baseUrl,
+  prepareHeaders = (x) => x,
+  fetchFn = defaultFetchFn,
+  paramsSerializer,
+  isJsonContentType = defaultIsJsonContentType,
+  jsonContentType = "application/json",
+  jsonReplacer,
+  timeout: defaultTimeout,
+  responseHandler: globalResponseHandler,
+  validateStatus: globalValidateStatus,
+  ...baseFetchOptions
+} = {}) {
+  if (typeof fetch === "undefined" && fetchFn === defaultFetchFn) {
+    console.warn("Warning: `fetch` is not available. Please supply a custom `fetchFn` property to use `fetchBaseQuery` on SSR environments.");
+  }
+  return async (arg, api) => {
+    const {
+      signal,
+      getState,
+      extra,
+      endpoint,
+      forced,
+      type
+    } = api;
+    let meta;
+    let {
+      url,
+      headers = new Headers(baseFetchOptions.headers),
+      params = void 0,
+      responseHandler = globalResponseHandler ?? "json",
+      validateStatus = globalValidateStatus ?? defaultValidateStatus,
+      timeout = defaultTimeout,
+      ...rest
+    } = typeof arg == "string" ? {
+      url: arg
+    } : arg;
+    let config = {
+      ...baseFetchOptions,
+      signal,
+      ...rest
+    };
+    headers = new Headers(stripUndefined(headers));
+    config.headers = await prepareHeaders(headers, {
+      getState,
+      extra,
+      endpoint,
+      forced,
+      type
+    }) || headers;
+    const isJsonifiable = (body) => typeof body === "object" && ((0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.isPlainObject)(body) || Array.isArray(body) || typeof body.toJSON === "function");
+    if (!config.headers.has("content-type") && isJsonifiable(config.body)) {
+      config.headers.set("content-type", jsonContentType);
+    }
+    if (isJsonifiable(config.body) && isJsonContentType(config.headers)) {
+      config.body = JSON.stringify(config.body, jsonReplacer);
+    }
+    if (params) {
+      const divider = ~url.indexOf("?") ? "&" : "?";
+      const query = paramsSerializer ? paramsSerializer(params) : new URLSearchParams(stripUndefined(params));
+      url += divider + query;
+    }
+    url = joinUrls(baseUrl, url);
+    const request = new Request(url, config);
+    const requestClone = new Request(url, config);
+    meta = {
+      request: requestClone
+    };
+    let response, timedOut = false, timeoutId = timeout && setTimeout(() => {
+      timedOut = true;
+      api.abort();
+    }, timeout);
+    try {
+      response = await fetchFn(request);
+    } catch (e) {
+      return {
+        error: {
+          status: timedOut ? "TIMEOUT_ERROR" : "FETCH_ERROR",
+          error: String(e)
+        },
+        meta
+      };
+    } finally {
+      if (timeoutId)
+        clearTimeout(timeoutId);
+    }
+    const responseClone = response.clone();
+    meta.response = responseClone;
+    let resultData;
+    let responseText = "";
+    try {
+      let handleResponseError;
+      await Promise.all([
+        handleResponse(response, responseHandler).then((r) => resultData = r, (e) => handleResponseError = e),
+        // see https://github.com/node-fetch/node-fetch/issues/665#issuecomment-538995182
+        // we *have* to "use up" both streams at the same time or they will stop running in node-fetch scenarios
+        responseClone.text().then((r) => responseText = r, () => {
+        })
+      ]);
+      if (handleResponseError)
+        throw handleResponseError;
+    } catch (e) {
+      return {
+        error: {
+          status: "PARSING_ERROR",
+          originalStatus: response.status,
+          data: responseText,
+          error: String(e)
+        },
+        meta
+      };
+    }
+    return validateStatus(response, resultData) ? {
+      data: resultData,
+      meta
+    } : {
+      error: {
+        status: response.status,
+        data: resultData
+      },
+      meta
+    };
+  };
+  async function handleResponse(response, responseHandler) {
+    if (typeof responseHandler === "function") {
+      return responseHandler(response);
+    }
+    if (responseHandler === "content-type") {
+      responseHandler = isJsonContentType(response.headers) ? "json" : "text";
+    }
+    if (responseHandler === "json") {
+      const text = await response.text();
+      return text.length ? JSON.parse(text) : null;
+    }
+    return response.text();
+  }
+}
+
+// src/query/HandledError.ts
+var HandledError = class {
+  constructor(value, meta = void 0) {
+    this.value = value;
+    this.meta = meta;
+  }
+};
+
+// src/query/retry.ts
+async function defaultBackoff(attempt = 0, maxRetries = 5) {
+  const attempts = Math.min(attempt, maxRetries);
+  const timeout = ~~((Math.random() + 0.4) * (300 << attempts));
+  await new Promise((resolve) => setTimeout((res) => resolve(res), timeout));
+}
+function fail(e) {
+  throw Object.assign(new HandledError({
+    error: e
+  }), {
+    throwImmediately: true
+  });
+}
+var EMPTY_OPTIONS = {};
+var retryWithBackoff = (baseQuery, defaultOptions) => async (args, api, extraOptions) => {
+  const possibleMaxRetries = [5, (defaultOptions || EMPTY_OPTIONS).maxRetries, (extraOptions || EMPTY_OPTIONS).maxRetries].filter((x) => x !== void 0);
+  const [maxRetries] = possibleMaxRetries.slice(-1);
+  const defaultRetryCondition = (_, __, {
+    attempt
+  }) => attempt <= maxRetries;
+  const options = {
+    maxRetries,
+    backoff: defaultBackoff,
+    retryCondition: defaultRetryCondition,
+    ...defaultOptions,
+    ...extraOptions
+  };
+  let retry2 = 0;
+  while (true) {
+    try {
+      const result = await baseQuery(args, api, extraOptions);
+      if (result.error) {
+        throw new HandledError(result);
+      }
+      return result;
+    } catch (e) {
+      retry2++;
+      if (e.throwImmediately) {
+        if (e instanceof HandledError) {
+          return e.value;
+        }
+        throw e;
+      }
+      if (e instanceof HandledError && !options.retryCondition(e.value.error, args, {
+        attempt: retry2,
+        baseQueryApi: api,
+        extraOptions
+      })) {
+        return e.value;
+      }
+      await options.backoff(retry2, options.maxRetries);
+    }
+  }
+};
+var retry = /* @__PURE__ */ Object.assign(retryWithBackoff, {
+  fail
+});
+
+// src/query/core/setupListeners.ts
+var onFocus = /* @__PURE__ */ (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createAction)("__rtkq/focused");
+var onFocusLost = /* @__PURE__ */ (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createAction)("__rtkq/unfocused");
+var onOnline = /* @__PURE__ */ (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createAction)("__rtkq/online");
+var onOffline = /* @__PURE__ */ (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createAction)("__rtkq/offline");
+var initialized = false;
+function setupListeners(dispatch, customHandler) {
+  function defaultHandler() {
+    const handleFocus = () => dispatch(onFocus());
+    const handleFocusLost = () => dispatch(onFocusLost());
+    const handleOnline = () => dispatch(onOnline());
+    const handleOffline = () => dispatch(onOffline());
+    const handleVisibilityChange = () => {
+      if (window.document.visibilityState === "visible") {
+        handleFocus();
+      } else {
+        handleFocusLost();
+      }
+    };
+    if (!initialized) {
+      if (typeof window !== "undefined" && window.addEventListener) {
+        window.addEventListener("visibilitychange", handleVisibilityChange, false);
+        window.addEventListener("focus", handleFocus, false);
+        window.addEventListener("online", handleOnline, false);
+        window.addEventListener("offline", handleOffline, false);
+        initialized = true;
+      }
+    }
+    const unsubscribe = () => {
+      window.removeEventListener("focus", handleFocus);
+      window.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
+      initialized = false;
+    };
+    return unsubscribe;
+  }
+  return customHandler ? customHandler(dispatch, {
+    onFocus,
+    onFocusLost,
+    onOffline,
+    onOnline
+  }) : defaultHandler();
+}
+
+// src/query/endpointDefinitions.ts
+function isQueryDefinition(e) {
+  return e.type === "query" /* query */;
+}
+function isMutationDefinition(e) {
+  return e.type === "mutation" /* mutation */;
+}
+function calculateProvidedBy(description, result, error, queryArg, meta, assertTagTypes) {
+  if (isFunction(description)) {
+    return description(result, error, queryArg, meta).map(expandTagDescription).map(assertTagTypes);
+  }
+  if (Array.isArray(description)) {
+    return description.map(expandTagDescription).map(assertTagTypes);
+  }
+  return [];
+}
+function isFunction(t) {
+  return typeof t === "function";
+}
+function expandTagDescription(description) {
+  return typeof description === "string" ? {
+    type: description
+  } : description;
+}
+
+// src/query/core/buildInitiate.ts
+
+
+// src/query/utils/isNotNullish.ts
+function isNotNullish(v) {
+  return v != null;
+}
+
+// src/query/utils/countObjectKeys.ts
+function countObjectKeys(obj) {
+  let count = 0;
+  for (const _key in obj) {
+    count++;
+  }
+  return count;
+}
+
+// src/tsHelpers.ts
+function asSafePromise(promise, fallback) {
+  return promise.catch(fallback);
+}
+
+// src/query/core/buildInitiate.ts
+var forceQueryFnSymbol = Symbol("forceQueryFn");
+var isUpsertQuery = (arg) => typeof arg[forceQueryFnSymbol] === "function";
+function buildInitiate({
+  serializeQueryArgs,
+  queryThunk,
+  mutationThunk,
+  api,
+  context
+}) {
+  const runningQueries = /* @__PURE__ */ new Map();
+  const runningMutations = /* @__PURE__ */ new Map();
+  const {
+    unsubscribeQueryResult,
+    removeMutationResult,
+    updateSubscriptionOptions
+  } = api.internalActions;
+  return {
+    buildInitiateQuery,
+    buildInitiateMutation,
+    getRunningQueryThunk,
+    getRunningMutationThunk,
+    getRunningQueriesThunk,
+    getRunningMutationsThunk
+  };
+  function getRunningQueryThunk(endpointName, queryArgs) {
+    return (dispatch) => {
+      const endpointDefinition = context.endpointDefinitions[endpointName];
+      const queryCacheKey = serializeQueryArgs({
+        queryArgs,
+        endpointDefinition,
+        endpointName
+      });
+      return runningQueries.get(dispatch)?.[queryCacheKey];
+    };
+  }
+  function getRunningMutationThunk(_endpointName, fixedCacheKeyOrRequestId) {
+    return (dispatch) => {
+      return runningMutations.get(dispatch)?.[fixedCacheKeyOrRequestId];
+    };
+  }
+  function getRunningQueriesThunk() {
+    return (dispatch) => Object.values(runningQueries.get(dispatch) || {}).filter(isNotNullish);
+  }
+  function getRunningMutationsThunk() {
+    return (dispatch) => Object.values(runningMutations.get(dispatch) || {}).filter(isNotNullish);
+  }
+  function middlewareWarning(dispatch) {
+    if (true) {
+      if (middlewareWarning.triggered)
+        return;
+      const returnedValue = dispatch(api.internalActions.internal_getRTKQSubscriptions());
+      middlewareWarning.triggered = true;
+      if (typeof returnedValue !== "object" || typeof returnedValue?.type === "string") {
+        throw new Error( false ? 0 : `Warning: Middleware for RTK-Query API at reducerPath "${api.reducerPath}" has not been added to the store.
+You must add the middleware for RTK-Query to function correctly!`);
+      }
+    }
+  }
+  function buildInitiateQuery(endpointName, endpointDefinition) {
+    const queryAction = (arg, {
+      subscribe = true,
+      forceRefetch,
+      subscriptionOptions,
+      [forceQueryFnSymbol]: forceQueryFn,
+      ...rest
+    } = {}) => (dispatch, getState) => {
+      const queryCacheKey = serializeQueryArgs({
+        queryArgs: arg,
+        endpointDefinition,
+        endpointName
+      });
+      const thunk = queryThunk({
+        ...rest,
+        type: "query",
+        subscribe,
+        forceRefetch,
+        subscriptionOptions,
+        endpointName,
+        originalArgs: arg,
+        queryCacheKey,
+        [forceQueryFnSymbol]: forceQueryFn
+      });
+      const selector = api.endpoints[endpointName].select(arg);
+      const thunkResult = dispatch(thunk);
+      const stateAfter = selector(getState());
+      middlewareWarning(dispatch);
+      const {
+        requestId,
+        abort
+      } = thunkResult;
+      const skippedSynchronously = stateAfter.requestId !== requestId;
+      const runningQuery = runningQueries.get(dispatch)?.[queryCacheKey];
+      const selectFromState = () => selector(getState());
+      const statePromise = Object.assign(forceQueryFn ? (
+        // a query has been forced (upsertQueryData)
+        // -> we want to resolve it once data has been written with the data that will be written
+        thunkResult.then(selectFromState)
+      ) : skippedSynchronously && !runningQuery ? (
+        // a query has been skipped due to a condition and we do not have any currently running query
+        // -> we want to resolve it immediately with the current data
+        Promise.resolve(stateAfter)
+      ) : (
+        // query just started or one is already in flight
+        // -> wait for the running query, then resolve with data from after that
+        Promise.all([runningQuery, thunkResult]).then(selectFromState)
+      ), {
+        arg,
+        requestId,
+        subscriptionOptions,
+        queryCacheKey,
+        abort,
+        async unwrap() {
+          const result = await statePromise;
+          if (result.isError) {
+            throw result.error;
+          }
+          return result.data;
+        },
+        refetch: () => dispatch(queryAction(arg, {
+          subscribe: false,
+          forceRefetch: true
+        })),
+        unsubscribe() {
+          if (subscribe)
+            dispatch(unsubscribeQueryResult({
+              queryCacheKey,
+              requestId
+            }));
+        },
+        updateSubscriptionOptions(options) {
+          statePromise.subscriptionOptions = options;
+          dispatch(updateSubscriptionOptions({
+            endpointName,
+            requestId,
+            queryCacheKey,
+            options
+          }));
+        }
+      });
+      if (!runningQuery && !skippedSynchronously && !forceQueryFn) {
+        const running = runningQueries.get(dispatch) || {};
+        running[queryCacheKey] = statePromise;
+        runningQueries.set(dispatch, running);
+        statePromise.then(() => {
+          delete running[queryCacheKey];
+          if (!countObjectKeys(running)) {
+            runningQueries.delete(dispatch);
+          }
+        });
+      }
+      return statePromise;
+    };
+    return queryAction;
+  }
+  function buildInitiateMutation(endpointName) {
+    return (arg, {
+      track = true,
+      fixedCacheKey
+    } = {}) => (dispatch, getState) => {
+      const thunk = mutationThunk({
+        type: "mutation",
+        endpointName,
+        originalArgs: arg,
+        track,
+        fixedCacheKey
+      });
+      const thunkResult = dispatch(thunk);
+      middlewareWarning(dispatch);
+      const {
+        requestId,
+        abort,
+        unwrap
+      } = thunkResult;
+      const returnValuePromise = asSafePromise(thunkResult.unwrap().then((data) => ({
+        data
+      })), (error) => ({
+        error
+      }));
+      const reset = () => {
+        dispatch(removeMutationResult({
+          requestId,
+          fixedCacheKey
+        }));
+      };
+      const ret = Object.assign(returnValuePromise, {
+        arg: thunkResult.arg,
+        requestId,
+        abort,
+        unwrap,
+        reset
+      });
+      const running = runningMutations.get(dispatch) || {};
+      runningMutations.set(dispatch, running);
+      running[requestId] = ret;
+      ret.then(() => {
+        delete running[requestId];
+        if (!countObjectKeys(running)) {
+          runningMutations.delete(dispatch);
+        }
+      });
+      if (fixedCacheKey) {
+        running[fixedCacheKey] = ret;
+        ret.then(() => {
+          if (running[fixedCacheKey] === ret) {
+            delete running[fixedCacheKey];
+            if (!countObjectKeys(running)) {
+              runningMutations.delete(dispatch);
+            }
+          }
+        });
+      }
+      return ret;
+    };
+  }
+}
+
+// src/query/core/buildThunks.ts
+
+function defaultTransformResponse(baseQueryReturnValue) {
+  return baseQueryReturnValue;
+}
+function buildThunks({
+  reducerPath,
+  baseQuery,
+  context: {
+    endpointDefinitions
+  },
+  serializeQueryArgs,
+  api,
+  assertTagType
+}) {
+  const patchQueryData = (endpointName, args, patches, updateProvided) => (dispatch, getState) => {
+    const endpointDefinition = endpointDefinitions[endpointName];
+    const queryCacheKey = serializeQueryArgs({
+      queryArgs: args,
+      endpointDefinition,
+      endpointName
+    });
+    dispatch(api.internalActions.queryResultPatched({
+      queryCacheKey,
+      patches
+    }));
+    if (!updateProvided) {
+      return;
+    }
+    const newValue = api.endpoints[endpointName].select(args)(
+      // Work around TS 4.1 mismatch
+      getState()
+    );
+    const providedTags = calculateProvidedBy(endpointDefinition.providesTags, newValue.data, void 0, args, {}, assertTagType);
+    dispatch(api.internalActions.updateProvidedBy({
+      queryCacheKey,
+      providedTags
+    }));
+  };
+  const updateQueryData = (endpointName, args, updateRecipe, updateProvided = true) => (dispatch, getState) => {
+    const endpointDefinition = api.endpoints[endpointName];
+    const currentState = endpointDefinition.select(args)(
+      // Work around TS 4.1 mismatch
+      getState()
+    );
+    let ret = {
+      patches: [],
+      inversePatches: [],
+      undo: () => dispatch(api.util.patchQueryData(endpointName, args, ret.inversePatches, updateProvided))
+    };
+    if (currentState.status === "uninitialized" /* uninitialized */) {
+      return ret;
+    }
+    let newValue;
+    if ("data" in currentState) {
+      if ((0,immer__WEBPACK_IMPORTED_MODULE_2__.isDraftable)(currentState.data)) {
+        const [value, patches, inversePatches] = (0,immer__WEBPACK_IMPORTED_MODULE_2__.produceWithPatches)(currentState.data, updateRecipe);
+        ret.patches.push(...patches);
+        ret.inversePatches.push(...inversePatches);
+        newValue = value;
+      } else {
+        newValue = updateRecipe(currentState.data);
+        ret.patches.push({
+          op: "replace",
+          path: [],
+          value: newValue
+        });
+        ret.inversePatches.push({
+          op: "replace",
+          path: [],
+          value: currentState.data
+        });
+      }
+    }
+    if (ret.patches.length === 0) {
+      return ret;
+    }
+    dispatch(api.util.patchQueryData(endpointName, args, ret.patches, updateProvided));
+    return ret;
+  };
+  const upsertQueryData = (endpointName, args, value) => (dispatch) => {
+    return dispatch(api.endpoints[endpointName].initiate(args, {
+      subscribe: false,
+      forceRefetch: true,
+      [forceQueryFnSymbol]: () => ({
+        data: value
+      })
+    }));
+  };
+  const executeEndpoint = async (arg, {
+    signal,
+    abort,
+    rejectWithValue,
+    fulfillWithValue,
+    dispatch,
+    getState,
+    extra
+  }) => {
+    const endpointDefinition = endpointDefinitions[arg.endpointName];
+    try {
+      let transformResponse = defaultTransformResponse;
+      let result;
+      const baseQueryApi = {
+        signal,
+        abort,
+        dispatch,
+        getState,
+        extra,
+        endpoint: arg.endpointName,
+        type: arg.type,
+        forced: arg.type === "query" ? isForcedQuery(arg, getState()) : void 0
+      };
+      const forceQueryFn = arg.type === "query" ? arg[forceQueryFnSymbol] : void 0;
+      if (forceQueryFn) {
+        result = forceQueryFn();
+      } else if (endpointDefinition.query) {
+        result = await baseQuery(endpointDefinition.query(arg.originalArgs), baseQueryApi, endpointDefinition.extraOptions);
+        if (endpointDefinition.transformResponse) {
+          transformResponse = endpointDefinition.transformResponse;
+        }
+      } else {
+        result = await endpointDefinition.queryFn(arg.originalArgs, baseQueryApi, endpointDefinition.extraOptions, (arg2) => baseQuery(arg2, baseQueryApi, endpointDefinition.extraOptions));
+      }
+      if (typeof process !== "undefined" && "development" === "development") {
+        const what = endpointDefinition.query ? "`baseQuery`" : "`queryFn`";
+        let err;
+        if (!result) {
+          err = `${what} did not return anything.`;
+        } else if (typeof result !== "object") {
+          err = `${what} did not return an object.`;
+        } else if (result.error && result.data) {
+          err = `${what} returned an object containing both \`error\` and \`result\`.`;
+        } else if (result.error === void 0 && result.data === void 0) {
+          err = `${what} returned an object containing neither a valid \`error\` and \`result\`. At least one of them should not be \`undefined\``;
+        } else {
+          for (const key of Object.keys(result)) {
+            if (key !== "error" && key !== "data" && key !== "meta") {
+              err = `The object returned by ${what} has the unknown property ${key}.`;
+              break;
+            }
+          }
+        }
+        if (err) {
+          console.error(`Error encountered handling the endpoint ${arg.endpointName}.
+              ${err}
+              It needs to return an object with either the shape \`{ data: <value> }\` or \`{ error: <value> }\` that may contain an optional \`meta\` property.
+              Object returned was:`, result);
+        }
+      }
+      if (result.error)
+        throw new HandledError(result.error, result.meta);
+      return fulfillWithValue(await transformResponse(result.data, result.meta, arg.originalArgs), {
+        fulfilledTimeStamp: Date.now(),
+        baseQueryMeta: result.meta,
+        [_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.SHOULD_AUTOBATCH]: true
+      });
+    } catch (error) {
+      let catchedError = error;
+      if (catchedError instanceof HandledError) {
+        let transformErrorResponse = defaultTransformResponse;
+        if (endpointDefinition.query && endpointDefinition.transformErrorResponse) {
+          transformErrorResponse = endpointDefinition.transformErrorResponse;
+        }
+        try {
+          return rejectWithValue(await transformErrorResponse(catchedError.value, catchedError.meta, arg.originalArgs), {
+            baseQueryMeta: catchedError.meta,
+            [_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.SHOULD_AUTOBATCH]: true
+          });
+        } catch (e) {
+          catchedError = e;
+        }
+      }
+      if (typeof process !== "undefined" && "development" !== "production") {
+        console.error(`An unhandled error occurred processing a request for the endpoint "${arg.endpointName}".
+In the case of an unhandled error, no tags will be "provided" or "invalidated".`, catchedError);
+      } else {
+        console.error(catchedError);
+      }
+      throw catchedError;
+    }
+  };
+  function isForcedQuery(arg, state) {
+    const requestState = state[reducerPath]?.queries?.[arg.queryCacheKey];
+    const baseFetchOnMountOrArgChange = state[reducerPath]?.config.refetchOnMountOrArgChange;
+    const fulfilledVal = requestState?.fulfilledTimeStamp;
+    const refetchVal = arg.forceRefetch ?? (arg.subscribe && baseFetchOnMountOrArgChange);
+    if (refetchVal) {
+      return refetchVal === true || (Number(/* @__PURE__ */ new Date()) - Number(fulfilledVal)) / 1e3 >= refetchVal;
+    }
+    return false;
+  }
+  const queryThunk = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createAsyncThunk)(`${reducerPath}/executeQuery`, executeEndpoint, {
+    getPendingMeta() {
+      return {
+        startedTimeStamp: Date.now(),
+        [_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.SHOULD_AUTOBATCH]: true
+      };
+    },
+    condition(queryThunkArgs, {
+      getState
+    }) {
+      const state = getState();
+      const requestState = state[reducerPath]?.queries?.[queryThunkArgs.queryCacheKey];
+      const fulfilledVal = requestState?.fulfilledTimeStamp;
+      const currentArg = queryThunkArgs.originalArgs;
+      const previousArg = requestState?.originalArgs;
+      const endpointDefinition = endpointDefinitions[queryThunkArgs.endpointName];
+      if (isUpsertQuery(queryThunkArgs)) {
+        return true;
+      }
+      if (requestState?.status === "pending") {
+        return false;
+      }
+      if (isForcedQuery(queryThunkArgs, state)) {
+        return true;
+      }
+      if (isQueryDefinition(endpointDefinition) && endpointDefinition?.forceRefetch?.({
+        currentArg,
+        previousArg,
+        endpointState: requestState,
+        state
+      })) {
+        return true;
+      }
+      if (fulfilledVal) {
+        return false;
+      }
+      return true;
+    },
+    dispatchConditionRejection: true
+  });
+  const mutationThunk = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createAsyncThunk)(`${reducerPath}/executeMutation`, executeEndpoint, {
+    getPendingMeta() {
+      return {
+        startedTimeStamp: Date.now(),
+        [_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.SHOULD_AUTOBATCH]: true
+      };
+    }
+  });
+  const hasTheForce = (options) => "force" in options;
+  const hasMaxAge = (options) => "ifOlderThan" in options;
+  const prefetch = (endpointName, arg, options) => (dispatch, getState) => {
+    const force = hasTheForce(options) && options.force;
+    const maxAge = hasMaxAge(options) && options.ifOlderThan;
+    const queryAction = (force2 = true) => {
+      const options2 = {
+        forceRefetch: force2,
+        isPrefetch: true
+      };
+      return api.endpoints[endpointName].initiate(arg, options2);
+    };
+    const latestStateValue = api.endpoints[endpointName].select(arg)(getState());
+    if (force) {
+      dispatch(queryAction());
+    } else if (maxAge) {
+      const lastFulfilledTs = latestStateValue?.fulfilledTimeStamp;
+      if (!lastFulfilledTs) {
+        dispatch(queryAction());
+        return;
+      }
+      const shouldRetrigger = (Number(/* @__PURE__ */ new Date()) - Number(new Date(lastFulfilledTs))) / 1e3 >= maxAge;
+      if (shouldRetrigger) {
+        dispatch(queryAction());
+      }
+    } else {
+      dispatch(queryAction(false));
+    }
+  };
+  function matchesEndpoint(endpointName) {
+    return (action) => action?.meta?.arg?.endpointName === endpointName;
+  }
+  function buildMatchThunkActions(thunk, endpointName) {
+    return {
+      matchPending: (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isAllOf)((0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isPending)(thunk), matchesEndpoint(endpointName)),
+      matchFulfilled: (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isAllOf)((0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isFulfilled)(thunk), matchesEndpoint(endpointName)),
+      matchRejected: (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isAllOf)((0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isRejected)(thunk), matchesEndpoint(endpointName))
+    };
+  }
+  return {
+    queryThunk,
+    mutationThunk,
+    prefetch,
+    updateQueryData,
+    upsertQueryData,
+    patchQueryData,
+    buildMatchThunkActions
+  };
+}
+function calculateProvidedByThunk(action, type, endpointDefinitions, assertTagType) {
+  return calculateProvidedBy(endpointDefinitions[action.meta.arg.endpointName][type], (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isFulfilled)(action) ? action.payload : void 0, (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isRejectedWithValue)(action) ? action.payload : void 0, action.meta.arg.originalArgs, "baseQueryMeta" in action.meta ? action.meta.baseQueryMeta : void 0, assertTagType);
+}
+
+// src/query/core/buildSlice.ts
+
+
+function updateQuerySubstateIfExists(state, queryCacheKey, update) {
+  const substate = state[queryCacheKey];
+  if (substate) {
+    update(substate);
+  }
+}
+function getMutationCacheKey(id) {
+  return ("arg" in id ? id.arg.fixedCacheKey : id.fixedCacheKey) ?? id.requestId;
+}
+function updateMutationSubstateIfExists(state, id, update) {
+  const substate = state[getMutationCacheKey(id)];
+  if (substate) {
+    update(substate);
+  }
+}
+var initialState = {};
+function buildSlice({
+  reducerPath,
+  queryThunk,
+  mutationThunk,
+  context: {
+    endpointDefinitions: definitions,
+    apiUid,
+    extractRehydrationInfo,
+    hasRehydrationInfo
+  },
+  assertTagType,
+  config
+}) {
+  const resetApiState = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createAction)(`${reducerPath}/resetApiState`);
+  const querySlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createSlice)({
+    name: `${reducerPath}/queries`,
+    initialState,
+    reducers: {
+      removeQueryResult: {
+        reducer(draft, {
+          payload: {
+            queryCacheKey
+          }
+        }) {
+          delete draft[queryCacheKey];
+        },
+        prepare: (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.prepareAutoBatched)()
+      },
+      queryResultPatched: {
+        reducer(draft, {
+          payload: {
+            queryCacheKey,
+            patches
+          }
+        }) {
+          updateQuerySubstateIfExists(draft, queryCacheKey, (substate) => {
+            substate.data = (0,immer__WEBPACK_IMPORTED_MODULE_2__.applyPatches)(substate.data, patches.concat());
+          });
+        },
+        prepare: (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.prepareAutoBatched)()
+      }
+    },
+    extraReducers(builder) {
+      builder.addCase(queryThunk.pending, (draft, {
+        meta,
+        meta: {
+          arg
+        }
+      }) => {
+        const upserting = isUpsertQuery(arg);
+        draft[arg.queryCacheKey] ??= {
+          status: "uninitialized" /* uninitialized */,
+          endpointName: arg.endpointName
+        };
+        updateQuerySubstateIfExists(draft, arg.queryCacheKey, (substate) => {
+          substate.status = "pending" /* pending */;
+          substate.requestId = upserting && substate.requestId ? (
+            // for `upsertQuery` **updates**, keep the current `requestId`
+            substate.requestId
+          ) : (
+            // for normal queries or `upsertQuery` **inserts** always update the `requestId`
+            meta.requestId
+          );
+          if (arg.originalArgs !== void 0) {
+            substate.originalArgs = arg.originalArgs;
+          }
+          substate.startedTimeStamp = meta.startedTimeStamp;
+        });
+      }).addCase(queryThunk.fulfilled, (draft, {
+        meta,
+        payload
+      }) => {
+        updateQuerySubstateIfExists(draft, meta.arg.queryCacheKey, (substate) => {
+          if (substate.requestId !== meta.requestId && !isUpsertQuery(meta.arg))
+            return;
+          const {
+            merge
+          } = definitions[meta.arg.endpointName];
+          substate.status = "fulfilled" /* fulfilled */;
+          if (merge) {
+            if (substate.data !== void 0) {
+              const {
+                fulfilledTimeStamp,
+                arg,
+                baseQueryMeta,
+                requestId
+              } = meta;
+              let newData = (0,immer__WEBPACK_IMPORTED_MODULE_2__.produce)(substate.data, (draftSubstateData) => {
+                return merge(draftSubstateData, payload, {
+                  arg: arg.originalArgs,
+                  baseQueryMeta,
+                  fulfilledTimeStamp,
+                  requestId
+                });
+              });
+              substate.data = newData;
+            } else {
+              substate.data = payload;
+            }
+          } else {
+            substate.data = definitions[meta.arg.endpointName].structuralSharing ?? true ? copyWithStructuralSharing((0,immer__WEBPACK_IMPORTED_MODULE_2__.isDraft)(substate.data) ? (0,immer__WEBPACK_IMPORTED_MODULE_2__.original)(substate.data) : substate.data, payload) : payload;
+          }
+          delete substate.error;
+          substate.fulfilledTimeStamp = meta.fulfilledTimeStamp;
+        });
+      }).addCase(queryThunk.rejected, (draft, {
+        meta: {
+          condition,
+          arg,
+          requestId
+        },
+        error,
+        payload
+      }) => {
+        updateQuerySubstateIfExists(draft, arg.queryCacheKey, (substate) => {
+          if (condition) {
+          } else {
+            if (substate.requestId !== requestId)
+              return;
+            substate.status = "rejected" /* rejected */;
+            substate.error = payload ?? error;
+          }
+        });
+      }).addMatcher(hasRehydrationInfo, (draft, action) => {
+        const {
+          queries
+        } = extractRehydrationInfo(action);
+        for (const [key, entry] of Object.entries(queries)) {
+          if (
+            // do not rehydrate entries that were currently in flight.
+            entry?.status === "fulfilled" /* fulfilled */ || entry?.status === "rejected" /* rejected */
+          ) {
+            draft[key] = entry;
+          }
+        }
+      });
+    }
+  });
+  const mutationSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createSlice)({
+    name: `${reducerPath}/mutations`,
+    initialState,
+    reducers: {
+      removeMutationResult: {
+        reducer(draft, {
+          payload
+        }) {
+          const cacheKey = getMutationCacheKey(payload);
+          if (cacheKey in draft) {
+            delete draft[cacheKey];
+          }
+        },
+        prepare: (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.prepareAutoBatched)()
+      }
+    },
+    extraReducers(builder) {
+      builder.addCase(mutationThunk.pending, (draft, {
+        meta,
+        meta: {
+          requestId,
+          arg,
+          startedTimeStamp
+        }
+      }) => {
+        if (!arg.track)
+          return;
+        draft[getMutationCacheKey(meta)] = {
+          requestId,
+          status: "pending" /* pending */,
+          endpointName: arg.endpointName,
+          startedTimeStamp
+        };
+      }).addCase(mutationThunk.fulfilled, (draft, {
+        payload,
+        meta
+      }) => {
+        if (!meta.arg.track)
+          return;
+        updateMutationSubstateIfExists(draft, meta, (substate) => {
+          if (substate.requestId !== meta.requestId)
+            return;
+          substate.status = "fulfilled" /* fulfilled */;
+          substate.data = payload;
+          substate.fulfilledTimeStamp = meta.fulfilledTimeStamp;
+        });
+      }).addCase(mutationThunk.rejected, (draft, {
+        payload,
+        error,
+        meta
+      }) => {
+        if (!meta.arg.track)
+          return;
+        updateMutationSubstateIfExists(draft, meta, (substate) => {
+          if (substate.requestId !== meta.requestId)
+            return;
+          substate.status = "rejected" /* rejected */;
+          substate.error = payload ?? error;
+        });
+      }).addMatcher(hasRehydrationInfo, (draft, action) => {
+        const {
+          mutations
+        } = extractRehydrationInfo(action);
+        for (const [key, entry] of Object.entries(mutations)) {
+          if (
+            // do not rehydrate entries that were currently in flight.
+            (entry?.status === "fulfilled" /* fulfilled */ || entry?.status === "rejected" /* rejected */) && // only rehydrate endpoints that were persisted using a `fixedCacheKey`
+            key !== entry?.requestId
+          ) {
+            draft[key] = entry;
+          }
+        }
+      });
+    }
+  });
+  const invalidationSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createSlice)({
+    name: `${reducerPath}/invalidation`,
+    initialState,
+    reducers: {
+      updateProvidedBy: {
+        reducer(draft, action) {
+          const {
+            queryCacheKey,
+            providedTags
+          } = action.payload;
+          for (const tagTypeSubscriptions of Object.values(draft)) {
+            for (const idSubscriptions of Object.values(tagTypeSubscriptions)) {
+              const foundAt = idSubscriptions.indexOf(queryCacheKey);
+              if (foundAt !== -1) {
+                idSubscriptions.splice(foundAt, 1);
+              }
+            }
+          }
+          for (const {
+            type,
+            id
+          } of providedTags) {
+            const subscribedQueries = (draft[type] ??= {})[id || "__internal_without_id"] ??= [];
+            const alreadySubscribed = subscribedQueries.includes(queryCacheKey);
+            if (!alreadySubscribed) {
+              subscribedQueries.push(queryCacheKey);
+            }
+          }
+        },
+        prepare: (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.prepareAutoBatched)()
+      }
+    },
+    extraReducers(builder) {
+      builder.addCase(querySlice.actions.removeQueryResult, (draft, {
+        payload: {
+          queryCacheKey
+        }
+      }) => {
+        for (const tagTypeSubscriptions of Object.values(draft)) {
+          for (const idSubscriptions of Object.values(tagTypeSubscriptions)) {
+            const foundAt = idSubscriptions.indexOf(queryCacheKey);
+            if (foundAt !== -1) {
+              idSubscriptions.splice(foundAt, 1);
+            }
+          }
+        }
+      }).addMatcher(hasRehydrationInfo, (draft, action) => {
+        const {
+          provided
+        } = extractRehydrationInfo(action);
+        for (const [type, incomingTags] of Object.entries(provided)) {
+          for (const [id, cacheKeys] of Object.entries(incomingTags)) {
+            const subscribedQueries = (draft[type] ??= {})[id || "__internal_without_id"] ??= [];
+            for (const queryCacheKey of cacheKeys) {
+              const alreadySubscribed = subscribedQueries.includes(queryCacheKey);
+              if (!alreadySubscribed) {
+                subscribedQueries.push(queryCacheKey);
+              }
+            }
+          }
+        }
+      }).addMatcher((0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isAnyOf)((0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isFulfilled)(queryThunk), (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isRejectedWithValue)(queryThunk)), (draft, action) => {
+        const providedTags = calculateProvidedByThunk(action, "providesTags", definitions, assertTagType);
+        const {
+          queryCacheKey
+        } = action.meta.arg;
+        invalidationSlice.caseReducers.updateProvidedBy(draft, invalidationSlice.actions.updateProvidedBy({
+          queryCacheKey,
+          providedTags
+        }));
+      });
+    }
+  });
+  const subscriptionSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createSlice)({
+    name: `${reducerPath}/subscriptions`,
+    initialState,
+    reducers: {
+      updateSubscriptionOptions(d, a) {
+      },
+      unsubscribeQueryResult(d, a) {
+      },
+      internal_getRTKQSubscriptions() {
+      }
+    }
+  });
+  const internalSubscriptionsSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createSlice)({
+    name: `${reducerPath}/internalSubscriptions`,
+    initialState,
+    reducers: {
+      subscriptionsUpdated: {
+        reducer(state, action) {
+          return (0,immer__WEBPACK_IMPORTED_MODULE_2__.applyPatches)(state, action.payload);
+        },
+        prepare: (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.prepareAutoBatched)()
+      }
+    }
+  });
+  const configSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createSlice)({
+    name: `${reducerPath}/config`,
+    initialState: {
+      online: isOnline(),
+      focused: isDocumentVisible(),
+      middlewareRegistered: false,
+      ...config
+    },
+    reducers: {
+      middlewareRegistered(state, {
+        payload
+      }) {
+        state.middlewareRegistered = state.middlewareRegistered === "conflict" || apiUid !== payload ? "conflict" : true;
+      }
+    },
+    extraReducers: (builder) => {
+      builder.addCase(onOnline, (state) => {
+        state.online = true;
+      }).addCase(onOffline, (state) => {
+        state.online = false;
+      }).addCase(onFocus, (state) => {
+        state.focused = true;
+      }).addCase(onFocusLost, (state) => {
+        state.focused = false;
+      }).addMatcher(hasRehydrationInfo, (draft) => ({
+        ...draft
+      }));
+    }
+  });
+  const combinedReducer = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({
+    queries: querySlice.reducer,
+    mutations: mutationSlice.reducer,
+    provided: invalidationSlice.reducer,
+    subscriptions: internalSubscriptionsSlice.reducer,
+    config: configSlice.reducer
+  });
+  const reducer = (state, action) => combinedReducer(resetApiState.match(action) ? void 0 : state, action);
+  const actions = {
+    ...configSlice.actions,
+    ...querySlice.actions,
+    ...subscriptionSlice.actions,
+    ...internalSubscriptionsSlice.actions,
+    ...mutationSlice.actions,
+    ...invalidationSlice.actions,
+    resetApiState
+  };
+  return {
+    reducer,
+    actions
+  };
+}
+
+// src/query/core/buildSelectors.ts
+var skipToken = /* @__PURE__ */ Symbol.for("RTKQ/skipToken");
+var initialSubState = {
+  status: "uninitialized" /* uninitialized */
+};
+var defaultQuerySubState = /* @__PURE__ */ (0,immer__WEBPACK_IMPORTED_MODULE_2__.produce)(initialSubState, () => {
+});
+var defaultMutationSubState = /* @__PURE__ */ (0,immer__WEBPACK_IMPORTED_MODULE_2__.produce)(initialSubState, () => {
+});
+function buildSelectors({
+  serializeQueryArgs,
+  reducerPath,
+  createSelector: createSelector2
+}) {
+  const selectSkippedQuery = (state) => defaultQuerySubState;
+  const selectSkippedMutation = (state) => defaultMutationSubState;
+  return {
+    buildQuerySelector,
+    buildMutationSelector,
+    selectInvalidatedBy,
+    selectCachedArgsForQuery
+  };
+  function withRequestFlags(substate) {
+    return {
+      ...substate,
+      ...getRequestStatusFlags(substate.status)
+    };
+  }
+  function selectInternalState(rootState) {
+    const state = rootState[reducerPath];
+    if (true) {
+      if (!state) {
+        if (selectInternalState.triggered)
+          return state;
+        selectInternalState.triggered = true;
+        console.error(`Error: No data found at \`state.${reducerPath}\`. Did you forget to add the reducer to the store?`);
+      }
+    }
+    return state;
+  }
+  function buildQuerySelector(endpointName, endpointDefinition) {
+    return (queryArgs) => {
+      const serializedArgs = serializeQueryArgs({
+        queryArgs,
+        endpointDefinition,
+        endpointName
+      });
+      const selectQuerySubstate = (state) => selectInternalState(state)?.queries?.[serializedArgs] ?? defaultQuerySubState;
+      const finalSelectQuerySubState = queryArgs === skipToken ? selectSkippedQuery : selectQuerySubstate;
+      return createSelector2(finalSelectQuerySubState, withRequestFlags);
+    };
+  }
+  function buildMutationSelector() {
+    return (id) => {
+      let mutationId;
+      if (typeof id === "object") {
+        mutationId = getMutationCacheKey(id) ?? skipToken;
+      } else {
+        mutationId = id;
+      }
+      const selectMutationSubstate = (state) => selectInternalState(state)?.mutations?.[mutationId] ?? defaultMutationSubState;
+      const finalSelectMutationSubstate = mutationId === skipToken ? selectSkippedMutation : selectMutationSubstate;
+      return createSelector2(finalSelectMutationSubstate, withRequestFlags);
+    };
+  }
+  function selectInvalidatedBy(state, tags) {
+    const apiState = state[reducerPath];
+    const toInvalidate = /* @__PURE__ */ new Set();
+    for (const tag of tags.map(expandTagDescription)) {
+      const provided = apiState.provided[tag.type];
+      if (!provided) {
+        continue;
+      }
+      let invalidateSubscriptions = (tag.id !== void 0 ? (
+        // id given: invalidate all queries that provide this type & id
+        provided[tag.id]
+      ) : (
+        // no id: invalidate all queries that provide this type
+        flatten(Object.values(provided))
+      )) ?? [];
+      for (const invalidate of invalidateSubscriptions) {
+        toInvalidate.add(invalidate);
+      }
+    }
+    return flatten(Array.from(toInvalidate.values()).map((queryCacheKey) => {
+      const querySubState = apiState.queries[queryCacheKey];
+      return querySubState ? [{
+        queryCacheKey,
+        endpointName: querySubState.endpointName,
+        originalArgs: querySubState.originalArgs
+      }] : [];
+    }));
+  }
+  function selectCachedArgsForQuery(state, queryName) {
+    return Object.values(state[reducerPath].queries).filter((entry) => entry?.endpointName === queryName && entry.status !== "uninitialized" /* uninitialized */).map((entry) => entry.originalArgs);
+  }
+}
+
+// src/query/createApi.ts
+
+
+// src/query/defaultSerializeQueryArgs.ts
+var cache = WeakMap ? /* @__PURE__ */ new WeakMap() : void 0;
+var defaultSerializeQueryArgs = ({
+  endpointName,
+  queryArgs
+}) => {
+  let serialized = "";
+  const cached = cache?.get(queryArgs);
+  if (typeof cached === "string") {
+    serialized = cached;
+  } else {
+    const stringified = JSON.stringify(queryArgs, (key, value) => {
+      value = typeof value === "bigint" ? {
+        $bigint: value.toString()
+      } : value;
+      value = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.isPlainObject)(value) ? Object.keys(value).sort().reduce((acc, key2) => {
+        acc[key2] = value[key2];
+        return acc;
+      }, {}) : value;
+      return value;
+    });
+    if ((0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.isPlainObject)(queryArgs)) {
+      cache?.set(queryArgs, stringified);
+    }
+    serialized = stringified;
+  }
+  return `${endpointName}(${serialized})`;
+};
+
+// src/query/createApi.ts
+
+function buildCreateApi(...modules) {
+  return function baseCreateApi(options) {
+    const extractRehydrationInfo = (0,reselect__WEBPACK_IMPORTED_MODULE_3__.weakMapMemoize)((action) => options.extractRehydrationInfo?.(action, {
+      reducerPath: options.reducerPath ?? "api"
+    }));
+    const optionsWithDefaults = {
+      reducerPath: "api",
+      keepUnusedDataFor: 60,
+      refetchOnMountOrArgChange: false,
+      refetchOnFocus: false,
+      refetchOnReconnect: false,
+      invalidationBehavior: "delayed",
+      ...options,
+      extractRehydrationInfo,
+      serializeQueryArgs(queryArgsApi) {
+        let finalSerializeQueryArgs = defaultSerializeQueryArgs;
+        if ("serializeQueryArgs" in queryArgsApi.endpointDefinition) {
+          const endpointSQA = queryArgsApi.endpointDefinition.serializeQueryArgs;
+          finalSerializeQueryArgs = (queryArgsApi2) => {
+            const initialResult = endpointSQA(queryArgsApi2);
+            if (typeof initialResult === "string") {
+              return initialResult;
+            } else {
+              return defaultSerializeQueryArgs({
+                ...queryArgsApi2,
+                queryArgs: initialResult
+              });
+            }
+          };
+        } else if (options.serializeQueryArgs) {
+          finalSerializeQueryArgs = options.serializeQueryArgs;
+        }
+        return finalSerializeQueryArgs(queryArgsApi);
+      },
+      tagTypes: [...options.tagTypes || []]
+    };
+    const context = {
+      endpointDefinitions: {},
+      batch(fn) {
+        fn();
+      },
+      apiUid: (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.nanoid)(),
+      extractRehydrationInfo,
+      hasRehydrationInfo: (0,reselect__WEBPACK_IMPORTED_MODULE_3__.weakMapMemoize)((action) => extractRehydrationInfo(action) != null)
+    };
+    const api = {
+      injectEndpoints,
+      enhanceEndpoints({
+        addTagTypes,
+        endpoints
+      }) {
+        if (addTagTypes) {
+          for (const eT of addTagTypes) {
+            if (!optionsWithDefaults.tagTypes.includes(eT)) {
+              ;
+              optionsWithDefaults.tagTypes.push(eT);
+            }
+          }
+        }
+        if (endpoints) {
+          for (const [endpointName, partialDefinition] of Object.entries(endpoints)) {
+            if (typeof partialDefinition === "function") {
+              partialDefinition(context.endpointDefinitions[endpointName]);
+            } else {
+              Object.assign(context.endpointDefinitions[endpointName] || {}, partialDefinition);
+            }
+          }
+        }
+        return api;
+      }
+    };
+    const initializedModules = modules.map((m) => m.init(api, optionsWithDefaults, context));
+    function injectEndpoints(inject) {
+      const evaluatedEndpoints = inject.endpoints({
+        query: (x) => ({
+          ...x,
+          type: "query" /* query */
+        }),
+        mutation: (x) => ({
+          ...x,
+          type: "mutation" /* mutation */
+        })
+      });
+      for (const [endpointName, definition] of Object.entries(evaluatedEndpoints)) {
+        if (inject.overrideExisting !== true && endpointName in context.endpointDefinitions) {
+          if (inject.overrideExisting === "throw") {
+            throw new Error( false ? 0 : `called \`injectEndpoints\` to override already-existing endpointName ${endpointName} without specifying \`overrideExisting: true\``);
+          } else if (typeof process !== "undefined" && "development" === "development") {
+            console.error(`called \`injectEndpoints\` to override already-existing endpointName ${endpointName} without specifying \`overrideExisting: true\``);
+          }
+          continue;
+        }
+        context.endpointDefinitions[endpointName] = definition;
+        for (const m of initializedModules) {
+          m.injectEndpoint(endpointName, definition);
+        }
+      }
+      return api;
+    }
+    return api.injectEndpoints({
+      endpoints: options.endpoints
+    });
+  };
+}
+
+// src/query/fakeBaseQuery.ts
+
+function fakeBaseQuery() {
+  return function() {
+    throw new Error( false ? 0 : "When using `fakeBaseQuery`, all queries & mutations must use the `queryFn` definition syntax.");
+  };
+}
+
+// src/query/core/buildMiddleware/cacheCollection.ts
+
+function isObjectEmpty(obj) {
+  for (let k in obj) {
+    return false;
+  }
+  return true;
+}
+var THIRTY_TWO_BIT_MAX_TIMER_SECONDS = 2147483647 / 1e3 - 1;
+var buildCacheCollectionHandler = ({
+  reducerPath,
+  api,
+  queryThunk,
+  context,
+  internalState
+}) => {
+  const {
+    removeQueryResult,
+    unsubscribeQueryResult
+  } = api.internalActions;
+  const canTriggerUnsubscribe = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isAnyOf)(unsubscribeQueryResult.match, queryThunk.fulfilled, queryThunk.rejected);
+  function anySubscriptionsRemainingForKey(queryCacheKey) {
+    const subscriptions = internalState.currentSubscriptions[queryCacheKey];
+    return !!subscriptions && !isObjectEmpty(subscriptions);
+  }
+  const currentRemovalTimeouts = {};
+  const handler = (action, mwApi, internalState2) => {
+    if (canTriggerUnsubscribe(action)) {
+      const state = mwApi.getState()[reducerPath];
+      const {
+        queryCacheKey
+      } = unsubscribeQueryResult.match(action) ? action.payload : action.meta.arg;
+      handleUnsubscribe(queryCacheKey, state.queries[queryCacheKey]?.endpointName, mwApi, state.config);
+    }
+    if (api.util.resetApiState.match(action)) {
+      for (const [key, timeout] of Object.entries(currentRemovalTimeouts)) {
+        if (timeout)
+          clearTimeout(timeout);
+        delete currentRemovalTimeouts[key];
+      }
+    }
+    if (context.hasRehydrationInfo(action)) {
+      const state = mwApi.getState()[reducerPath];
+      const {
+        queries
+      } = context.extractRehydrationInfo(action);
+      for (const [queryCacheKey, queryState] of Object.entries(queries)) {
+        handleUnsubscribe(queryCacheKey, queryState?.endpointName, mwApi, state.config);
+      }
+    }
+  };
+  function handleUnsubscribe(queryCacheKey, endpointName, api2, config) {
+    const endpointDefinition = context.endpointDefinitions[endpointName];
+    const keepUnusedDataFor = endpointDefinition?.keepUnusedDataFor ?? config.keepUnusedDataFor;
+    if (keepUnusedDataFor === Infinity) {
+      return;
+    }
+    const finalKeepUnusedDataFor = Math.max(0, Math.min(keepUnusedDataFor, THIRTY_TWO_BIT_MAX_TIMER_SECONDS));
+    if (!anySubscriptionsRemainingForKey(queryCacheKey)) {
+      const currentTimeout = currentRemovalTimeouts[queryCacheKey];
+      if (currentTimeout) {
+        clearTimeout(currentTimeout);
+      }
+      currentRemovalTimeouts[queryCacheKey] = setTimeout(() => {
+        if (!anySubscriptionsRemainingForKey(queryCacheKey)) {
+          api2.dispatch(removeQueryResult({
+            queryCacheKey
+          }));
+        }
+        delete currentRemovalTimeouts[queryCacheKey];
+      }, finalKeepUnusedDataFor * 1e3);
+    }
+  }
+  return handler;
+};
+
+// src/query/core/buildMiddleware/invalidationByTags.ts
+var buildInvalidationByTagsHandler = ({
+  reducerPath,
+  context,
+  context: {
+    endpointDefinitions
+  },
+  mutationThunk,
+  queryThunk,
+  api,
+  assertTagType,
+  refetchQuery,
+  internalState
+}) => {
+  const {
+    removeQueryResult
+  } = api.internalActions;
+  const isThunkActionWithTags = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isAnyOf)((0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isFulfilled)(mutationThunk), (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isRejectedWithValue)(mutationThunk));
+  const isQueryEnd = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isAnyOf)((0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isFulfilled)(mutationThunk, queryThunk), (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isRejected)(mutationThunk, queryThunk));
+  let pendingTagInvalidations = [];
+  const handler = (action, mwApi) => {
+    if (isThunkActionWithTags(action)) {
+      invalidateTags(calculateProvidedByThunk(action, "invalidatesTags", endpointDefinitions, assertTagType), mwApi);
+    } else if (isQueryEnd(action)) {
+      invalidateTags([], mwApi);
+    } else if (api.util.invalidateTags.match(action)) {
+      invalidateTags(calculateProvidedBy(action.payload, void 0, void 0, void 0, void 0, assertTagType), mwApi);
+    }
+  };
+  function hasPendingRequests(state) {
+    for (const key in state.queries) {
+      if (state.queries[key]?.status === "pending" /* pending */)
+        return true;
+    }
+    for (const key in state.mutations) {
+      if (state.mutations[key]?.status === "pending" /* pending */)
+        return true;
+    }
+    return false;
+  }
+  function invalidateTags(newTags, mwApi) {
+    const rootState = mwApi.getState();
+    const state = rootState[reducerPath];
+    pendingTagInvalidations.push(...newTags);
+    if (state.config.invalidationBehavior === "delayed" && hasPendingRequests(state)) {
+      return;
+    }
+    const tags = pendingTagInvalidations;
+    pendingTagInvalidations = [];
+    if (tags.length === 0)
+      return;
+    const toInvalidate = api.util.selectInvalidatedBy(rootState, tags);
+    context.batch(() => {
+      const valuesArray = Array.from(toInvalidate.values());
+      for (const {
+        queryCacheKey
+      } of valuesArray) {
+        const querySubState = state.queries[queryCacheKey];
+        const subscriptionSubState = internalState.currentSubscriptions[queryCacheKey] ?? {};
+        if (querySubState) {
+          if (countObjectKeys(subscriptionSubState) === 0) {
+            mwApi.dispatch(removeQueryResult({
+              queryCacheKey
+            }));
+          } else if (querySubState.status !== "uninitialized" /* uninitialized */) {
+            mwApi.dispatch(refetchQuery(querySubState, queryCacheKey));
+          }
+        }
+      }
+    });
+  }
+  return handler;
+};
+
+// src/query/core/buildMiddleware/polling.ts
+var buildPollingHandler = ({
+  reducerPath,
+  queryThunk,
+  api,
+  refetchQuery,
+  internalState
+}) => {
+  const currentPolls = {};
+  const handler = (action, mwApi) => {
+    if (api.internalActions.updateSubscriptionOptions.match(action) || api.internalActions.unsubscribeQueryResult.match(action)) {
+      updatePollingInterval(action.payload, mwApi);
+    }
+    if (queryThunk.pending.match(action) || queryThunk.rejected.match(action) && action.meta.condition) {
+      updatePollingInterval(action.meta.arg, mwApi);
+    }
+    if (queryThunk.fulfilled.match(action) || queryThunk.rejected.match(action) && !action.meta.condition) {
+      startNextPoll(action.meta.arg, mwApi);
+    }
+    if (api.util.resetApiState.match(action)) {
+      clearPolls();
+    }
+  };
+  function startNextPoll({
+    queryCacheKey
+  }, api2) {
+    const state = api2.getState()[reducerPath];
+    const querySubState = state.queries[queryCacheKey];
+    const subscriptions = internalState.currentSubscriptions[queryCacheKey];
+    if (!querySubState || querySubState.status === "uninitialized" /* uninitialized */)
+      return;
+    const {
+      lowestPollingInterval,
+      skipPollingIfUnfocused
+    } = findLowestPollingInterval(subscriptions);
+    if (!Number.isFinite(lowestPollingInterval))
+      return;
+    const currentPoll = currentPolls[queryCacheKey];
+    if (currentPoll?.timeout) {
+      clearTimeout(currentPoll.timeout);
+      currentPoll.timeout = void 0;
+    }
+    const nextPollTimestamp = Date.now() + lowestPollingInterval;
+    currentPolls[queryCacheKey] = {
+      nextPollTimestamp,
+      pollingInterval: lowestPollingInterval,
+      timeout: setTimeout(() => {
+        if (state.config.focused || !skipPollingIfUnfocused) {
+          api2.dispatch(refetchQuery(querySubState, queryCacheKey));
+        }
+        startNextPoll({
+          queryCacheKey
+        }, api2);
+      }, lowestPollingInterval)
+    };
+  }
+  function updatePollingInterval({
+    queryCacheKey
+  }, api2) {
+    const state = api2.getState()[reducerPath];
+    const querySubState = state.queries[queryCacheKey];
+    const subscriptions = internalState.currentSubscriptions[queryCacheKey];
+    if (!querySubState || querySubState.status === "uninitialized" /* uninitialized */) {
+      return;
+    }
+    const {
+      lowestPollingInterval
+    } = findLowestPollingInterval(subscriptions);
+    if (!Number.isFinite(lowestPollingInterval)) {
+      cleanupPollForKey(queryCacheKey);
+      return;
+    }
+    const currentPoll = currentPolls[queryCacheKey];
+    const nextPollTimestamp = Date.now() + lowestPollingInterval;
+    if (!currentPoll || nextPollTimestamp < currentPoll.nextPollTimestamp) {
+      startNextPoll({
+        queryCacheKey
+      }, api2);
+    }
+  }
+  function cleanupPollForKey(key) {
+    const existingPoll = currentPolls[key];
+    if (existingPoll?.timeout) {
+      clearTimeout(existingPoll.timeout);
+    }
+    delete currentPolls[key];
+  }
+  function clearPolls() {
+    for (const key of Object.keys(currentPolls)) {
+      cleanupPollForKey(key);
+    }
+  }
+  function findLowestPollingInterval(subscribers = {}) {
+    let skipPollingIfUnfocused = false;
+    let lowestPollingInterval = Number.POSITIVE_INFINITY;
+    for (let key in subscribers) {
+      if (!!subscribers[key].pollingInterval) {
+        lowestPollingInterval = Math.min(subscribers[key].pollingInterval, lowestPollingInterval);
+        skipPollingIfUnfocused = subscribers[key].skipPollingIfUnfocused || skipPollingIfUnfocused;
+      }
+    }
+    return {
+      lowestPollingInterval,
+      skipPollingIfUnfocused
+    };
+  }
+  return handler;
+};
+
+// src/query/core/buildMiddleware/windowEventHandling.ts
+var buildWindowEventHandler = ({
+  reducerPath,
+  context,
+  api,
+  refetchQuery,
+  internalState
+}) => {
+  const {
+    removeQueryResult
+  } = api.internalActions;
+  const handler = (action, mwApi) => {
+    if (onFocus.match(action)) {
+      refetchValidQueries(mwApi, "refetchOnFocus");
+    }
+    if (onOnline.match(action)) {
+      refetchValidQueries(mwApi, "refetchOnReconnect");
+    }
+  };
+  function refetchValidQueries(api2, type) {
+    const state = api2.getState()[reducerPath];
+    const queries = state.queries;
+    const subscriptions = internalState.currentSubscriptions;
+    context.batch(() => {
+      for (const queryCacheKey of Object.keys(subscriptions)) {
+        const querySubState = queries[queryCacheKey];
+        const subscriptionSubState = subscriptions[queryCacheKey];
+        if (!subscriptionSubState || !querySubState)
+          continue;
+        const shouldRefetch = Object.values(subscriptionSubState).some((sub) => sub[type] === true) || Object.values(subscriptionSubState).every((sub) => sub[type] === void 0) && state.config[type];
+        if (shouldRefetch) {
+          if (countObjectKeys(subscriptionSubState) === 0) {
+            api2.dispatch(removeQueryResult({
+              queryCacheKey
+            }));
+          } else if (querySubState.status !== "uninitialized" /* uninitialized */) {
+            api2.dispatch(refetchQuery(querySubState, queryCacheKey));
+          }
+        }
+      }
+    });
+  }
+  return handler;
+};
+
+// src/query/core/buildMiddleware/cacheLifecycle.ts
+var neverResolvedError = new Error("Promise never resolved before cacheEntryRemoved.");
+var buildCacheLifecycleHandler = ({
+  api,
+  reducerPath,
+  context,
+  queryThunk,
+  mutationThunk,
+  internalState
+}) => {
+  const isQueryThunk = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isAsyncThunkAction)(queryThunk);
+  const isMutationThunk = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isAsyncThunkAction)(mutationThunk);
+  const isFulfilledThunk = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isFulfilled)(queryThunk, mutationThunk);
+  const lifecycleMap = {};
+  const handler = (action, mwApi, stateBefore) => {
+    const cacheKey = getCacheKey(action);
+    if (queryThunk.pending.match(action)) {
+      const oldState = stateBefore[reducerPath].queries[cacheKey];
+      const state = mwApi.getState()[reducerPath].queries[cacheKey];
+      if (!oldState && state) {
+        handleNewKey(action.meta.arg.endpointName, action.meta.arg.originalArgs, cacheKey, mwApi, action.meta.requestId);
+      }
+    } else if (mutationThunk.pending.match(action)) {
+      const state = mwApi.getState()[reducerPath].mutations[cacheKey];
+      if (state) {
+        handleNewKey(action.meta.arg.endpointName, action.meta.arg.originalArgs, cacheKey, mwApi, action.meta.requestId);
+      }
+    } else if (isFulfilledThunk(action)) {
+      const lifecycle = lifecycleMap[cacheKey];
+      if (lifecycle?.valueResolved) {
+        lifecycle.valueResolved({
+          data: action.payload,
+          meta: action.meta.baseQueryMeta
+        });
+        delete lifecycle.valueResolved;
+      }
+    } else if (api.internalActions.removeQueryResult.match(action) || api.internalActions.removeMutationResult.match(action)) {
+      const lifecycle = lifecycleMap[cacheKey];
+      if (lifecycle) {
+        delete lifecycleMap[cacheKey];
+        lifecycle.cacheEntryRemoved();
+      }
+    } else if (api.util.resetApiState.match(action)) {
+      for (const [cacheKey2, lifecycle] of Object.entries(lifecycleMap)) {
+        delete lifecycleMap[cacheKey2];
+        lifecycle.cacheEntryRemoved();
+      }
+    }
+  };
+  function getCacheKey(action) {
+    if (isQueryThunk(action))
+      return action.meta.arg.queryCacheKey;
+    if (isMutationThunk(action)) {
+      return action.meta.arg.fixedCacheKey ?? action.meta.requestId;
+    }
+    if (api.internalActions.removeQueryResult.match(action))
+      return action.payload.queryCacheKey;
+    if (api.internalActions.removeMutationResult.match(action))
+      return getMutationCacheKey(action.payload);
+    return "";
+  }
+  function handleNewKey(endpointName, originalArgs, queryCacheKey, mwApi, requestId) {
+    const endpointDefinition = context.endpointDefinitions[endpointName];
+    const onCacheEntryAdded = endpointDefinition?.onCacheEntryAdded;
+    if (!onCacheEntryAdded)
+      return;
+    let lifecycle = {};
+    const cacheEntryRemoved = new Promise((resolve) => {
+      lifecycle.cacheEntryRemoved = resolve;
+    });
+    const cacheDataLoaded = Promise.race([new Promise((resolve) => {
+      lifecycle.valueResolved = resolve;
+    }), cacheEntryRemoved.then(() => {
+      throw neverResolvedError;
+    })]);
+    cacheDataLoaded.catch(() => {
+    });
+    lifecycleMap[queryCacheKey] = lifecycle;
+    const selector = api.endpoints[endpointName].select(endpointDefinition.type === "query" /* query */ ? originalArgs : queryCacheKey);
+    const extra = mwApi.dispatch((_, __, extra2) => extra2);
+    const lifecycleApi = {
+      ...mwApi,
+      getCacheEntry: () => selector(mwApi.getState()),
+      requestId,
+      extra,
+      updateCachedData: endpointDefinition.type === "query" /* query */ ? (updateRecipe) => mwApi.dispatch(api.util.updateQueryData(endpointName, originalArgs, updateRecipe)) : void 0,
+      cacheDataLoaded,
+      cacheEntryRemoved
+    };
+    const runningHandler = onCacheEntryAdded(originalArgs, lifecycleApi);
+    Promise.resolve(runningHandler).catch((e) => {
+      if (e === neverResolvedError)
+        return;
+      throw e;
+    });
+  }
+  return handler;
+};
+
+// src/query/core/buildMiddleware/queryLifecycle.ts
+var buildQueryLifecycleHandler = ({
+  api,
+  context,
+  queryThunk,
+  mutationThunk
+}) => {
+  const isPendingThunk = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isPending)(queryThunk, mutationThunk);
+  const isRejectedThunk = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isRejected)(queryThunk, mutationThunk);
+  const isFullfilledThunk = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.isFulfilled)(queryThunk, mutationThunk);
+  const lifecycleMap = {};
+  const handler = (action, mwApi) => {
+    if (isPendingThunk(action)) {
+      const {
+        requestId,
+        arg: {
+          endpointName,
+          originalArgs
+        }
+      } = action.meta;
+      const endpointDefinition = context.endpointDefinitions[endpointName];
+      const onQueryStarted = endpointDefinition?.onQueryStarted;
+      if (onQueryStarted) {
+        const lifecycle = {};
+        const queryFulfilled = new Promise((resolve, reject) => {
+          lifecycle.resolve = resolve;
+          lifecycle.reject = reject;
+        });
+        queryFulfilled.catch(() => {
+        });
+        lifecycleMap[requestId] = lifecycle;
+        const selector = api.endpoints[endpointName].select(endpointDefinition.type === "query" /* query */ ? originalArgs : requestId);
+        const extra = mwApi.dispatch((_, __, extra2) => extra2);
+        const lifecycleApi = {
+          ...mwApi,
+          getCacheEntry: () => selector(mwApi.getState()),
+          requestId,
+          extra,
+          updateCachedData: endpointDefinition.type === "query" /* query */ ? (updateRecipe) => mwApi.dispatch(api.util.updateQueryData(endpointName, originalArgs, updateRecipe)) : void 0,
+          queryFulfilled
+        };
+        onQueryStarted(originalArgs, lifecycleApi);
+      }
+    } else if (isFullfilledThunk(action)) {
+      const {
+        requestId,
+        baseQueryMeta
+      } = action.meta;
+      lifecycleMap[requestId]?.resolve({
+        data: action.payload,
+        meta: baseQueryMeta
+      });
+      delete lifecycleMap[requestId];
+    } else if (isRejectedThunk(action)) {
+      const {
+        requestId,
+        rejectedWithValue,
+        baseQueryMeta
+      } = action.meta;
+      lifecycleMap[requestId]?.reject({
+        error: action.payload ?? action.error,
+        isUnhandledError: !rejectedWithValue,
+        meta: baseQueryMeta
+      });
+      delete lifecycleMap[requestId];
+    }
+  };
+  return handler;
+};
+
+// src/query/core/buildMiddleware/devMiddleware.ts
+var buildDevCheckHandler = ({
+  api,
+  context: {
+    apiUid
+  },
+  reducerPath
+}) => {
+  return (action, mwApi) => {
+    if (api.util.resetApiState.match(action)) {
+      mwApi.dispatch(api.internalActions.middlewareRegistered(apiUid));
+    }
+    if (typeof process !== "undefined" && "development" === "development") {
+      if (api.internalActions.middlewareRegistered.match(action) && action.payload === apiUid && mwApi.getState()[reducerPath]?.config?.middlewareRegistered === "conflict") {
+        console.warn(`There is a mismatch between slice and middleware for the reducerPath "${reducerPath}".
+You can only have one api per reducer path, this will lead to crashes in various situations!${reducerPath === "api" ? `
+If you have multiple apis, you *have* to specify the reducerPath option when using createApi!` : ""}`);
+      }
+    }
+  };
+};
+
+// src/query/core/buildMiddleware/batchActions.ts
+
+var buildBatchedActionsHandler = ({
+  api,
+  queryThunk,
+  internalState
+}) => {
+  const subscriptionsPrefix = `${api.reducerPath}/subscriptions`;
+  let previousSubscriptions = null;
+  let updateSyncTimer = null;
+  const {
+    updateSubscriptionOptions,
+    unsubscribeQueryResult
+  } = api.internalActions;
+  const actuallyMutateSubscriptions = (mutableState, action) => {
+    if (updateSubscriptionOptions.match(action)) {
+      const {
+        queryCacheKey,
+        requestId,
+        options
+      } = action.payload;
+      if (mutableState?.[queryCacheKey]?.[requestId]) {
+        mutableState[queryCacheKey][requestId] = options;
+      }
+      return true;
+    }
+    if (unsubscribeQueryResult.match(action)) {
+      const {
+        queryCacheKey,
+        requestId
+      } = action.payload;
+      if (mutableState[queryCacheKey]) {
+        delete mutableState[queryCacheKey][requestId];
+      }
+      return true;
+    }
+    if (api.internalActions.removeQueryResult.match(action)) {
+      delete mutableState[action.payload.queryCacheKey];
+      return true;
+    }
+    if (queryThunk.pending.match(action)) {
+      const {
+        meta: {
+          arg,
+          requestId
+        }
+      } = action;
+      const substate = mutableState[arg.queryCacheKey] ??= {};
+      substate[`${requestId}_running`] = {};
+      if (arg.subscribe) {
+        substate[requestId] = arg.subscriptionOptions ?? substate[requestId] ?? {};
+      }
+      return true;
+    }
+    let mutated = false;
+    if (queryThunk.fulfilled.match(action) || queryThunk.rejected.match(action)) {
+      const state = mutableState[action.meta.arg.queryCacheKey] || {};
+      const key = `${action.meta.requestId}_running`;
+      mutated ||= !!state[key];
+      delete state[key];
+    }
+    if (queryThunk.rejected.match(action)) {
+      const {
+        meta: {
+          condition,
+          arg,
+          requestId
+        }
+      } = action;
+      if (condition && arg.subscribe) {
+        const substate = mutableState[arg.queryCacheKey] ??= {};
+        substate[requestId] = arg.subscriptionOptions ?? substate[requestId] ?? {};
+        mutated = true;
+      }
+    }
+    return mutated;
+  };
+  const getSubscriptions = () => internalState.currentSubscriptions;
+  const getSubscriptionCount = (queryCacheKey) => {
+    const subscriptions = getSubscriptions();
+    const subscriptionsForQueryArg = subscriptions[queryCacheKey] ?? {};
+    return countObjectKeys(subscriptionsForQueryArg);
+  };
+  const isRequestSubscribed = (queryCacheKey, requestId) => {
+    const subscriptions = getSubscriptions();
+    return !!subscriptions?.[queryCacheKey]?.[requestId];
+  };
+  const subscriptionSelectors = {
+    getSubscriptions,
+    getSubscriptionCount,
+    isRequestSubscribed
+  };
+  return (action, mwApi) => {
+    if (!previousSubscriptions) {
+      previousSubscriptions = JSON.parse(JSON.stringify(internalState.currentSubscriptions));
+    }
+    if (api.util.resetApiState.match(action)) {
+      previousSubscriptions = internalState.currentSubscriptions = {};
+      updateSyncTimer = null;
+      return [true, false];
+    }
+    if (api.internalActions.internal_getRTKQSubscriptions.match(action)) {
+      return [false, subscriptionSelectors];
+    }
+    const didMutate = actuallyMutateSubscriptions(internalState.currentSubscriptions, action);
+    let actionShouldContinue = true;
+    if (didMutate) {
+      if (!updateSyncTimer) {
+        updateSyncTimer = setTimeout(() => {
+          const newSubscriptions = JSON.parse(JSON.stringify(internalState.currentSubscriptions));
+          const [, patches] = (0,immer__WEBPACK_IMPORTED_MODULE_2__.produceWithPatches)(previousSubscriptions, () => newSubscriptions);
+          mwApi.next(api.internalActions.subscriptionsUpdated(patches));
+          previousSubscriptions = newSubscriptions;
+          updateSyncTimer = null;
+        }, 500);
+      }
+      const isSubscriptionSliceAction = typeof action.type == "string" && !!action.type.startsWith(subscriptionsPrefix);
+      const isAdditionalSubscriptionAction = queryThunk.rejected.match(action) && action.meta.condition && !!action.meta.arg.subscribe;
+      actionShouldContinue = !isSubscriptionSliceAction && !isAdditionalSubscriptionAction;
+    }
+    return [actionShouldContinue, false];
+  };
+};
+
+// src/query/core/buildMiddleware/index.ts
+function buildMiddleware(input) {
+  const {
+    reducerPath,
+    queryThunk,
+    api,
+    context
+  } = input;
+  const {
+    apiUid
+  } = context;
+  const actions = {
+    invalidateTags: (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createAction)(`${reducerPath}/invalidateTags`)
+  };
+  const isThisApiSliceAction = (action) => action.type.startsWith(`${reducerPath}/`);
+  const handlerBuilders = [buildDevCheckHandler, buildCacheCollectionHandler, buildInvalidationByTagsHandler, buildPollingHandler, buildCacheLifecycleHandler, buildQueryLifecycleHandler];
+  const middleware = (mwApi) => {
+    let initialized2 = false;
+    let internalState = {
+      currentSubscriptions: {}
+    };
+    const builderArgs = {
+      ...input,
+      internalState,
+      refetchQuery,
+      isThisApiSliceAction
+    };
+    const handlers = handlerBuilders.map((build) => build(builderArgs));
+    const batchedActionsHandler = buildBatchedActionsHandler(builderArgs);
+    const windowEventsHandler = buildWindowEventHandler(builderArgs);
+    return (next) => {
+      return (action) => {
+        if (!(0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.isAction)(action)) {
+          return next(action);
+        }
+        if (!initialized2) {
+          initialized2 = true;
+          mwApi.dispatch(api.internalActions.middlewareRegistered(apiUid));
+        }
+        const mwApiWithNext = {
+          ...mwApi,
+          next
+        };
+        const stateBefore = mwApi.getState();
+        const [actionShouldContinue, internalProbeResult] = batchedActionsHandler(action, mwApiWithNext, stateBefore);
+        let res;
+        if (actionShouldContinue) {
+          res = next(action);
+        } else {
+          res = internalProbeResult;
+        }
+        if (!!mwApi.getState()[reducerPath]) {
+          windowEventsHandler(action, mwApiWithNext, stateBefore);
+          if (isThisApiSliceAction(action) || context.hasRehydrationInfo(action)) {
+            for (let handler of handlers) {
+              handler(action, mwApiWithNext, stateBefore);
+            }
+          }
+        }
+        return res;
+      };
+    };
+  };
+  return {
+    middleware,
+    actions
+  };
+  function refetchQuery(querySubState, queryCacheKey, override = {}) {
+    return queryThunk({
+      type: "query",
+      endpointName: querySubState.endpointName,
+      originalArgs: querySubState.originalArgs,
+      subscribe: false,
+      forceRefetch: true,
+      queryCacheKey,
+      ...override
+    });
+  }
+}
+
+// src/query/tsHelpers.ts
+function assertCast(v) {
+}
+function safeAssign(target, ...args) {
+  return Object.assign(target, ...args);
+}
+
+// src/query/core/module.ts
+
+var coreModuleName = /* @__PURE__ */ Symbol();
+var coreModule = ({
+  createSelector: createSelector2 = reselect__WEBPACK_IMPORTED_MODULE_3__.createSelector
+} = {}) => ({
+  name: coreModuleName,
+  init(api, {
+    baseQuery,
+    tagTypes,
+    reducerPath,
+    serializeQueryArgs,
+    keepUnusedDataFor,
+    refetchOnMountOrArgChange,
+    refetchOnFocus,
+    refetchOnReconnect,
+    invalidationBehavior
+  }, context) {
+    (0,immer__WEBPACK_IMPORTED_MODULE_2__.enablePatches)();
+    assertCast(serializeQueryArgs);
+    const assertTagType = (tag) => {
+      if (typeof process !== "undefined" && "development" === "development") {
+        if (!tagTypes.includes(tag.type)) {
+          console.error(`Tag type '${tag.type}' was used, but not specified in \`tagTypes\`!`);
+        }
+      }
+      return tag;
+    };
+    Object.assign(api, {
+      reducerPath,
+      endpoints: {},
+      internalActions: {
+        onOnline,
+        onOffline,
+        onFocus,
+        onFocusLost
+      },
+      util: {}
+    });
+    const {
+      queryThunk,
+      mutationThunk,
+      patchQueryData,
+      updateQueryData,
+      upsertQueryData,
+      prefetch,
+      buildMatchThunkActions
+    } = buildThunks({
+      baseQuery,
+      reducerPath,
+      context,
+      api,
+      serializeQueryArgs,
+      assertTagType
+    });
+    const {
+      reducer,
+      actions: sliceActions
+    } = buildSlice({
+      context,
+      queryThunk,
+      mutationThunk,
+      reducerPath,
+      assertTagType,
+      config: {
+        refetchOnFocus,
+        refetchOnReconnect,
+        refetchOnMountOrArgChange,
+        keepUnusedDataFor,
+        reducerPath,
+        invalidationBehavior
+      }
+    });
+    safeAssign(api.util, {
+      patchQueryData,
+      updateQueryData,
+      upsertQueryData,
+      prefetch,
+      resetApiState: sliceActions.resetApiState
+    });
+    safeAssign(api.internalActions, sliceActions);
+    const {
+      middleware,
+      actions: middlewareActions
+    } = buildMiddleware({
+      reducerPath,
+      context,
+      queryThunk,
+      mutationThunk,
+      api,
+      assertTagType
+    });
+    safeAssign(api.util, middlewareActions);
+    safeAssign(api, {
+      reducer,
+      middleware
+    });
+    const {
+      buildQuerySelector,
+      buildMutationSelector,
+      selectInvalidatedBy,
+      selectCachedArgsForQuery
+    } = buildSelectors({
+      serializeQueryArgs,
+      reducerPath,
+      createSelector: createSelector2
+    });
+    safeAssign(api.util, {
+      selectInvalidatedBy,
+      selectCachedArgsForQuery
+    });
+    const {
+      buildInitiateQuery,
+      buildInitiateMutation,
+      getRunningMutationThunk,
+      getRunningMutationsThunk,
+      getRunningQueriesThunk,
+      getRunningQueryThunk
+    } = buildInitiate({
+      queryThunk,
+      mutationThunk,
+      api,
+      serializeQueryArgs,
+      context
+    });
+    safeAssign(api.util, {
+      getRunningMutationThunk,
+      getRunningMutationsThunk,
+      getRunningQueryThunk,
+      getRunningQueriesThunk
+    });
+    return {
+      name: coreModuleName,
+      injectEndpoint(endpointName, definition) {
+        const anyApi = api;
+        anyApi.endpoints[endpointName] ??= {};
+        if (isQueryDefinition(definition)) {
+          safeAssign(anyApi.endpoints[endpointName], {
+            name: endpointName,
+            select: buildQuerySelector(endpointName, definition),
+            initiate: buildInitiateQuery(endpointName, definition)
+          }, buildMatchThunkActions(queryThunk, endpointName));
+        } else if (isMutationDefinition(definition)) {
+          safeAssign(anyApi.endpoints[endpointName], {
+            name: endpointName,
+            select: buildMutationSelector(),
+            initiate: buildInitiateMutation(endpointName)
+          }, buildMatchThunkActions(mutationThunk, endpointName));
+        }
+      }
+    };
+  }
+});
+
+// src/query/core/index.ts
+var createApi = /* @__PURE__ */ buildCreateApi(coreModule());
+
+//# sourceMappingURL=rtk-query.modern.mjs.map
 
 /***/ }),
 
@@ -60672,68 +63630,6 @@ function _setPrototypeOf(t, e) {
 
 /***/ }),
 
-/***/ "./node_modules/nanoid/index.browser.js":
-/*!**********************************************!*\
-  !*** ./node_modules/nanoid/index.browser.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   customAlphabet: () => (/* binding */ customAlphabet),
-/* harmony export */   customRandom: () => (/* binding */ customRandom),
-/* harmony export */   nanoid: () => (/* binding */ nanoid),
-/* harmony export */   random: () => (/* binding */ random),
-/* harmony export */   urlAlphabet: () => (/* reexport safe */ _url_alphabet_index_js__WEBPACK_IMPORTED_MODULE_0__.urlAlphabet)
-/* harmony export */ });
-/* harmony import */ var _url_alphabet_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./url-alphabet/index.js */ "./node_modules/nanoid/url-alphabet/index.js");
-
-
-let random = bytes => crypto.getRandomValues(new Uint8Array(bytes));
-let customRandom = (alphabet, defaultSize, getRandom) => {
-    let mask = (2 << (Math.log(alphabet.length - 1) / Math.LN2)) - 1;
-    let step = -~((1.6 * mask * defaultSize) / alphabet.length);
-    return (size = defaultSize) => {
-        let id = '';
-        while (true) {
-            let bytes = getRandom(step);
-            let j = step;
-            while (j--) {
-                id += alphabet[bytes[j] & mask] || '';
-                if (id.length === size)
-                    return id;
-            }
-        }
-    };
-};
-let customAlphabet = (alphabet, size = 21) => customRandom(alphabet, size, random);
-let nanoid = (size = 21) => {
-    let id = '';
-    let bytes = crypto.getRandomValues(new Uint8Array(size));
-    while (size--) {
-        id += _url_alphabet_index_js__WEBPACK_IMPORTED_MODULE_0__.urlAlphabet[bytes[size] & 63];
-    }
-    return id;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/nanoid/url-alphabet/index.js":
-/*!***************************************************!*\
-  !*** ./node_modules/nanoid/url-alphabet/index.js ***!
-  \***************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   urlAlphabet: () => (/* binding */ urlAlphabet)
-/* harmony export */ });
-const urlAlphabet = 'useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict';
-
-
-/***/ }),
-
 /***/ "./node_modules/stylis/src/Enum.js":
 /*!*****************************************!*\
   !*** ./node_modules/stylis/src/Enum.js ***!
@@ -61924,7 +64820,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ "./src/App.tsx");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store */ "./src/store.ts");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store */ "./src/store/index.ts");
 
 
 
@@ -61936,4 +64832,4 @@ root.render((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_redux__
 
 /******/ })()
 ;
-//# sourceMappingURL=main.ca116882.js.map
+//# sourceMappingURL=main.a97108f6.js.map
