@@ -43,25 +43,6 @@ export const rowsSlice = createSlice({
         } else {
           state.rows.push(newRow);
         }
-
-        // const newRow = action.payload.recalculated.current;
-        // const parentId = action.payload.parentId;
-        // if (parentId) {
-        //   state.rows = state.rows.map((row) => {
-        //     if (row.id === parentId) {
-        //       return {
-        //         ...row,
-        //         child:
-        //           row.child.length === 0
-        //             ? [{ ...newRow, child: [] }]
-        //             : [...row.child, { ...newRow, child: [] }]
-        //       };
-        //     }
-        //     return row;
-        //   });
-        // } else {
-        //   state.rows.push({ ...newRow, child: [] });
-        // }
       })
       .addCase(createRow.rejected, (state, action) => {
         state.status = 'failed';
@@ -74,13 +55,6 @@ export const rowsSlice = createSlice({
         state.status = 'succeeded';
         state.rows = state.rows.filter((row) => row.id !== action.payload.rowId);
         state.rows.push(action.payload.recalculated.current);
-        // const updatedRow = action.payload.current;
-        // state.rows = state.rows.map((row) => {
-        //   if (row.id === updatedRow.id) {
-        //     return { ...row, ...updatedRow };
-        //   }
-        //   return row;
-        // });
       })
       .addCase(updateRow.rejected, (state, action) => {
         state.status = 'failed';

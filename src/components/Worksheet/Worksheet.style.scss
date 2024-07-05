@@ -1,15 +1,18 @@
+@import '../../App.style.scss';
+
 .row-name {
   width: 250px;
 }
 
 .table-container {
-  background: #252525;
-  border-left: 0.1px solid #a1a1aa;
+  background: $table;
+  border-left: 0.1px solid $secondary;
 }
 
 .description-icon {
-  color: #7890b2;
+  color: $create-icon;
   cursor: pointer;
+  margin-left: 15px
 }
 
 .delete-icon {
@@ -17,7 +20,7 @@
   color: transparent;
 
   &.hovered {
-    color: #df4444;
+    color: $delete-icon;
   }
 }
 

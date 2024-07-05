@@ -1,6 +1,5 @@
 export type RowId = number | null;
-// /v1/outlay-rows/entity/{eID}/row/create | createRowInEntity ---> request
-// /v1/outlay-rows/entity/{eID}/row/{rID}/update | update updateRow ---> request
+
 export type OutlayRowRequest = {
   equipmentCosts: number;
   estimatedProfit: number;
@@ -31,15 +30,11 @@ export type RowResponse = {
   total: number;
 };
 
-// /v1/outlay-rows/entity/{eID}/row/create | createRowInEntity ---> response
-// /v1/outlay-rows/entity/{eID}/row/{rID}/update | updateRow ---> response
-// /v1/outlay-rows/entity/{eID}/row/{rID}/delete | deleteRow ---> response
 export type RecalculatedRows = {
   changed: RowResponse[];
   current: RowResponse;
 };
 
-// /v1/outlay-rows/entity/{eID}/row/list | getTreeRows ---> response
 export type TreeResponse = RowResponse & {
   child?: [] | TreeResponse[];
 };

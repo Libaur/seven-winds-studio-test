@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 const ReactRefreshTypeScript = require('react-refresh-typescript')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 
 const IS_DEVELOPMENT = process.env.NODE_ENV !== 'production'
 const IS_SERVE = process.env.WEBPACK_SERVE ?? false
@@ -59,6 +60,7 @@ module.exports = () => {
             ]
         },
         plugins: [
+            new Dotenv(),
             new CleanWebpackPlugin(),
             new HtmlWebpackPlugin({
                 template: PATH_TEMPLATE_ENTRY,

@@ -23,6 +23,7 @@ export default function WorksheetEditRow({
     ...ROW_INITIAL_VALUES,
     parentId: currentParentId
   });
+
   useEffect(() => {
     if (updatedRow) {
       setRowCells((rowCells) => ({
@@ -35,22 +36,37 @@ export default function WorksheetEditRow({
       }));
       setUpdatedRowId(updatedRow.id);
     }
-  }, []);
+  }, [updateRow]);
+
   useEffect(() => {
     parentId !== undefined && setCurrentParentId(parentId);
   }, [parentId]);
+
   const handleSubmitRow = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       event.preventDefault();
-      if (updatedRowId) {        
+      if (updatedRowId) {
         dispatch(updateRow({ outlayRowRequest: rowCells, rowId: updatedRowId }));
-        updateHandler();
       } else {
         dispatch(createRow({ outlayRowRequest: rowCells }));
-        updateHandler();
       }
+      updateHandler();
     }
   };
+
+  const handleChange = (
+    field: string,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setRowCells((rowCells) => ({
+      ...rowCells,
+      [field]:
+        field !== 'rowName'
+          ? parseFloat(e.target.value.replace(numberCheckPattern, ''))
+          : e.target.value
+    }));
+  };
+
   return (
     <>
       <TableCell>
@@ -58,7 +74,7 @@ export default function WorksheetEditRow({
           className="row-name"
           size="small"
           value={rowCells.rowName}
-          onChange={(e) => setRowCells((rowCells) => ({ ...rowCells, rowName: e.target.value }))}
+          onChange={(e) => handleChange('rowName', e)}
           onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleSubmitRow(e)}
         />
       </TableCell>
@@ -66,12 +82,7 @@ export default function WorksheetEditRow({
         <TextField
           size="small"
           value={rowCells.salary}
-          onChange={(e) =>
-            setRowCells((rowCells) => ({
-              ...rowCells,
-              salary: parseFloat(e.target.value.replace(numberCheckPattern, ''))
-            }))
-          }
+          onChange={(e) => handleChange('salary', e)}
           onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleSubmitRow(e)}
         />
       </TableCell>
@@ -79,12 +90,7 @@ export default function WorksheetEditRow({
         <TextField
           size="small"
           value={rowCells.equipmentCosts}
-          onChange={(e) =>
-            setRowCells((rowCells) => ({
-              ...rowCells,
-              equipmentCosts: parseFloat(e.target.value.replace(numberCheckPattern, ''))
-            }))
-          }
+          onChange={(e) => handleChange('equipmentCosts', e)}
           onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleSubmitRow(e)}
         />
       </TableCell>
@@ -93,12 +99,7 @@ export default function WorksheetEditRow({
           className="cell-field"
           size="small"
           value={rowCells.overheads}
-          onChange={(e) =>
-            setRowCells((rowCells) => ({
-              ...rowCells,
-              overheads: parseFloat(e.target.value.replace(numberCheckPattern, ''))
-            }))
-          }
+          onChange={(e) => handleChange('overheads', e)}
           onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleSubmitRow(e)}
         />
       </TableCell>
@@ -106,12 +107,7 @@ export default function WorksheetEditRow({
         <TextField
           size="small"
           value={rowCells.estimatedProfit}
-          onChange={(e) =>
-            setRowCells((rowCells) => ({
-              ...rowCells,
-              estimatedProfit: parseFloat(e.target.value.replace(numberCheckPattern, ''))
-            }))
-          }
+          onChange={(e) => handleChange('estimatedProfit', e)}
           onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleSubmitRow(e)}
         />
       </TableCell>

@@ -1,26 +1,19 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { API, ERRORS } from './constants';
 import {
   OutlayRowRequest,
   TreeResponse,
   RecalculatedRows,
-  RecalculatedRowsResponse,
-  RowId
+  RecalculatedRowsResponse
 } from '../App.types';
-
-const API = {
-  SERVER_URL: 'http://185.244.172.108:8081',
-  ENTITY_ID: 128766
-};
 
 const fetchRowsList = createAsyncThunk<TreeResponse[], void, { rejectValue: string }>(
   'rows/fetchRowsList',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await fetch(
-        `${API.SERVER_URL}/v1/outlay-rows/entity/${API.ENTITY_ID}/row/list`
-      );
+      const response = await fetch(`${API.SERVER_URL}${API.SAME_PARAMS}${API.ENTITY_ID}/row/list`);
       if (!response.ok) {
-        throw new Error('Ошибка при загрузке списка строк');
+        throw new Error(ERRORS.FETCH_LIST);
       }
       const data: TreeResponse[] = await response.json();
       return data;
@@ -28,7 +21,7 @@ const fetchRowsList = createAsyncThunk<TreeResponse[], void, { rejectValue: stri
       if (error instanceof Error) {
         return rejectWithValue(error.message);
       }
-      return rejectWithValue('Произошла неизвестная ошибка');
+      return rejectWithValue(ERRORS.UNKNOWN);
     }
   }
 );
@@ -39,18 +32,15 @@ const createRow = createAsyncThunk<
   { rejectValue: string }
 >('rows/createRow', async ({ outlayRowRequest }, { rejectWithValue }) => {
   try {
-    const response = await fetch(
-      `${API.SERVER_URL}/v1/outlay-rows/entity/${API.ENTITY_ID}/row/create`,
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(outlayRowRequest)
-      }
-    );
+    const response = await fetch(`${API.SERVER_URL}${API.SAME_PARAMS}${API.ENTITY_ID}/row/create`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(outlayRowRequest)
+    });
     if (!response.ok) {
-      throw new Error('Ошибка при создании строки');
+      throw new Error(ERRORS.CREATE);
     }
     const recalculated: RecalculatedRows = await response.json();
     return recalculated;
@@ -58,7 +48,7 @@ const createRow = createAsyncThunk<
     if (error instanceof Error) {
       return rejectWithValue(error.message);
     }
-    return rejectWithValue('Произошла неизвестная ошибка');
+    return rejectWithValue(ERRORS.UNKNOWN);
   }
 });
 
@@ -69,7 +59,7 @@ const updateRow = createAsyncThunk<
 >('rows/updateRow', async ({ outlayRowRequest, rowId }, { rejectWithValue }) => {
   try {
     const response = await fetch(
-      `${API.SERVER_URL}/v1/outlay-rows/entity/${API.ENTITY_ID}/row/${rowId}/update`,
+      `${API.SERVER_URL}${API.SAME_PARAMS}${API.ENTITY_ID}/row/${rowId}/update`,
       {
         method: 'POST',
         headers: {
@@ -79,7 +69,7 @@ const updateRow = createAsyncThunk<
       }
     );
     if (!response.ok) {
-      throw new Error('Ошибка при обновлении строки');
+      throw new Error(ERRORS.UPDATE);
     }
     const recalculated: RecalculatedRows = await response.json();
     return { recalculated, rowId };
@@ -87,7 +77,7 @@ const updateRow = createAsyncThunk<
     if (error instanceof Error) {
       return rejectWithValue(error.message);
     }
-    return rejectWithValue('Произошла неизвестная ошибка');
+    return rejectWithValue(ERRORS.UNKNOWN);
   }
 });
 
@@ -98,13 +88,13 @@ const deleteRow = createAsyncThunk<
 >('rows/deleteRow', async ({ rowId }, { rejectWithValue }) => {
   try {
     const response = await fetch(
-      `${API.SERVER_URL}/v1/outlay-rows/entity/${API.ENTITY_ID}/row/${rowId}/delete`,
+      `${API.SERVER_URL}${API.SAME_PARAMS}${API.ENTITY_ID}/row/${rowId}/delete`,
       {
         method: 'DELETE'
       }
     );
     if (!response.ok) {
-      throw new Error('Ошибка при удалении строки');
+      throw new Error(ERRORS.DELETE);
     }
     const recalculated: RecalculatedRows = await response.json();
     return { recalculated, rowId };
@@ -112,7 +102,7 @@ const deleteRow = createAsyncThunk<
     if (error instanceof Error) {
       return rejectWithValue(error.message);
     }
-    return rejectWithValue('Произошла неизвестная ошибка');
+    return rejectWithValue(ERRORS.UNKNOWN);
   }
 });
 
