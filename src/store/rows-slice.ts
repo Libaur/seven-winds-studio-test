@@ -32,8 +32,18 @@ export const rowsSlice = createSlice({
       .addCase(createRow.fulfilled, (state, action: PayloadAction<RecalculatedRows>) => {
         state.status = 'succeeded';
         const newRow = action.payload.current;
-        if (state.rows.length) state.lastCreatedRowId = newRow.id;
-        state.rows.push(newRow);
+        if (state.rows.length) {
+          state.lastCreatedRowId = newRow.id;
+          state.rows.map((row) => {
+            if (row.id === newRow.id) {
+              return { ...row, child: [...(row.child || []), newRow] };
+            }
+            return row;
+          });
+        } else {
+          state.rows.push(newRow);
+        }
+
         // const newRow = action.payload.recalculated.current;
         // const parentId = action.payload.parentId;
         // if (parentId) {

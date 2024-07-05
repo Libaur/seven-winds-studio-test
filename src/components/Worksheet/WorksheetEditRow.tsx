@@ -2,9 +2,9 @@ import './Worksheet.style.scss';
 import { useEffect, useState } from 'react';
 import TableCell from '@mui/material/TableCell';
 import TextField from '@mui/material/TextField';
-import { ROW_INITIAL_VALUES, numberCheckPattern } from './WorksheetEditRow.service';
+import { ROW_INITIAL_VALUES, numberCheckPattern } from './Worksheet.service';
 import { TreeResponse, RowId } from 'src/App.types';
-import { useAppSelector, useAppDispatch } from 'src/store';
+import { useAppDispatch } from 'src/store';
 import { createRow, updateRow } from 'src/api';
 
 export default function WorksheetEditRow({
@@ -17,7 +17,6 @@ export default function WorksheetEditRow({
   updateHandler: () => void;
 }) {
   const dispatch = useAppDispatch();
-  const lastCreatedRowId = useAppSelector((state) => state.lastCreatedRowId);
   const [currentParentId, setCurrentParentId] = useState<RowId>(null);
   const [updatedRowId, setUpdatedRowId] = useState<RowId>(null);
   const [rowCells, setRowCells] = useState({
