@@ -25,7 +25,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.interactive-component {
   width: 100%;
   background-color: #323232;
   border-left: 0.5px solid #a1a1aa;
-}`, "",{"version":3,"sources":["webpack://./src/App.style.scss"],"names":[],"mappings":"AAGA;EACI,WAAA;EACA,yBALG;EAMH,gCAAA;AAFJ","sourcesContent":["$main: #323232;\r\n$secondary: #a1a1aa;\r\n\r\n.interactive-component {\r\n    width: 100%;\r\n    background-color: $main;\r\n    border-left: 0.5px solid $secondary;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/App.style.scss"],"names":[],"mappings":"AAMA;EACI,WAAA;EACA,yBARG;EASH,gCAAA;AALJ","sourcesContent":["$main: #323232;\r\n$secondary: #a1a1aa;\r\n$table: #252525;\r\n$create-icon: #7890b2;\r\n$delete-icon: #df4444;\r\n\r\n.interactive-component {\r\n    width: 100%;\r\n    background-color: $main;\r\n    border-left: 0.5px solid $secondary;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -73,7 +73,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.interactive-component {
 .with-border {
   border-bottom: 2px solid white;
   color: white;
-}`, "",{"version":3,"sources":["webpack://./src/App.style.scss","webpack://./src/components/Header/Header.style.scss"],"names":[],"mappings":"AAGA;EACI,WAAA;EACA,yBALG;EAMH,gCAAA;ACFJ;;AAFA;EACI,SAAA;EACA,yBDJG;ECKH,cDJQ;ACSZ;;AAFA;EACI,YAAA;EACA,gBAAA;EACA,eAAA;EACA,mBAAA;AAKJ;;AAFA;EACI,8BAAA;EACA,YAAA;AAKJ","sourcesContent":["$main: #323232;\r\n$secondary: #a1a1aa;\r\n\r\n.interactive-component {\r\n    width: 100%;\r\n    background-color: $main;\r\n    border-left: 0.5px solid $secondary;\r\n}\r\n","@import '../../App.style.scss';\r\n\r\n.toolbar {\r\n    gap: 20px;\r\n    background-color: $main;\r\n    color: $secondary;\r\n}\r\n\r\n.toolbar-button {\r\n    border: none;\r\n    background: none;\r\n    cursor: pointer;\r\n    padding: 10.5px 0px;\r\n}\r\n\r\n.with-border {\r\n    border-bottom: 2px solid white;\r\n    color: white;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/App.style.scss","webpack://./src/components/Header/Header.style.scss"],"names":[],"mappings":"AAMA;EACI,WAAA;EACA,yBARG;EASH,gCAAA;ACLJ;;AAFA;EACI,SAAA;EACA,yBDJG;ECKH,cDJQ;ACSZ;;AAFA;EACI,YAAA;EACA,gBAAA;EACA,eAAA;EACA,mBAAA;AAKJ;;AAFA;EACI,8BAAA;EACA,YAAA;AAKJ","sourcesContent":["$main: #323232;\r\n$secondary: #a1a1aa;\r\n$table: #252525;\r\n$create-icon: #7890b2;\r\n$delete-icon: #df4444;\r\n\r\n.interactive-component {\r\n    width: 100%;\r\n    background-color: $main;\r\n    border-left: 0.5px solid $secondary;\r\n}\r\n","@import '../../App.style.scss';\r\n\r\n.toolbar {\r\n    gap: 20px;\r\n    background-color: $main;\r\n    color: $secondary;\r\n}\r\n\r\n.toolbar-button {\r\n    border: none;\r\n    background: none;\r\n    cursor: pointer;\r\n    padding: 10.5px 0px;\r\n}\r\n\r\n.with-border {\r\n    border-bottom: 2px solid white;\r\n    color: white;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -140,7 +140,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.interactive-component {
   margin-left: auto;
   color: white;
   cursor: pointer;
-}`, "",{"version":3,"sources":["webpack://./src/App.style.scss","webpack://./src/components/Layout/Layout.style.scss"],"names":[],"mappings":"AAGA;EACI,WAAA;EACA,yBALG;EAMH,gCAAA;ACFJ;;AAQA;EATI,yBDHG;ECIH,cDHQ;ECIR,YAQ4B;AAHhC;;AAMA;EAbI,yBDHG;ECIH,cDHQ;ECIR,YAY4B;EAR5B,2BAAA;AAQJ;;AAIA;EAlBI,yBDHG;ECIH,cDHQ;ECIR,UAiB4B;EAb5B,2BAAA;EAeA,iBAAA;EACA,YAAA;AACJ;AACI;EAlBA,2BAAA;EAoBI,iBAAA;EACA,YAAA;EACA,mBAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;AACR;;AAGA;EACI,iBAAA;EACA,YAAA;EACA,eAAA;AAAJ","sourcesContent":["$main: #323232;\r\n$secondary: #a1a1aa;\r\n\r\n.interactive-component {\r\n    width: 100%;\r\n    background-color: $main;\r\n    border-left: 0.5px solid $secondary;\r\n}\r\n","@import '../../App.style.scss';\r\n\r\n@mixin sidebar-main-specs($width) {\r\n    background-color: $main;\r\n    color: $secondary;\r\n    width: $width;\r\n}\r\n\r\n@mixin sidebar-border {\r\n    border: 0.1px solid $secondary;\r\n}\r\n\r\n.sidebar {\r\n    @include sidebar-main-specs(240px);\r\n}\r\n\r\n.project-title {\r\n    @include sidebar-main-specs(15.4%);\r\n    @include sidebar-border;\r\n}\r\n\r\n.subheader {\r\n    @include sidebar-main-specs(77%);\r\n    @include sidebar-border;\r\n    border-left: none;\r\n    color: white;\r\n\r\n    h3 {\r\n        @include sidebar-border;\r\n        border-left: none;\r\n        height: 100%;\r\n        padding-right: 25px;\r\n        display: flex;\r\n        align-items: center;\r\n        justify-content: center;\r\n    }\r\n}\r\n\r\n.arrow-icon {\r\n    margin-left: auto;\r\n    color: white;\r\n    cursor: pointer;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/App.style.scss","webpack://./src/components/Layout/Layout.style.scss"],"names":[],"mappings":"AAMA;EACI,WAAA;EACA,yBARG;EASH,gCAAA;ACLJ;;AAQA;EATI,yBDHG;ECIH,cDHQ;ECIR,YAQ4B;AAHhC;;AAMA;EAbI,yBDHG;ECIH,cDHQ;ECIR,YAY4B;EAR5B,2BAAA;AAQJ;;AAIA;EAlBI,yBDHG;ECIH,cDHQ;ECIR,UAiB4B;EAb5B,2BAAA;EAeA,iBAAA;EACA,YAAA;AACJ;AACI;EAlBA,2BAAA;EAoBI,iBAAA;EACA,YAAA;EACA,mBAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;AACR;;AAGA;EACI,iBAAA;EACA,YAAA;EACA,eAAA;AAAJ","sourcesContent":["$main: #323232;\r\n$secondary: #a1a1aa;\r\n$table: #252525;\r\n$create-icon: #7890b2;\r\n$delete-icon: #df4444;\r\n\r\n.interactive-component {\r\n    width: 100%;\r\n    background-color: $main;\r\n    border-left: 0.5px solid $secondary;\r\n}\r\n","@import '../../App.style.scss';\r\n\r\n@mixin sidebar-main-specs($width) {\r\n    background-color: $main;\r\n    color: $secondary;\r\n    width: $width;\r\n}\r\n\r\n@mixin sidebar-border {\r\n    border: 0.1px solid $secondary;\r\n}\r\n\r\n.sidebar {\r\n    @include sidebar-main-specs(240px);\r\n}\r\n\r\n.project-title {\r\n    @include sidebar-main-specs(15.4%);\r\n    @include sidebar-border;\r\n}\r\n\r\n.subheader {\r\n    @include sidebar-main-specs(77%);\r\n    @include sidebar-border;\r\n    border-left: none;\r\n    color: white;\r\n\r\n    h3 {\r\n        @include sidebar-border;\r\n        border-left: none;\r\n        height: 100%;\r\n        padding-right: 25px;\r\n        display: flex;\r\n        align-items: center;\r\n        justify-content: center;\r\n    }\r\n}\r\n\r\n.arrow-icon {\r\n    margin-left: auto;\r\n    color: white;\r\n    cursor: pointer;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -178,7 +178,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.interactive-component {
 
 .item-marked {
   background-color: #a1a1aa;
-}`, "",{"version":3,"sources":["webpack://./src/App.style.scss","webpack://./src/components/SidebarItem/SidebarItem.style.scss"],"names":[],"mappings":"AAGA;EACI,WAAA;EACA,yBALG;EAMH,gCAAA;ACFJ;;AAFA;EACE,mBAAA;AAKF;;AAFA;EACE,yBDNU;ACWZ","sourcesContent":["$main: #323232;\r\n$secondary: #a1a1aa;\r\n\r\n.interactive-component {\r\n    width: 100%;\r\n    background-color: $main;\r\n    border-left: 0.5px solid $secondary;\r\n}\r\n","@import '../../App.style.scss';\r\n\r\n.sidebar-item {\r\n  margin: 0 8px 0 8px;\r\n}\r\n\r\n.item-marked {\r\n  background-color: $secondary;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/App.style.scss","webpack://./src/components/SidebarItem/SidebarItem.style.scss"],"names":[],"mappings":"AAMA;EACI,WAAA;EACA,yBARG;EASH,gCAAA;ACLJ;;AAFA;EACE,mBAAA;AAKF;;AAFA;EACE,yBDNU;ACWZ","sourcesContent":["$main: #323232;\r\n$secondary: #a1a1aa;\r\n$table: #252525;\r\n$create-icon: #7890b2;\r\n$delete-icon: #df4444;\r\n\r\n.interactive-component {\r\n    width: 100%;\r\n    background-color: $main;\r\n    border-left: 0.5px solid $secondary;\r\n}\r\n","@import '../../App.style.scss';\r\n\r\n.sidebar-item {\r\n  margin: 0 8px 0 8px;\r\n}\r\n\r\n.item-marked {\r\n  background-color: $secondary;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -204,7 +204,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.row-name {
+___CSS_LOADER_EXPORT___.push([module.id, `.interactive-component {
+  width: 100%;
+  background-color: #323232;
+  border-left: 0.5px solid #a1a1aa;
+}
+
+.row-name {
   width: 250px;
 }
 
@@ -216,6 +222,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.row-name {
 .description-icon {
   color: #7890b2;
   cursor: pointer;
+  margin-left: 15px;
 }
 
 .delete-icon {
@@ -238,7 +245,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.row-name {
 
 .icon-child {
   margin-left: 15px;
-}`, "",{"version":3,"sources":["webpack://./src/components/Worksheet/Worksheet.style.scss"],"names":[],"mappings":"AAAA;EACE,YAAA;AACF;;AAEA;EACE,mBAAA;EACA,gCAAA;AACF;;AAEA;EACE,cAAA;EACA,eAAA;AACF;;AAEA;EACE,eAAA;EACA,kBAAA;AACF;AACE;EACE,cAAA;AACJ;;AAGA;EACE,YAAA;EACA,gBAAA;AAAF;;AAGA;EACE,aAAA;EACA,mBAAA;AAAF;;AAGA;EACE,iBAAA;AAAF","sourcesContent":[".row-name {\r\n  width: 250px;\r\n}\r\n\r\n.table-container {\r\n  background: #252525;\r\n  border-left: 0.1px solid #a1a1aa;\r\n}\r\n\r\n.description-icon {\r\n  color: #7890b2;\r\n  cursor: pointer;\r\n}\r\n\r\n.delete-icon {\r\n  cursor: pointer;\r\n  color: transparent;\r\n\r\n  &.hovered {\r\n    color: #df4444;\r\n  }\r\n}\r\n\r\n.table-cell-child {\r\n  width: 100px;\r\n  min-width: 100px;\r\n}\r\n\r\n.flex-center {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.icon-child {\r\n  margin-left: 15px;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/App.style.scss","webpack://./src/components/Worksheet/Worksheet.style.scss"],"names":[],"mappings":"AAMA;EACI,WAAA;EACA,yBARG;EASH,gCAAA;ACLJ;;AAFA;EACE,YAAA;AAKF;;AAFA;EACE,mBDLM;ECMN,gCAAA;AAKF;;AAFA;EACE,cDTY;ECUZ,eAAA;EACA,iBAAA;AAKF;;AAFA;EACE,eAAA;EACA,kBAAA;AAKF;AAHE;EACE,cDlBU;ACuBd;;AADA;EACE,YAAA;EACA,gBAAA;AAIF;;AADA;EACE,aAAA;EACA,mBAAA;AAIF;;AADA;EACE,iBAAA;AAIF","sourcesContent":["$main: #323232;\r\n$secondary: #a1a1aa;\r\n$table: #252525;\r\n$create-icon: #7890b2;\r\n$delete-icon: #df4444;\r\n\r\n.interactive-component {\r\n    width: 100%;\r\n    background-color: $main;\r\n    border-left: 0.5px solid $secondary;\r\n}\r\n","@import '../../App.style.scss';\r\n\r\n.row-name {\r\n  width: 250px;\r\n}\r\n\r\n.table-container {\r\n  background: $table;\r\n  border-left: 0.1px solid $secondary;\r\n}\r\n\r\n.description-icon {\r\n  color: $create-icon;\r\n  cursor: pointer;\r\n  margin-left: 15px\r\n}\r\n\r\n.delete-icon {\r\n  cursor: pointer;\r\n  color: transparent;\r\n\r\n  &.hovered {\r\n    color: $delete-icon;\r\n  }\r\n}\r\n\r\n.table-cell-child {\r\n  width: 100px;\r\n  min-width: 100px;\r\n}\r\n\r\n.flex-center {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.icon-child {\r\n  margin-left: 15px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -54511,6 +54518,34 @@ function App() {
 
 /***/ }),
 
+/***/ "./src/api/constants.ts":
+/*!******************************!*\
+  !*** ./src/api/constants.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   API: () => (/* binding */ API),
+/* harmony export */   ERRORS: () => (/* binding */ ERRORS)
+/* harmony export */ });
+const API = {
+    ENTITY_ID: "128766",
+    SERVER_URL: "http://185.244.172.108:8081",
+    SAME_PARAMS: "/v1/outlay-rows/entity/"
+};
+const ERRORS = {
+    UNKNOWN: 'Произошла неизвестная ошибка',
+    FETCH_LIST: 'Ошибка при загрузке списка строк',
+    CREATE: 'Ошибка при создании строки',
+    UPDATE: 'Ошибка при обновлении строки',
+    DELETE: 'Ошибка при удалении строки'
+};
+
+
+
+/***/ }),
+
 /***/ "./src/api/index.ts":
 /*!**************************!*\
   !*** ./src/api/index.ts ***!
@@ -54524,7 +54559,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   fetchRowsList: () => (/* binding */ fetchRowsList),
 /* harmony export */   updateRow: () => (/* binding */ updateRow)
 /* harmony export */ });
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs");
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ "./src/api/constants.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -54535,15 +54571,12 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
     });
 };
 
-const API = {
-    SERVER_URL: 'http://185.244.172.108:8081',
-    ENTITY_ID: 128766
-};
-const fetchRowsList = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createAsyncThunk)('rows/fetchRowsList', (_1, _a) => __awaiter(void 0, [_1, _a], void 0, function* (_, { rejectWithValue }) {
+
+const fetchRowsList = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createAsyncThunk)('rows/fetchRowsList', (_1, _a) => __awaiter(void 0, [_1, _a], void 0, function* (_, { rejectWithValue }) {
     try {
-        const response = yield fetch(`${API.SERVER_URL}/v1/outlay-rows/entity/${API.ENTITY_ID}/row/list`);
+        const response = yield fetch(`${_constants__WEBPACK_IMPORTED_MODULE_0__.API.SERVER_URL}${_constants__WEBPACK_IMPORTED_MODULE_0__.API.SAME_PARAMS}${_constants__WEBPACK_IMPORTED_MODULE_0__.API.ENTITY_ID}/row/list`);
         if (!response.ok) {
-            throw new Error('Ошибка при загрузке списка строк');
+            throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERRORS.FETCH_LIST);
         }
         const data = yield response.json();
         return data;
@@ -54552,12 +54585,12 @@ const fetchRowsList = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createAsy
         if (error instanceof Error) {
             return rejectWithValue(error.message);
         }
-        return rejectWithValue('Произошла неизвестная ошибка');
+        return rejectWithValue(_constants__WEBPACK_IMPORTED_MODULE_0__.ERRORS.UNKNOWN);
     }
 }));
-const createRow = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createAsyncThunk)('rows/createRow', (_a, _b) => __awaiter(void 0, [_a, _b], void 0, function* ({ outlayRowRequest }, { rejectWithValue }) {
+const createRow = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createAsyncThunk)('rows/createRow', (_a, _b) => __awaiter(void 0, [_a, _b], void 0, function* ({ outlayRowRequest }, { rejectWithValue }) {
     try {
-        const response = yield fetch(`${API.SERVER_URL}/v1/outlay-rows/entity/${API.ENTITY_ID}/row/create`, {
+        const response = yield fetch(`${_constants__WEBPACK_IMPORTED_MODULE_0__.API.SERVER_URL}${_constants__WEBPACK_IMPORTED_MODULE_0__.API.SAME_PARAMS}${_constants__WEBPACK_IMPORTED_MODULE_0__.API.ENTITY_ID}/row/create`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -54565,7 +54598,7 @@ const createRow = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createAsyncTh
             body: JSON.stringify(outlayRowRequest)
         });
         if (!response.ok) {
-            throw new Error('Ошибка при создании строки');
+            throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERRORS.CREATE);
         }
         const recalculated = yield response.json();
         return recalculated;
@@ -54574,12 +54607,12 @@ const createRow = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createAsyncTh
         if (error instanceof Error) {
             return rejectWithValue(error.message);
         }
-        return rejectWithValue('Произошла неизвестная ошибка');
+        return rejectWithValue(_constants__WEBPACK_IMPORTED_MODULE_0__.ERRORS.UNKNOWN);
     }
 }));
-const updateRow = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createAsyncThunk)('rows/updateRow', (_a, _b) => __awaiter(void 0, [_a, _b], void 0, function* ({ outlayRowRequest, rowId }, { rejectWithValue }) {
+const updateRow = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createAsyncThunk)('rows/updateRow', (_a, _b) => __awaiter(void 0, [_a, _b], void 0, function* ({ outlayRowRequest, rowId }, { rejectWithValue }) {
     try {
-        const response = yield fetch(`${API.SERVER_URL}/v1/outlay-rows/entity/${API.ENTITY_ID}/row/${rowId}/update`, {
+        const response = yield fetch(`${_constants__WEBPACK_IMPORTED_MODULE_0__.API.SERVER_URL}${_constants__WEBPACK_IMPORTED_MODULE_0__.API.SAME_PARAMS}${_constants__WEBPACK_IMPORTED_MODULE_0__.API.ENTITY_ID}/row/${rowId}/update`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -54587,7 +54620,7 @@ const updateRow = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createAsyncTh
             body: JSON.stringify(outlayRowRequest)
         });
         if (!response.ok) {
-            throw new Error('Ошибка при обновлении строки');
+            throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERRORS.UPDATE);
         }
         const recalculated = yield response.json();
         return { recalculated, rowId };
@@ -54596,16 +54629,16 @@ const updateRow = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createAsyncTh
         if (error instanceof Error) {
             return rejectWithValue(error.message);
         }
-        return rejectWithValue('Произошла неизвестная ошибка');
+        return rejectWithValue(_constants__WEBPACK_IMPORTED_MODULE_0__.ERRORS.UNKNOWN);
     }
 }));
-const deleteRow = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createAsyncThunk)('rows/deleteRow', (_a, _b) => __awaiter(void 0, [_a, _b], void 0, function* ({ rowId }, { rejectWithValue }) {
+const deleteRow = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createAsyncThunk)('rows/deleteRow', (_a, _b) => __awaiter(void 0, [_a, _b], void 0, function* ({ rowId }, { rejectWithValue }) {
     try {
-        const response = yield fetch(`${API.SERVER_URL}/v1/outlay-rows/entity/${API.ENTITY_ID}/row/${rowId}/delete`, {
+        const response = yield fetch(`${_constants__WEBPACK_IMPORTED_MODULE_0__.API.SERVER_URL}${_constants__WEBPACK_IMPORTED_MODULE_0__.API.SAME_PARAMS}${_constants__WEBPACK_IMPORTED_MODULE_0__.API.ENTITY_ID}/row/${rowId}/delete`, {
             method: 'DELETE'
         });
         if (!response.ok) {
-            throw new Error('Ошибка при удалении строки');
+            throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERRORS.DELETE);
         }
         const recalculated = yield response.json();
         return { recalculated, rowId };
@@ -54614,7 +54647,7 @@ const deleteRow = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createAsyncTh
         if (error instanceof Error) {
             return rejectWithValue(error.message);
         }
-        return rejectWithValue('Произошла неизвестная ошибка');
+        return rejectWithValue(_constants__WEBPACK_IMPORTED_MODULE_0__.ERRORS.UNKNOWN);
     }
 }));
 
@@ -54801,85 +54834,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/components/Worksheet/Worksheet.tsx":
-/*!************************************************!*\
-  !*** ./src/components/Worksheet/Worksheet.tsx ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Worksheet)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _Worksheet_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Worksheet.style.scss */ "./src/components/Worksheet/Worksheet.style.scss");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableContainer/TableContainer.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Table/Table.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableHead/TableHead.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableRow/TableRow.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableCell/TableCell.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableBody/TableBody.js");
-/* harmony import */ var _mui_icons_material_Description__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/icons-material/Description */ "./node_modules/@mui/icons-material/Description.js");
-/* harmony import */ var _mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/icons-material/Delete */ "./node_modules/@mui/icons-material/Delete.js");
-/* harmony import */ var _WorksheetEditRow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WorksheetEditRow */ "./src/components/Worksheet/WorksheetEditRow.tsx");
-/* harmony import */ var _WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./WorksheetEditRow.service */ "./src/components/Worksheet/WorksheetEditRow.service.ts");
-/* harmony import */ var src_store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/store */ "./src/store/index.ts");
-/* harmony import */ var src_api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/api */ "./src/api/index.ts");
-
-
-
-
-
-
-
-
-
-
-function Worksheet() {
-    const dispatch = (0,src_store__WEBPACK_IMPORTED_MODULE_5__.useAppDispatch)();
-    const treeRows = (0,src_store__WEBPACK_IMPORTED_MODULE_5__.useAppSelector)((state) => state.rows);
-    const [editedRow, setEditedRows] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null);
-    const [hoveredRows, setHoveredRows] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]);
-    const lastCreatedRowId = (0,src_store__WEBPACK_IMPORTED_MODULE_5__.useAppSelector)((state) => state.lastCreatedRowId);
-    (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
-        dispatch((0,src_api__WEBPACK_IMPORTED_MODULE_6__.fetchRowsList)());
-    });
-    (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
-        lastCreatedRowId && handleEditRow(lastCreatedRowId);
-    }, [lastCreatedRowId]);
-    const handleCreateRow = (id) => {
-        dispatch((0,src_api__WEBPACK_IMPORTED_MODULE_6__.createRow)({
-            outlayRowRequest: Object.assign(Object.assign({}, _WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_4__.ROW_INITIAL_VALUES), { parentId: id })
-        }));
-    };
-    const handleEditRow = (id) => {
-        setEditedRows(id);
-    };
-    const handleUpdateRow = () => {
-        setEditedRows(null);
-    };
-    const handleDeleteRow = (rowId) => {
-        dispatch((0,src_api__WEBPACK_IMPORTED_MODULE_6__.deleteRow)({ rowId }));
-    };
-    const handleMouseEnter = (id) => {
-        setHoveredRows((ids) => [...ids, id]);
-    };
-    const handleMouseLeave = (id) => {
-        setHoveredRows((ids) => ids.filter((rowId) => rowId !== id));
-    };
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { className: "table-container", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], { children: _WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_4__.TABLE_HEAD_TITLES.map((title, index) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { sx: { color: '#a1a1aa' }, children: title }, index))) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], { children: treeRows.length > 0 ? (treeRows.map((row, rowIndex) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((react__WEBPACK_IMPORTED_MODULE_2___default().Fragment), { children: [row.id !== null && editedRow === row.id ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetEditRow__WEBPACK_IMPORTED_MODULE_3__["default"], { updatedRow: row, updateHandler: handleUpdateRow })] })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], { onDoubleClick: () => handleEditRow(row.id), onMouseEnter: () => handleMouseEnter(row.id), onMouseLeave: () => handleMouseLeave(row.id), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Description__WEBPACK_IMPORTED_MODULE_13__["default"], { className: "description-icon", onClick: () => handleCreateRow(row.id) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_14__["default"], { className: `delete-icon ${hoveredRows.includes(row.id) ? 'hovered' : ''}`, onClick: () => handleDeleteRow(row.id) })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: row.rowName }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: row.salary }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: row.equipmentCosts }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: row.overheads }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: row.estimatedProfit })] })), row.child &&
-                                row.child.map((childRow, childIndex) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)((react__WEBPACK_IMPORTED_MODULE_2___default().Fragment), { children: editedRow === childRow.id ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetEditRow__WEBPACK_IMPORTED_MODULE_3__["default"], { updatedRow: childRow, updateHandler: handleUpdateRow })] })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], { onDoubleClick: () => handleEditRow(childRow.id), onMouseEnter: () => handleMouseEnter(childRow.id), onMouseLeave: () => handleMouseLeave(childRow.id), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { className: "table-cell-child", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "flex-center", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Description__WEBPACK_IMPORTED_MODULE_13__["default"], { className: "description-icon icon-child", onClick: () => handleCreateRow(childRow.id) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_14__["default"], { className: `delete-icon ${hoveredRows.includes(childRow.id) ? 'hovered' : ''}`, onClick: () => handleDeleteRow(childRow.id) })] }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: childRow.rowName }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: childRow.salary }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: childRow.equipmentCosts }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: childRow.overheads }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { children: childRow.estimatedProfit })] })) }, childIndex)))] }, rowIndex)))) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetEditRow__WEBPACK_IMPORTED_MODULE_3__["default"], { updateHandler: handleUpdateRow })] })) })] }) }));
-}
-
-
-/***/ }),
-
-/***/ "./src/components/Worksheet/WorksheetEditRow.service.ts":
-/*!**************************************************************!*\
-  !*** ./src/components/Worksheet/WorksheetEditRow.service.ts ***!
-  \**************************************************************/
+/***/ "./src/components/Worksheet/Worksheet.service.ts":
+/*!*******************************************************!*\
+  !*** ./src/components/Worksheet/Worksheet.service.ts ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -54914,6 +54872,38 @@ const numberCheckPattern = /[^\d.]/g;
 
 /***/ }),
 
+/***/ "./src/components/Worksheet/Worksheet.tsx":
+/*!************************************************!*\
+  !*** ./src/components/Worksheet/Worksheet.tsx ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Worksheet)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Worksheet_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Worksheet.style.scss */ "./src/components/Worksheet/Worksheet.style.scss");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableContainer/TableContainer.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Table/Table.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableHead/TableHead.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableRow/TableRow.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableCell/TableCell.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableBody/TableBody.js");
+/* harmony import */ var _WorksheetRows__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./WorksheetRows */ "./src/components/Worksheet/WorksheetRows.tsx");
+/* harmony import */ var _Worksheet_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Worksheet.service */ "./src/components/Worksheet/Worksheet.service.ts");
+
+
+
+
+
+function Worksheet() {
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], { className: "table-container", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { children: _Worksheet_service__WEBPACK_IMPORTED_MODULE_3__.TABLE_HEAD_TITLES.map((title, index) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { sx: { color: '#a1a1aa' }, children: title }, index))) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetRows__WEBPACK_IMPORTED_MODULE_2__["default"], {}) })] }) }));
+}
+
+
+/***/ }),
+
 /***/ "./src/components/Worksheet/WorksheetEditRow.tsx":
 /*!*******************************************************!*\
   !*** ./src/components/Worksheet/WorksheetEditRow.tsx ***!
@@ -54930,7 +54920,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material/TableCell */ "./node_modules/@mui/material/TableCell/TableCell.js");
 /* harmony import */ var _mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material/TextField */ "./node_modules/@mui/material/TextField/TextField.js");
-/* harmony import */ var _WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WorksheetEditRow.service */ "./src/components/Worksheet/WorksheetEditRow.service.ts");
+/* harmony import */ var _Worksheet_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Worksheet.service */ "./src/components/Worksheet/Worksheet.service.ts");
 /* harmony import */ var src_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/store */ "./src/store/index.ts");
 /* harmony import */ var src_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/api */ "./src/api/index.ts");
 
@@ -54943,16 +54933,15 @@ __webpack_require__.r(__webpack_exports__);
 
 function WorksheetEditRow({ updatedRow, parentId, updateHandler }) {
     const dispatch = (0,src_store__WEBPACK_IMPORTED_MODULE_4__.useAppDispatch)();
-    const lastCreatedRowId = (0,src_store__WEBPACK_IMPORTED_MODULE_4__.useAppSelector)((state) => state.lastCreatedRowId);
     const [currentParentId, setCurrentParentId] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null);
     const [updatedRowId, setUpdatedRowId] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null);
-    const [rowCells, setRowCells] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(Object.assign(Object.assign({}, _WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_3__.ROW_INITIAL_VALUES), { parentId: currentParentId }));
+    const [rowCells, setRowCells] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(Object.assign(Object.assign({}, _Worksheet_service__WEBPACK_IMPORTED_MODULE_3__.ROW_INITIAL_VALUES), { parentId: currentParentId }));
     (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
         if (updatedRow) {
             setRowCells((rowCells) => (Object.assign(Object.assign({}, rowCells), { rowName: updatedRow.rowName, salary: updatedRow.salary, equipmentCosts: updatedRow.equipmentCosts, overheads: updatedRow.overheads, estimatedProfit: updatedRow.estimatedProfit })));
             setUpdatedRowId(updatedRow.id);
         }
-    }, []);
+    }, [src_api__WEBPACK_IMPORTED_MODULE_5__.updateRow]);
     (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
         parentId !== undefined && setCurrentParentId(parentId);
     }, [parentId]);
@@ -54961,15 +54950,90 @@ function WorksheetEditRow({ updatedRow, parentId, updateHandler }) {
             event.preventDefault();
             if (updatedRowId) {
                 dispatch((0,src_api__WEBPACK_IMPORTED_MODULE_5__.updateRow)({ outlayRowRequest: rowCells, rowId: updatedRowId }));
-                updateHandler();
             }
             else {
                 dispatch((0,src_api__WEBPACK_IMPORTED_MODULE_5__.createRow)({ outlayRowRequest: rowCells }));
-                updateHandler();
             }
+            updateHandler();
         }
     };
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], { className: "row-name", size: "small", value: rowCells.rowName, onChange: (e) => setRowCells((rowCells) => (Object.assign(Object.assign({}, rowCells), { rowName: e.target.value }))), onKeyDown: (e) => handleSubmitRow(e) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], { size: "small", value: rowCells.salary, onChange: (e) => setRowCells((rowCells) => (Object.assign(Object.assign({}, rowCells), { salary: parseFloat(e.target.value.replace(_WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_3__.numberCheckPattern, '')) }))), onKeyDown: (e) => handleSubmitRow(e) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], { size: "small", value: rowCells.equipmentCosts, onChange: (e) => setRowCells((rowCells) => (Object.assign(Object.assign({}, rowCells), { equipmentCosts: parseFloat(e.target.value.replace(_WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_3__.numberCheckPattern, '')) }))), onKeyDown: (e) => handleSubmitRow(e) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], { className: "cell-field", size: "small", value: rowCells.overheads, onChange: (e) => setRowCells((rowCells) => (Object.assign(Object.assign({}, rowCells), { overheads: parseFloat(e.target.value.replace(_WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_3__.numberCheckPattern, '')) }))), onKeyDown: (e) => handleSubmitRow(e) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], { size: "small", value: rowCells.estimatedProfit, onChange: (e) => setRowCells((rowCells) => (Object.assign(Object.assign({}, rowCells), { estimatedProfit: parseFloat(e.target.value.replace(_WorksheetEditRow_service__WEBPACK_IMPORTED_MODULE_3__.numberCheckPattern, '')) }))), onKeyDown: (e) => handleSubmitRow(e) }) })] }));
+    const handleChange = (field, e) => {
+        setRowCells((rowCells) => (Object.assign(Object.assign({}, rowCells), { [field]: field !== 'rowName'
+                ? parseFloat(e.target.value.replace(_Worksheet_service__WEBPACK_IMPORTED_MODULE_3__.numberCheckPattern, ''))
+                : e.target.value })));
+    };
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], { className: "row-name", size: "small", value: rowCells.rowName, onChange: (e) => handleChange('rowName', e), onKeyDown: (e) => handleSubmitRow(e) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], { size: "small", value: rowCells.salary, onChange: (e) => handleChange('salary', e), onKeyDown: (e) => handleSubmitRow(e) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], { size: "small", value: rowCells.equipmentCosts, onChange: (e) => handleChange('equipmentCosts', e), onKeyDown: (e) => handleSubmitRow(e) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], { className: "cell-field", size: "small", value: rowCells.overheads, onChange: (e) => handleChange('overheads', e), onKeyDown: (e) => handleSubmitRow(e) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TableCell__WEBPACK_IMPORTED_MODULE_6__["default"], { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], { size: "small", value: rowCells.estimatedProfit, onChange: (e) => handleChange('estimatedProfit', e), onKeyDown: (e) => handleSubmitRow(e) }) })] }));
+}
+
+
+/***/ }),
+
+/***/ "./src/components/Worksheet/WorksheetRows.tsx":
+/*!****************************************************!*\
+  !*** ./src/components/Worksheet/WorksheetRows.tsx ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ WorksheetRows)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Worksheet_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Worksheet.style.scss */ "./src/components/Worksheet/Worksheet.style.scss");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableRow/TableRow.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableCell/TableCell.js");
+/* harmony import */ var _mui_icons_material_Description__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/icons-material/Description */ "./node_modules/@mui/icons-material/Description.js");
+/* harmony import */ var _mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/icons-material/Delete */ "./node_modules/@mui/icons-material/Delete.js");
+/* harmony import */ var _WorksheetEditRow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WorksheetEditRow */ "./src/components/Worksheet/WorksheetEditRow.tsx");
+/* harmony import */ var _Worksheet_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Worksheet.service */ "./src/components/Worksheet/Worksheet.service.ts");
+/* harmony import */ var src_store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/store */ "./src/store/index.ts");
+/* harmony import */ var src_api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/api */ "./src/api/index.ts");
+
+
+
+
+
+
+
+
+
+
+function WorksheetRows() {
+    const dispatch = (0,src_store__WEBPACK_IMPORTED_MODULE_5__.useAppDispatch)();
+    const treeRows = (0,src_store__WEBPACK_IMPORTED_MODULE_5__.useAppSelector)((state) => state.rows);
+    const [editedRow, setEditedRows] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null);
+    const [hoveredRows, setHoveredRows] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]);
+    const lastCreatedRowId = (0,src_store__WEBPACK_IMPORTED_MODULE_5__.useAppSelector)((state) => state.lastCreatedRowId);
+    (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
+        dispatch((0,src_api__WEBPACK_IMPORTED_MODULE_6__.fetchRowsList)());
+    });
+    (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
+        lastCreatedRowId && handleEditRow(lastCreatedRowId);
+    }, [lastCreatedRowId]);
+    const handleCreateRow = (id) => {
+        dispatch((0,src_api__WEBPACK_IMPORTED_MODULE_6__.createRow)({
+            outlayRowRequest: Object.assign(Object.assign({}, _Worksheet_service__WEBPACK_IMPORTED_MODULE_4__.ROW_INITIAL_VALUES), { parentId: id })
+        }));
+    };
+    const handleEditRow = (id) => {
+        setEditedRows(id);
+    };
+    const handleUpdateRow = () => {
+        setEditedRows(null);
+    };
+    const handleDeleteRow = (rowId) => {
+        dispatch((0,src_api__WEBPACK_IMPORTED_MODULE_6__.deleteRow)({ rowId }));
+    };
+    const handleMouseEnter = (id) => {
+        setHoveredRows((ids) => [...ids, id]);
+    };
+    const handleMouseLeave = (id) => {
+        setHoveredRows((ids) => ids.filter((rowId) => rowId !== id));
+    };
+    const renderRow = (row, level = 0) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((react__WEBPACK_IMPORTED_MODULE_2___default().Fragment), { children: [row.id !== null && editedRow === row.id ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { paddingLeft: `${level * 20}px` } }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetEditRow__WEBPACK_IMPORTED_MODULE_3__["default"], { updatedRow: row, updateHandler: handleUpdateRow })] })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], { onDoubleClick: () => handleEditRow(row.id), onMouseEnter: () => handleMouseEnter(row.id), onMouseLeave: () => handleMouseLeave(row.id), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { style: { paddingLeft: `${level * 20}px` }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Description__WEBPACK_IMPORTED_MODULE_9__["default"], { className: "description-icon", onClick: () => handleCreateRow(row.id) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_10__["default"], { className: `delete-icon ${hoveredRows.includes(row.id) ? 'hovered' : ''}`, onClick: () => handleDeleteRow(row.id) })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { children: row.rowName }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { children: row.salary }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { children: row.equipmentCosts }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { children: row.overheads }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { children: row.estimatedProfit })] })), row.child && row.child.map((childRow) => renderRow(childRow, level + 1))] }, row.id));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: treeRows.length ? (treeRows.map((row) => renderRow(row))) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_WorksheetEditRow__WEBPACK_IMPORTED_MODULE_3__["default"], { updateHandler: handleUpdateRow })) }));
 }
 
 
@@ -55066,27 +55130,18 @@ const rowsSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createSlice)(
             .addCase(src_api__WEBPACK_IMPORTED_MODULE_0__.createRow.fulfilled, (state, action) => {
             state.status = 'succeeded';
             const newRow = action.payload.current;
-            if (state.rows.length)
+            if (state.rows.length) {
                 state.lastCreatedRowId = newRow.id;
-            state.rows.push(newRow);
-            // const newRow = action.payload.recalculated.current;
-            // const parentId = action.payload.parentId;
-            // if (parentId) {
-            //   state.rows = state.rows.map((row) => {
-            //     if (row.id === parentId) {
-            //       return {
-            //         ...row,
-            //         child:
-            //           row.child.length === 0
-            //             ? [{ ...newRow, child: [] }]
-            //             : [...row.child, { ...newRow, child: [] }]
-            //       };
-            //     }
-            //     return row;
-            //   });
-            // } else {
-            //   state.rows.push({ ...newRow, child: [] });
-            // }
+                state.rows.map((row) => {
+                    if (row.id === newRow.id) {
+                        return Object.assign(Object.assign({}, row), { child: [...(row.child || []), newRow] });
+                    }
+                    return row;
+                });
+            }
+            else {
+                state.rows.push(newRow);
+            }
         })
             .addCase(src_api__WEBPACK_IMPORTED_MODULE_0__.createRow.rejected, (state, action) => {
             state.status = 'failed';
@@ -55099,13 +55154,6 @@ const rowsSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createSlice)(
             state.status = 'succeeded';
             state.rows = state.rows.filter((row) => row.id !== action.payload.rowId);
             state.rows.push(action.payload.recalculated.current);
-            // const updatedRow = action.payload.current;
-            // state.rows = state.rows.map((row) => {
-            //   if (row.id === updatedRow.id) {
-            //     return { ...row, ...updatedRow };
-            //   }
-            //   return row;
-            // });
         })
             .addCase(src_api__WEBPACK_IMPORTED_MODULE_0__.updateRow.rejected, (state, action) => {
             state.status = 'failed';
@@ -59020,9 +59068,6 @@ function createSelectorsFactory() {
   };
 }
 
-// src/entities/sorted_state_adapter.ts
-
-
 // src/entities/state_adapter.ts
 
 var isDraftTyped = immer__WEBPACK_IMPORTED_MODULE_2__.isDraft;
@@ -59176,7 +59221,7 @@ function createUnsortedStateAdapter(selectId) {
           // Spreads ignore falsy values, so this works even if there isn't
           // an existing update already at this key
           changes: {
-            ...updatesPerEntity[update.id] ? updatesPerEntity[update.id].changes : null,
+            ...updatesPerEntity[update.id]?.changes,
             ...update.changes
           }
         };
@@ -59247,7 +59292,7 @@ function createSortedStateAdapter(selectId, comparer) {
   }
   function addManyMutably(newEntities, state, existingIds) {
     newEntities = ensureEntitiesArray(newEntities);
-    const existingKeys = new Set(existingIds ?? (0,immer__WEBPACK_IMPORTED_MODULE_2__.current)(state.ids));
+    const existingKeys = new Set(existingIds ?? getCurrent(state.ids));
     const models = newEntities.filter((model) => !existingKeys.has(selectIdValue(model, selectId)));
     if (models.length !== 0) {
       mergeFunction(state, models);
@@ -59313,7 +59358,7 @@ function createSortedStateAdapter(selectId, comparer) {
     if (a.length !== b.length) {
       return false;
     }
-    for (let i = 0; i < a.length && i < b.length; i++) {
+    for (let i = 0; i < a.length; i++) {
       if (a[i] === b[i]) {
         continue;
       }
@@ -59321,13 +59366,13 @@ function createSortedStateAdapter(selectId, comparer) {
     }
     return true;
   }
-  const mergeInsertion = (state, addedItems, appliedUpdates, replacedIds) => {
+  const mergeFunction = (state, addedItems, appliedUpdates, replacedIds) => {
     const currentEntities = getCurrent(state.entities);
     const currentIds = getCurrent(state.ids);
     const stateEntities = state.entities;
     let ids = currentIds;
     if (replacedIds) {
-      ids = Array.from(new Set(currentIds));
+      ids = new Set(currentIds);
     }
     let sortedEntities = [];
     for (const id of ids) {
@@ -59353,7 +59398,6 @@ function createSortedStateAdapter(selectId, comparer) {
       state.ids = newSortedIds;
     }
   };
-  const mergeFunction = mergeInsertion;
   return {
     removeOne,
     removeMany,
@@ -64832,4 +64876,4 @@ root.render((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_redux__
 
 /******/ })()
 ;
-//# sourceMappingURL=main.a97108f6.js.map
+//# sourceMappingURL=main.c385bde7.js.map
